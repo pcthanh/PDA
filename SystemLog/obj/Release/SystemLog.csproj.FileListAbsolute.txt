@@ -1,0 +1,10 @@
+D:\OneDrive\Project\THANH.PHAN\PDA\POSPDA\SystemLog\bin\Release\SystemLog.dll
+D:\OneDrive\Project\THANH.PHAN\PDA\POSPDA\SystemLog\bin\Release\SystemLog.pdb
+D:\OneDrive\Project\THANH.PHAN\PDA\POSPDA\SystemLog\obj\Release\SystemLog.dll
+D:\OneDrive\Project\THANH.PHAN\PDA\POSPDA\SystemLog\obj\Release\SystemLog.pdb
+D:\OneDrive\Project\THANH.PHAN\PDA\POSPDA\SystemLog\obj\Release\SystemLog.csprojResolveAssemblyReference.cache
+D:\MyProject\LocPOS\THANH.PHAN\PDA\POSPDA\SystemLog\bin\Release\SystemLog.dll
+D:\MyProject\LocPOS\THANH.PHAN\PDA\POSPDA\SystemLog\bin\Release\SystemLog.pdb
+D:\MyProject\LocPOS\THANH.PHAN\PDA\POSPDA\SystemLog\obj\Release\SystemLog.csprojResolveAssemblyReference.cache
+D:\MyProject\LocPOS\THANH.PHAN\PDA\POSPDA\SystemLog\obj\Release\SystemLog.dll
+D:\MyProject\LocPOS\THANH.PHAN\PDA\POSPDA\SystemLog\obj\Release\SystemLog.pdb

@@ -1,0 +1,1319 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="POSEZ2UModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="ACC_PAYMENT">
+    <Key>
+      <PropertyRef Name="PayMentID" />
+    </Key>
+    <Property Name="PayMentID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CusNo" Type="int" />
+    <Property Name="SubTotal" Type="int" />
+    <Property Name="InvoiceID" Type="int" />
+    <Property Name="InvoiceNumber" Type="nvarchar" MaxLength="50" />
+    <Property Name="Cash" Type="int" />
+    <Property Name="Card" Type="int" />
+    <Property Name="IsCredit" Type="int" />
+    <Property Name="IsDebit" Type="int" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="CreateBy" Type="int" />
+    <Property Name="UpdateDate" Type="datetime" />
+    <Property Name="UpdateBy" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Card">
+    <Key>
+      <PropertyRef Name="CardID" />
+    </Key>
+    <Property Name="CardID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CardName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Status" Type="int" />
+    <Property Name="SurChart" Type="int" />
+  </EntityType>
+  <EntityType Name="CATALOGUE">
+    <Key>
+      <PropertyRef Name="CatalogueID" />
+    </Key>
+    <Property Name="CatalogueID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CatalogueName" Type="nvarchar" MaxLength="500" Nullable="false" />
+    <Property Name="Status" Type="int" Nullable="false" />
+    <Property Name="Color" Type="nvarchar" MaxLength="250" />
+    <Property Name="Note" Type="nvarchar(max)" />
+    <Property Name="CreateBy" Type="int" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="UpdateBy" Type="int" />
+    <Property Name="UpdateDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="CATEGORY">
+    <Key>
+      <PropertyRef Name="CategoryID" />
+    </Key>
+    <Property Name="CategoryID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CategoryName" Type="nvarchar" MaxLength="500" Nullable="false" />
+    <Property Name="CategoryNameSort" Type="nvarchar" MaxLength="500" />
+    <Property Name="Status" Type="int" Nullable="false" />
+    <Property Name="Color" Type="nvarchar" MaxLength="250" />
+    <Property Name="ProductColor" Type="nvarchar" MaxLength="250" />
+    <Property Name="Note" Type="nvarchar(max)" />
+    <Property Name="CreateBy" Type="int" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="UpdateBy" Type="int" />
+    <Property Name="UpdateDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="CLIENT">
+    <Key>
+      <PropertyRef Name="ClientID" />
+    </Key>
+    <Property Name="ClientID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Status" Type="int" Nullable="false" />
+    <Property Name="Fname" Type="nvarchar" MaxLength="500" />
+    <Property Name="Lname" Type="nvarchar" MaxLength="500" />
+    <Property Name="Email" Type="nvarchar" MaxLength="500" />
+    <Property Name="Phone" Type="nvarchar" MaxLength="500" />
+    <Property Name="Adress1" Type="nvarchar" MaxLength="500" />
+    <Property Name="Adress2" Type="nvarchar" MaxLength="500" />
+    <Property Name="Adress3" Type="nvarchar" MaxLength="500" />
+    <Property Name="Country" Type="nvarchar" MaxLength="500" />
+    <Property Name="Note" Type="nvarchar(max)" />
+    <Property Name="Balance" Type="int" />
+    <Property Name="CreateBy" Type="int" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="UpdateBy" Type="int" />
+    <Property Name="UpdateDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="CONFIG">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="ABN" Type="nvarchar" MaxLength="50" />
+    <Property Name="Address" Type="nvarchar" MaxLength="50" />
+    <Property Name="Tel" Type="nvarchar" MaxLength="50" />
+    <Property Name="Web" Type="nvarchar" MaxLength="50" />
+    <Property Name="Logan" Type="nvarchar" MaxLength="50" />
+    <Property Name="Note" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="CONFIG_SAVE_DATA">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="500" />
+    <Property Name="LinkPath" Type="nvarchar(max)" />
+    <Property Name="Status" Type="int" />
+    <Property Name="CreateBy" Type="int" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="UpdateBy" Type="int" />
+    <Property Name="UpdateDate" Type="datetime" />
+    <Property Name="Type" Type="int" />
+  </EntityType>
+  <EntityType Name="DATABASE_BACKUP">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FileName" Type="nvarchar(max)" />
+    <Property Name="Notes" Type="nvarchar(max)" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="CreateBy" Type="int" />
+    <Property Name="UpdateDate" Type="datetime" />
+    <Property Name="UpdateBy" Type="int" />
+  </EntityType>
+  <EntityType Name="DEPARTMENT">
+    <Key>
+      <PropertyRef Name="DepartmentID" />
+    </Key>
+    <Property Name="DepartmentID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DepartmentName" Type="nvarchar" MaxLength="500" Nullable="false" />
+    <Property Name="Status" Type="int" Nullable="false" />
+    <Property Name="Note" Type="nvarchar(max)" />
+    <Property Name="CreateBy" Type="int" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="UpdateBy" Type="int" />
+    <Property Name="UpdateDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="FLOOR">
+    <Key>
+      <PropertyRef Name="FloorID" />
+    </Key>
+    <Property Name="FloorID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FloorName" Type="nvarchar" MaxLength="500" Nullable="false" />
+    <Property Name="Priority" Type="int" Nullable="false" />
+    <Property Name="Status" Type="int" Nullable="false" />
+    <Property Name="Note" Type="nvarchar(max)" />
+    <Property Name="CreateBy" Type="int" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="UpdateBy" Type="int" />
+    <Property Name="UpdateDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="INVOICE">
+    <Key>
+      <PropertyRef Name="InvoiceID" />
+    </Key>
+    <Property Name="InvoiceID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="InvoiceNumber" Type="nvarchar" MaxLength="50" />
+    <Property Name="OrderID" Type="int" />
+    <Property Name="OrderNumber" Type="nvarchar" MaxLength="50" />
+    <Property Name="Status" Type="int" />
+    <Property Name="Total" Type="int" />
+    <Property Name="Payment" Type="int" />
+    <Property Name="Change" Type="int" />
+    <Property Name="Discount" Type="int" />
+    <Property Name="DiscountType" Type="int" />
+    <Property Name="InvoiceByCardID" Type="bigint" />
+    <Property Name="CashOut" Type="int" />
+    <Property Name="Seat" Type="int" />
+    <Property Name="Account" Type="int" />
+    <Property Name="CreateBy" Type="int" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="UpdateBy" Type="int" />
+    <Property Name="UpdateDate" Type="datetime" />
+    <Property Name="Note" Type="nvarchar(max)" />
+    <Property Name="ShiftID" Type="int" />
+    <Property Name="FloorType" Type="int" />
+    <Property Name="PDA" Type="int" />
+  </EntityType>
+  <EntityType Name="INVOICE_BY_CARD">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="InvoiceByCardID" Type="bigint" Nullable="false" />
+    <Property Name="InvoiceID" Type="int" />
+    <Property Name="CardID" Type="int" />
+    <Property Name="Total" Type="float" />
+    <Property Name="CreateBy" Type="int" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="UpdateBy" Type="int" />
+    <Property Name="UpdateDate" Type="datetime" />
+    <Property Name="Note" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="INVOICE_DETAIL">
+    <Key>
+      <PropertyRef Name="InvoiceDetailID" />
+    </Key>
+    <Property Name="InvoiceDetailID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="InvoiceID" Type="int" Nullable="false" />
+    <Property Name="InvoiceNumber" Type="nvarchar" MaxLength="50" />
+    <Property Name="OrderDetailID" Type="int" />
+    <Property Name="KeyItem" Type="int" />
+    <Property Name="Status" Type="int" Nullable="false" />
+    <Property Name="ProductID" Type="int" />
+    <Property Name="Price" Type="float" />
+    <Property Name="Qty" Type="float" />
+    <Property Name="Total" Type="float" />
+    <Property Name="Seat" Type="int" />
+    <Property Name="DynId" Type="int" />
+    <Property Name="PrintType" Type="int" />
+    <Property Name="CreateBy" Type="int" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="UpdateBy" Type="int" />
+    <Property Name="UpdateDate" Type="datetime" />
+    <Property Name="Note" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="INVOICE_DETAIL_HISTORY">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="InvoiceDetailID" Type="int" Nullable="false" />
+    <Property Name="InvoiceID" Type="int" Nullable="false" />
+    <Property Name="InvoiceNumber" Type="nvarchar" MaxLength="50" />
+    <Property Name="OrderDetailID" Type="int" />
+    <Property Name="KeyItem" Type="int" />
+    <Property Name="Status" Type="int" Nullable="false" />
+    <Property Name="ProductID" Type="int" />
+    <Property Name="Price" Type="float" />
+    <Property Name="Qty" Type="float" />
+    <Property Name="Total" Type="float" />
+    <Property Name="Seat" Type="int" />
+    <Property Name="DynId" Type="int" />
+    <Property Name="PrintType" Type="int" />
+    <Property Name="CreateBy" Type="int" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="UpdateBy" Type="int" />
+    <Property Name="UpdateDate" Type="datetime" />
+    <Property Name="Note" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="INVOICE_DETAIL_MODIFIRE">
+    <Key>
+      <PropertyRef Name="InvoiceModifireID" />
+    </Key>
+    <Property Name="InvoiceModifireID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="InvoiceID" Type="int" />
+    <Property Name="InvoiceNumber" Type="nvarchar" MaxLength="50" />
+    <Property Name="OrderModifireID" Type="int" />
+    <Property Name="Status" Type="int" />
+    <Property Name="ProductID" Type="int" />
+    <Property Name="KeyModi" Type="int" />
+    <Property Name="ModifireID" Type="int" />
+    <Property Name="Price" Type="float" />
+    <Property Name="Qty" Type="float" />
+    <Property Name="Total" Type="float" />
+    <Property Name="Seat" Type="int" />
+    <Property Name="DynId" Type="int" />
+    <Property Name="CreateBy" Type="int" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="UpdateBy" Type="int" />
+    <Property Name="UpdateDate" Type="datetime" />
+    <Property Name="Note" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="INVOICE_DETAIL_MODIFIRE_HISTORY">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="InvoiceModifireID" Type="int" Nullable="false" />
+    <Property Name="InvoiceID" Type="int" />
+    <Property Name="InvoiceNumber" Type="nvarchar" MaxLength="50" />
+    <Property Name="OrderModifireID" Type="int" />
+    <Property Name="Status" Type="int" />
+    <Property Name="ProductID" Type="int" />
+    <Property Name="KeyModi" Type="int" />
+    <Property Name="ModifireID" Type="int" />
+    <Property Name="Price" Type="float" />
+    <Property Name="Qty" Type="float" />
+    <Property Name="Total" Type="float" />
+    <Property Name="Seat" Type="int" />
+    <Property Name="DynId" Type="int" />
+    <Property Name="CreateBy" Type="int" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="UpdateBy" Type="int" />
+    <Property Name="UpdateDate" Type="datetime" />
+    <Property Name="Note" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="INVOICE_HISTORY">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="InvoiceID" Type="int" Nullable="false" />
+    <Property Name="InvoiceNumber" Type="nvarchar" MaxLength="50" />
+    <Property Name="OrderID" Type="int" />
+    <Property Name="OrderNumber" Type="nvarchar" MaxLength="50" />
+    <Property Name="Status" Type="int" />
+    <Property Name="Total" Type="int" />
+    <Property Name="Payment" Type="int" />
+    <Property Name="Change" Type="int" />
+    <Property Name="Discount" Type="int" />
+    <Property Name="DiscountType" Type="int" />
+    <Property Name="InvoiceByCardID" Type="nvarchar" MaxLength="50" />
+    <Property Name="CashOut" Type="int" />
+    <Property Name="Seat" Type="int" />
+    <Property Name="CreateBy" Type="int" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="UpdateBy" Type="int" />
+    <Property Name="UpdateDate" Type="datetime" />
+    <Property Name="Note" Type="nvarchar(max)" />
+    <Property Name="ShiftID" Type="int" />
+    <Property Name="FloorType" Type="int" />
+    <Property Name="PDA" Type="int" />
+  </EntityType>
+  <EntityType Name="MAP_CATEGORY_TO_CATALOGUE">
+    <Key>
+      <PropertyRef Name="CategoryID" />
+      <PropertyRef Name="CatalogueID" />
+    </Key>
+    <Property Name="CategoryID" Type="int" Nullable="false" />
+    <Property Name="CatalogueID" Type="int" Nullable="false" />
+    <Property Name="Status" Type="int" Nullable="false" />
+    <Property Name="Note" Type="nvarchar(max)" />
+    <Property Name="CreateBy" Type="int" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="UpdateBy" Type="int" />
+    <Property Name="UpdateDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="MAP_MODIFIRE_TO_PRODUCT">
+    <Key>
+      <PropertyRef Name="ModifireID" />
+      <PropertyRef Name="ProductID" />
+    </Key>
+    <Property Name="ModifireID" Type="int" Nullable="false" />
+    <Property Name="ProductID" Type="int" Nullable="false" />
+    <Property Name="Status" Type="int" Nullable="false" />
+    <Property Name="Note" Type="nvarchar(max)" />
+    <Property Name="CreateBy" Type="int" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="UpdateBy" Type="int" />
+    <Property Name="UpdateDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="MAP_PRODUCT_TO_CATEGORY">
+    <Key>
+      <PropertyRef Name="ProductID" />
+      <PropertyRef Name="CategoryID" />
+    </Key>
+    <Property Name="ProductID" Type="int" Nullable="false" />
+    <Property Name="CategoryID" Type="int" Nullable="false" />
+    <Property Name="Status" Type="int" Nullable="false" />
+    <Property Name="Note" Type="nvarchar(max)" />
+    <Property Name="CreateBy" Type="int" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="UpdateBy" Type="int" />
+    <Property Name="UpdateDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="MENU">
+    <Key>
+      <PropertyRef Name="MenuID" />
+    </Key>
+    <Property Name="MenuID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MenuName" Type="nvarchar" MaxLength="500" Nullable="false" />
+    <Property Name="Priority" Type="int" Nullable="false" />
+    <Property Name="Status" Type="int" Nullable="false" />
+    <Property Name="Note" Type="nvarchar(max)" />
+    <Property Name="CreateBy" Type="int" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="UpdateBy" Type="int" />
+    <Property Name="UpdateDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="MODIFIRE">
+    <Key>
+      <PropertyRef Name="ModifireID" />
+    </Key>
+    <Property Name="ModifireID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ModifireName" Type="nvarchar" MaxLength="500" Nullable="false" />
+    <Property Name="Status" Type="int" Nullable="false" />
+    <Property Name="Color" Type="nvarchar" MaxLength="250" />
+    <Property Name="Note" Type="nvarchar(max)" />
+    <Property Name="CreateBy" Type="int" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="UpdateBy" Type="int" />
+    <Property Name="UpdateDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="MODIFIRE_PRICE">
+    <Key>
+      <PropertyRef Name="ModifirePriceID" />
+    </Key>
+    <Property Name="ModifirePriceID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ModifireID" Type="int" Nullable="false" />
+    <Property Name="Status" Type="int" Nullable="false" />
+    <Property Name="CurrentPrice" Type="float" />
+    <Property Name="WasPrice" Type="float" />
+    <Property Name="Note" Type="nvarchar(max)" />
+    <Property Name="CreateBy" Type="int" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="UpdateBy" Type="int" />
+    <Property Name="UpdateDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="ORDER">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="OrderID" Type="int" />
+    <Property Name="OrderNumber" Type="nvarchar" MaxLength="50" />
+    <Property Name="ClientID" Type="int" />
+    <Property Name="FloorID" Type="nvarchar" MaxLength="50" />
+    <Property Name="Status" Type="int" Nullable="false" />
+    <Property Name="TotalAmount" Type="float" />
+    <Property Name="Seat" Type="int" />
+    <Property Name="CreateBy" Type="int" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+    <Property Name="UpdateBy" Type="int" />
+    <Property Name="UpdateDate" Type="datetime" />
+    <Property Name="Note" Type="nvarchar(max)" />
+    <Property Name="ShiftID" Type="int" />
+    <Property Name="PrinterNote" Type="int" />
+    <Property Name="PDA" Type="int" />
+  </EntityType>
+  <EntityType Name="ORDER_DATE">
+    <Key>
+      <PropertyRef Name="OrderID" />
+    </Key>
+    <Property Name="OrderID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="OrderNumber" Type="nvarchar" MaxLength="50" />
+    <Property Name="ClientID" Type="int" />
+    <Property Name="FloorID" Type="nvarchar" MaxLength="50" />
+    <Property Name="Status" Type="int" Nullable="false" />
+    <Property Name="TotalAmount" Type="float" />
+    <Property Name="Seat" Type="int" />
+    <Property Name="CreateBy" Type="int" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+    <Property Name="UpdateBy" Type="int" />
+    <Property Name="UpdateDate" Type="datetime" />
+    <Property Name="Note" Type="nvarchar(max)" />
+    <Property Name="ShiftID" Type="int" />
+    <Property Name="PrinterNote" Type="int" />
+    <Property Name="PDA" Type="int" />
+  </EntityType>
+  <EntityType Name="ORDER_DETAIL">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="OrderDetailID" Type="int" Nullable="false" />
+    <Property Name="OrderID" Type="int" Nullable="false" />
+    <Property Name="OrderNumber" Type="nvarchar" MaxLength="50" />
+    <Property Name="ProductID" Type="int" Nullable="false" />
+    <Property Name="KeyItem" Type="int" />
+    <Property Name="Status" Type="int" Nullable="false" />
+    <Property Name="Price" Type="float" />
+    <Property Name="Qty" Type="float" />
+    <Property Name="Total" Type="float" />
+    <Property Name="Seat" Type="int" />
+    <Property Name="DynId" Type="int" />
+    <Property Name="PrintType" Type="int" />
+    <Property Name="CreateBy" Type="int" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="UpdateBy" Type="int" />
+    <Property Name="UpdateDate" Type="datetime" />
+    <Property Name="Note" Type="nvarchar(max)" />
+    <Property Name="Category" Type="int" />
+  </EntityType>
+  <EntityType Name="ORDER_DETAIL_DATE">
+    <Key>
+      <PropertyRef Name="OrderDetailID" />
+    </Key>
+    <Property Name="OrderDetailID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="OrderID" Type="int" Nullable="false" />
+    <Property Name="OrderNumber" Type="nvarchar" MaxLength="50" />
+    <Property Name="ProductID" Type="int" Nullable="false" />
+    <Property Name="KeyItem" Type="int" />
+    <Property Name="Status" Type="int" Nullable="false" />
+    <Property Name="Price" Type="float" />
+    <Property Name="Qty" Type="float" />
+    <Property Name="Total" Type="float" />
+    <Property Name="Seat" Type="int" />
+    <Property Name="DynId" Type="int" />
+    <Property Name="PrintType" Type="int" />
+    <Property Name="CreateBy" Type="int" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="UpdateBy" Type="int" />
+    <Property Name="UpdateDate" Type="datetime" />
+    <Property Name="Note" Type="nvarchar(max)" />
+    <Property Name="Category" Type="int" />
+  </EntityType>
+  <EntityType Name="ORDER_DETAIL_MODIFIRE">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="OrderModifireID" Type="int" Nullable="false" />
+    <Property Name="OrderDetailID" Type="int" Nullable="false" />
+    <Property Name="OrderNumber" Type="nvarchar" MaxLength="50" />
+    <Property Name="OrderID" Type="int" />
+    <Property Name="ProductID" Type="int" />
+    <Property Name="KeyModi" Type="int" />
+    <Property Name="ModifireID" Type="int" Nullable="false" />
+    <Property Name="Status" Type="int" Nullable="false" />
+    <Property Name="Price" Type="float" />
+    <Property Name="Qty" Type="float" />
+    <Property Name="Total" Type="float" />
+    <Property Name="Seat" Type="int" />
+    <Property Name="DynId" Type="int" />
+    <Property Name="CreateBy" Type="int" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="UpdateBy" Type="int" />
+    <Property Name="UpdateDate" Type="datetime" />
+    <Property Name="Note" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="ORDER_DETAIL_MODIFIRE_DATE">
+    <Key>
+      <PropertyRef Name="OrderModifireID" />
+    </Key>
+    <Property Name="OrderModifireID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="OrderDetailID" Type="int" Nullable="false" />
+    <Property Name="OrderNumber" Type="nvarchar" MaxLength="50" />
+    <Property Name="OrderID" Type="int" />
+    <Property Name="ProductID" Type="int" />
+    <Property Name="KeyModi" Type="int" />
+    <Property Name="ModifireID" Type="int" Nullable="false" />
+    <Property Name="Status" Type="int" Nullable="false" />
+    <Property Name="Price" Type="float" />
+    <Property Name="Qty" Type="float" />
+    <Property Name="Total" Type="float" />
+    <Property Name="Seat" Type="int" />
+    <Property Name="DynId" Type="int" />
+    <Property Name="CreateBy" Type="int" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="UpdateBy" Type="int" />
+    <Property Name="UpdateDate" Type="datetime" />
+    <Property Name="Note" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="ORDER_OPEN_ITEM">
+    <Key>
+      <PropertyRef Name="dynID" />
+    </Key>
+    <Property Name="dynID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ItemNameShort" Type="nvarchar" MaxLength="50" />
+    <Property Name="ItemNameDesc" Type="nvarchar" MaxLength="50" />
+    <Property Name="UnitPrice" Type="int" />
+    <Property Name="PrinterID" Type="int" />
+    <Property Name="PrintType" Type="int" />
+    <Property Name="CreateBy" Type="int" />
+    <Property Name="CreateDate" Type="date" />
+    <Property Name="UpdateBy" Type="int" />
+    <Property Name="UpdateDate" Type="date" />
+  </EntityType>
+  <EntityType Name="ORDER_OPEN_ITEM_ALL">
+    <Key>
+      <PropertyRef Name="iD" />
+    </Key>
+    <Property Name="iD" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="dynID" Type="int" />
+    <Property Name="ItemNameShort" Type="nvarchar" MaxLength="50" />
+    <Property Name="ItemNameDesc" Type="nvarchar" MaxLength="50" />
+    <Property Name="UnitPrice" Type="int" />
+    <Property Name="PrinterID" Type="int" />
+    <Property Name="PrintType" Type="int" />
+    <Property Name="CreateBy" Type="int" />
+    <Property Name="CreateDate" Type="date" />
+    <Property Name="UpdateBy" Type="int" />
+    <Property Name="UpdateDate" Type="date" />
+  </EntityType>
+  <EntityType Name="PAYMENT_INVOICE_HISTORY">
+    <Key>
+      <PropertyRef Name="PaymentHistoryID" />
+    </Key>
+    <Property Name="PaymentHistoryID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="InvoiceID" Type="int" Nullable="false" />
+    <Property Name="InvoiceNumber" Type="nvarchar" MaxLength="50" />
+    <Property Name="PaymentTypeID" Type="int" Nullable="false" />
+    <Property Name="Total" Type="float" Nullable="false" />
+    <Property Name="Status" Type="int" Nullable="false" />
+    <Property Name="CreateBy" Type="int" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="UpdateBy" Type="int" />
+    <Property Name="UpdateDate" Type="datetime" />
+    <Property Name="Note" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="PAYMENT_INVOICE_HISTORY_ALL">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PaymentHistoryID" Type="int" Nullable="false" />
+    <Property Name="InvoiceID" Type="int" Nullable="false" />
+    <Property Name="InvoiceNumber" Type="nvarchar" MaxLength="50" />
+    <Property Name="PaymentTypeID" Type="int" Nullable="false" />
+    <Property Name="Total" Type="float" Nullable="false" />
+    <Property Name="Status" Type="int" Nullable="false" />
+    <Property Name="CreateBy" Type="int" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="UpdateBy" Type="int" />
+    <Property Name="UpdateDate" Type="datetime" />
+    <Property Name="Note" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="PAYMENT_TYPE">
+    <Key>
+      <PropertyRef Name="PaymentTypeID" />
+    </Key>
+    <Property Name="PaymentTypeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PaymentTypeName" Type="nvarchar" MaxLength="500" Nullable="false" />
+    <Property Name="Status" Type="int" Nullable="false" />
+    <Property Name="Note" Type="nvarchar(max)" />
+    <Property Name="CreateBy" Type="int" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="UpdateBy" Type="int" />
+    <Property Name="UpdateDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="PERMISSION">
+    <Key>
+      <PropertyRef Name="PermissionID" />
+    </Key>
+    <Property Name="PermissionID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PermissionName" Type="nvarchar" MaxLength="500" Nullable="false" />
+    <Property Name="Status" Type="int" Nullable="false" />
+    <Property Name="DepartmentID" Type="int" Nullable="false" />
+    <Property Name="SubMenuID" Type="int" Nullable="false" />
+    <Property Name="CreateBy" Type="int" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="UpdateBy" Type="int" />
+    <Property Name="UpdateDate" Type="datetime" />
+    <Property Name="Note" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="PRINT_JOB">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PrintJobName" Type="nvarchar" MaxLength="500" />
+    <Property Name="PrintContent" Type="nvarchar" MaxLength="500" />
+    <Property Name="Note" Type="nvarchar(max)" />
+    <Property Name="CreateBy" Type="int" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="UpdateBy" Type="int" />
+    <Property Name="UpdateDate" Type="datetime" />
+    <Property Name="Status" Type="int" />
+  </EntityType>
+  <EntityType Name="PRINTE_JOB_DETAIL">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CategoryID" Type="int" />
+    <Property Name="ProductID" Type="int" />
+    <Property Name="PrinterID" Type="int" />
+    <Property Name="TemplatesID" Type="int" />
+    <Property Name="Status" Type="int" />
+    <Property Name="Notes" Type="nvarchar(max)" />
+    <Property Name="CreateBy" Type="int" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="UpdateBy" Type="int" />
+    <Property Name="UpdateDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="PRINTER">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PrinterName" Type="nvarchar" MaxLength="250" />
+    <Property Name="PrintName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Header" Type="nvarchar" MaxLength="50" />
+    <Property Name="PrinterType" Type="int" />
+    <Property Name="NumberOfTicket" Type="int" />
+    <Property Name="Status" Type="int" />
+    <Property Name="CreateBy" Type="int" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="UpdateBy" Type="int" />
+    <Property Name="UpdateDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="PRODUCT">
+    <Key>
+      <PropertyRef Name="ProductID" />
+    </Key>
+    <Property Name="ProductID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ProductNameDesc" Type="nvarchar" MaxLength="500" Nullable="false" />
+    <Property Name="Status" Type="int" Nullable="false" />
+    <Property Name="Color" Type="nvarchar" MaxLength="250" />
+    <Property Name="Note" Type="nvarchar(max)" />
+    <Property Name="CreateBy" Type="int" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="UpdateBy" Type="int" />
+    <Property Name="UpdateDate" Type="datetime" />
+    <Property Name="ProductNameSort" Type="nvarchar" MaxLength="500" />
+    <Property Name="Portions" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="PRODUCT_PRICE">
+    <Key>
+      <PropertyRef Name="ProductPriceID" />
+    </Key>
+    <Property Name="ProductPriceID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ProductID" Type="int" Nullable="false" />
+    <Property Name="Status" Type="int" Nullable="false" />
+    <Property Name="CurrentPrice" Type="float" />
+    <Property Name="WasPrice" Type="float" />
+    <Property Name="Note" Type="nvarchar(max)" />
+    <Property Name="CreateBy" Type="int" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="UpdateBy" Type="int" />
+    <Property Name="UpdateDate" Type="datetime" />
+    <Property Name="Portions" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="SEAT">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Seat" Type="int" />
+    <Property Name="OrderNumber" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreateBy" Type="int" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="UpdateBy" Type="int" />
+    <Property Name="UpdateDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="SHIFT_HISTORY">
+    <Key>
+      <PropertyRef Name="ShiftHistoryID" />
+    </Key>
+    <Property Name="ShiftHistoryID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="StaffID" Type="int" />
+    <Property Name="ShiftName" Type="nvarchar" MaxLength="500" />
+    <Property Name="StartShift" Type="datetime" />
+    <Property Name="EndShift" Type="datetime" />
+    <Property Name="Status" Type="int" />
+    <Property Name="CashStart" Type="float" />
+    <Property Name="CashEnd" Type="float" />
+    <Property Name="SafeDrop" Type="float" />
+    <Property Name="Note" Type="nvarchar(max)" />
+    <Property Name="CreateBy" Type="int" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="UpdateBy" Type="int" />
+    <Property Name="UpdateDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="STAFF">
+    <Key>
+      <PropertyRef Name="StaffID" />
+    </Key>
+    <Property Name="StaffID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Password" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Status" Type="int" Nullable="false" />
+    <Property Name="DepartmentID" Type="int" Nullable="false" />
+    <Property Name="Fname" Type="nvarchar" MaxLength="500" />
+    <Property Name="Lname" Type="nvarchar" MaxLength="500" />
+    <Property Name="Email" Type="nvarchar" MaxLength="500" />
+    <Property Name="Phone" Type="nvarchar" MaxLength="500" />
+    <Property Name="Adress1" Type="nvarchar" MaxLength="500" />
+    <Property Name="Adress2" Type="nvarchar" MaxLength="500" />
+    <Property Name="Adress3" Type="nvarchar" MaxLength="500" />
+    <Property Name="Country" Type="nvarchar" MaxLength="500" />
+    <Property Name="Note" Type="nvarchar(max)" />
+    <Property Name="CreateBy" Type="int" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="UpdateBy" Type="int" />
+    <Property Name="UpdateDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="SUB_MENU">
+    <Key>
+      <PropertyRef Name="SubMenuID" />
+    </Key>
+    <Property Name="SubMenuID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SubMenuName" Type="nvarchar" MaxLength="500" Nullable="false" />
+    <Property Name="MenuID" Type="int" Nullable="false" />
+    <Property Name="Priority" Type="int" Nullable="false" />
+    <Property Name="Status" Type="int" Nullable="false" />
+    <Property Name="Note" Type="nvarchar(max)" />
+    <Property Name="CreateBy" Type="int" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="UpdateBy" Type="int" />
+    <Property Name="UpdateDate" Type="datetime" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'VyVyCabra.dbo.TableTemp' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="TableTemp">
+    <Key>
+      <PropertyRef Name="ShiftHistoryID" />
+      <PropertyRef Name="StaffID" />
+      <PropertyRef Name="CashStart" />
+      <PropertyRef Name="CashEnd" />
+      <PropertyRef Name="SafeDrop" />
+      <PropertyRef Name="UserName" />
+    </Key>
+    <Property Name="ShiftHistoryID" Type="int" Nullable="false" />
+    <Property Name="StaffID" Type="int" Nullable="false" />
+    <Property Name="ShiftName" Type="nvarchar" MaxLength="500" />
+    <Property Name="StartShift" Type="datetime" />
+    <Property Name="EndShift" Type="datetime" />
+    <Property Name="Status" Type="int" />
+    <Property Name="CashStart" Type="float" Nullable="false" />
+    <Property Name="CashEnd" Type="float" Nullable="false" />
+    <Property Name="SafeDrop" Type="float" Nullable="false" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="VOID_ITEM_HISTORY">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="OrderID" Type="int" />
+    <Property Name="OrderNumber" Type="nvarchar" MaxLength="50" />
+    <Property Name="ProductID" Type="int" />
+    <Property Name="ModifireID" Type="int" />
+    <Property Name="ShiftID" Type="int" />
+    <Property Name="Total" Type="int" />
+    <Property Name="StaffID" Type="int" />
+    <Property Name="Qty" Type="int" />
+    <Property Name="FloorID" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreateBy" Type="int" />
+    <Property Name="CreateDate" Type="date" />
+    <Property Name="UpdateBy" Type="int" />
+    <Property Name="UpdateDate" Type="date" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'VyVyCabra.dbo.VIEW_INVOICE_ALL' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="VIEW_INVOICE_ALL">
+    <Key>
+      <PropertyRef Name="InvoiceID" />
+    </Key>
+    <Property Name="InvoiceID" Type="int" Nullable="false" />
+    <Property Name="InvoiceNumber" Type="nvarchar" MaxLength="50" />
+    <Property Name="OrderID" Type="int" />
+    <Property Name="OrderNumber" Type="nvarchar" MaxLength="50" />
+    <Property Name="Status" Type="int" />
+    <Property Name="Total" Type="int" />
+    <Property Name="Payment" Type="int" />
+    <Property Name="Change" Type="int" />
+    <Property Name="Discount" Type="int" />
+    <Property Name="DiscountType" Type="int" />
+    <Property Name="InvoiceByCardID" Type="bigint" />
+    <Property Name="CashOut" Type="int" />
+    <Property Name="Seat" Type="int" />
+    <Property Name="CreateBy" Type="int" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="UpdateBy" Type="int" />
+    <Property Name="UpdateDate" Type="datetime" />
+    <Property Name="Note" Type="nvarchar(max)" />
+    <Property Name="ShiftID" Type="int" />
+    <Property Name="FloorType" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'VyVyCabra.dbo.VIEW_INVOICE_DETAIL_ALL' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="VIEW_INVOICE_DETAIL_ALL">
+    <Key>
+      <PropertyRef Name="InvoiceDetailID" />
+      <PropertyRef Name="InvoiceID" />
+      <PropertyRef Name="Status" />
+    </Key>
+    <Property Name="InvoiceDetailID" Type="int" Nullable="false" />
+    <Property Name="InvoiceID" Type="int" Nullable="false" />
+    <Property Name="InvoiceNumber" Type="nvarchar" MaxLength="50" />
+    <Property Name="OrderDetailID" Type="int" />
+    <Property Name="KeyItem" Type="int" />
+    <Property Name="Status" Type="int" Nullable="false" />
+    <Property Name="ProductID" Type="int" />
+    <Property Name="Price" Type="float" />
+    <Property Name="Qty" Type="float" />
+    <Property Name="Total" Type="float" />
+    <Property Name="Seat" Type="int" />
+    <Property Name="DynId" Type="int" />
+    <Property Name="PrintType" Type="int" />
+    <Property Name="CreateBy" Type="int" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="UpdateBy" Type="int" />
+    <Property Name="UpdateDate" Type="datetime" />
+    <Property Name="Note" Type="nvarchar(max)" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'VyVyCabra.dbo.VIEW_INVOICE_DETAIL_MODIFIRE_ALL' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="VIEW_INVOICE_DETAIL_MODIFIRE_ALL">
+    <Key>
+      <PropertyRef Name="InvoiceModifireID" />
+    </Key>
+    <Property Name="InvoiceModifireID" Type="int" Nullable="false" />
+    <Property Name="InvoiceID" Type="int" />
+    <Property Name="InvoiceNumber" Type="nvarchar" MaxLength="50" />
+    <Property Name="OrderModifireID" Type="int" />
+    <Property Name="Status" Type="int" />
+    <Property Name="ProductID" Type="int" />
+    <Property Name="KeyModi" Type="int" />
+    <Property Name="ModifireID" Type="int" />
+    <Property Name="Qty" Type="float" />
+    <Property Name="Total" Type="float" />
+    <Property Name="Seat" Type="int" />
+    <Property Name="DynId" Type="int" />
+    <Property Name="CreateBy" Type="int" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="UpdateBy" Type="int" />
+    <Property Name="UpdateDate" Type="datetime" />
+    <Property Name="Note" Type="nvarchar(max)" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'VyVyCabra.dbo.VIEW_ORDER_ALL' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="VIEW_ORDER_ALL">
+    <Key>
+      <PropertyRef Name="Status" />
+      <PropertyRef Name="CreateDate" />
+    </Key>
+    <Property Name="OrderID" Type="int" />
+    <Property Name="OrderNumber" Type="nvarchar" MaxLength="50" />
+    <Property Name="ClientID" Type="int" />
+    <Property Name="FloorID" Type="nvarchar" MaxLength="50" />
+    <Property Name="Status" Type="int" Nullable="false" />
+    <Property Name="TotalAmount" Type="float" />
+    <Property Name="Seat" Type="int" />
+    <Property Name="CreateBy" Type="int" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+    <Property Name="UpdateBy" Type="int" />
+    <Property Name="UpdateDate" Type="datetime" />
+    <Property Name="Note" Type="nvarchar(max)" />
+    <Property Name="ShiftID" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'VyVyCabra.dbo.VIEW_ORDER_DETAIL_ALL' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="VIEW_ORDER_DETAIL_ALL">
+    <Key>
+      <PropertyRef Name="OrderDetailID" />
+      <PropertyRef Name="OrderID" />
+      <PropertyRef Name="ProductID" />
+      <PropertyRef Name="Status" />
+    </Key>
+    <Property Name="OrderDetailID" Type="int" Nullable="false" />
+    <Property Name="OrderID" Type="int" Nullable="false" />
+    <Property Name="OrderNumber" Type="nvarchar" MaxLength="50" />
+    <Property Name="ProductID" Type="int" Nullable="false" />
+    <Property Name="KeyItem" Type="int" />
+    <Property Name="Status" Type="int" Nullable="false" />
+    <Property Name="Price" Type="float" />
+    <Property Name="Qty" Type="float" />
+    <Property Name="Total" Type="float" />
+    <Property Name="Seat" Type="int" />
+    <Property Name="DynId" Type="int" />
+    <Property Name="PrintType" Type="int" />
+    <Property Name="CreateBy" Type="int" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="UpdateBy" Type="int" />
+    <Property Name="UpdateDate" Type="datetime" />
+    <Property Name="Note" Type="nvarchar(max)" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'VyVyCabra.dbo.VIEW_ORDER_DETAIL_MODIFIRE_ALL' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="VIEW_ORDER_DETAIL_MODIFIRE_ALL">
+    <Key>
+      <PropertyRef Name="OrderModifireID" />
+      <PropertyRef Name="OrderDetailID" />
+      <PropertyRef Name="ModifireID" />
+      <PropertyRef Name="Status" />
+    </Key>
+    <Property Name="OrderModifireID" Type="int" Nullable="false" />
+    <Property Name="OrderDetailID" Type="int" Nullable="false" />
+    <Property Name="OrderNumber" Type="nvarchar" MaxLength="50" />
+    <Property Name="OrderID" Type="int" />
+    <Property Name="ProductID" Type="int" />
+    <Property Name="KeyModi" Type="int" />
+    <Property Name="ModifireID" Type="int" Nullable="false" />
+    <Property Name="Status" Type="int" Nullable="false" />
+    <Property Name="Price" Type="float" />
+    <Property Name="Qty" Type="float" />
+    <Property Name="Total" Type="float" />
+    <Property Name="Seat" Type="int" />
+    <Property Name="DynId" Type="int" />
+    <Property Name="CreateBy" Type="int" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="UpdateBy" Type="int" />
+    <Property Name="UpdateDate" Type="datetime" />
+    <Property Name="Note" Type="nvarchar(max)" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'VyVyCabra.dbo.VIEW_PAYMENT_INVOICE_HISTORY_ALL' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="VIEW_PAYMENT_INVOICE_HISTORY_ALL">
+    <Key>
+      <PropertyRef Name="PaymentHistoryID" />
+      <PropertyRef Name="InvoiceID" />
+      <PropertyRef Name="PaymentTypeID" />
+      <PropertyRef Name="Total" />
+      <PropertyRef Name="Status" />
+    </Key>
+    <Property Name="PaymentHistoryID" Type="int" Nullable="false" />
+    <Property Name="InvoiceID" Type="int" Nullable="false" />
+    <Property Name="InvoiceNumber" Type="nvarchar" MaxLength="50" />
+    <Property Name="PaymentTypeID" Type="int" Nullable="false" />
+    <Property Name="Total" Type="float" Nullable="false" />
+    <Property Name="Status" Type="int" Nullable="false" />
+    <Property Name="CreateBy" Type="int" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="UpdateBy" Type="int" />
+    <Property Name="UpdateDate" Type="datetime" />
+    <Property Name="Note" Type="nvarchar(max)" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'VyVyCabra.dbo.view_report_invoice' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="view_report_invoice">
+    <Key>
+      <PropertyRef Name="CategoryID" />
+      <PropertyRef Name="CategoryName" />
+      <PropertyRef Name="InvoiceID" />
+      <PropertyRef Name="ProductNameDesc" />
+    </Key>
+    <Property Name="CategoryID" Type="int" Nullable="false" />
+    <Property Name="CategoryName" Type="nvarchar" MaxLength="500" Nullable="false" />
+    <Property Name="InvoiceID" Type="int" Nullable="false" />
+    <Property Name="InvoiceNumber" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="OrderID" Type="int" />
+    <Property Name="ProductID" Type="int" />
+    <Property Name="ProductNameDesc" Type="nvarchar" MaxLength="500" Nullable="false" />
+    <Property Name="Qty" Type="float" />
+    <Property Name="Price" Type="float" />
+    <Property Name="Total" Type="float" />
+  </EntityType>
+  <Function Name="Auto_Create_Code" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="nvarchar">
+    <Parameter Name="StartCode" Type="nvarchar" Mode="In" />
+    <Parameter Name="id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="GetEndDate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="datetime">
+    <Parameter Name="enddate" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="getModifireByProduct" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="productid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="getProductByCategory" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="categoryid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="GetStartDate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="datetime">
+    <Parameter Name="startdate" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="LISTTKA" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="pos_th_GetAllListCategoryByCatalogue" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="catalogueid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="pos_th_GetAllListPermissionByDepartmentID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="departmentid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="pos_th_GetAllListProductByCategory" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="categoryid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="pos_th_GetDataBackupDatabase" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="pos_th_GetDataListShiftHistoryByUserID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="userid" Type="int" Mode="In" />
+    <Parameter Name="type" Type="int" Mode="In" />
+  </Function>
+  <Function Name="pos_th_GetDataProductAndModifire" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="pos_th_GetDataSaleByAccount" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="dateselect" Type="nvarchar" Mode="In" />
+    <Parameter Name="type" Type="int" Mode="In" />
+  </Function>
+  <Function Name="pos_th_GetDataSaleByCard" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="dateselect" Type="nvarchar" Mode="In" />
+    <Parameter Name="type" Type="int" Mode="In" />
+  </Function>
+  <Function Name="pos_th_GetDataSummaryReport" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="dateselect" Type="nvarchar" Mode="In" />
+    <Parameter Name="type" Type="int" Mode="In" />
+  </Function>
+  <Function Name="pos_th_GetDataSummaryReportNew" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="dateselect" Type="nvarchar" Mode="In" />
+    <Parameter Name="type" Type="int" Mode="In" />
+  </Function>
+  <Function Name="pos_th_GetDetailProductPrice" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="productpriceID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="pos_th_GetListModifire" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="productID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="pos_th_GetListModifireToProduct" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="productID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="pos_th_GetListProductPrice" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="pos_th_GetQTYGroupSaleReport" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="dateselect" Type="nvarchar" Mode="In" />
+    <Parameter Name="type" Type="int" Mode="In" />
+  </Function>
+  <Function Name="pos_th_GetQTYItemSaleReport" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="dateselect" Type="nvarchar" Mode="In" />
+    <Parameter Name="type" Type="int" Mode="In" />
+  </Function>
+  <Function Name="pos_th_GetReportSaleByStaff" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="dateselect" Type="nvarchar" Mode="In" />
+    <Parameter Name="type" Type="int" Mode="In" />
+  </Function>
+  <Function Name="pos_th_GetShiftReport" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="dateselect" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="pos_th_SaveDataMapCategoryToCatalogue" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="catalogueid" Type="int" Mode="In" />
+    <Parameter Name="userid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="pos_th_SaveDataMapModifireToProduct" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="productid" Type="int" Mode="In" />
+    <Parameter Name="userid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="pos_th_SaveDataMapProductToCategory" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="categoryid" Type="int" Mode="In" />
+    <Parameter Name="userid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="pos_th_SaveDataPermissionByDepartmet" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="departmentid" Type="int" Mode="In" />
+    <Parameter Name="userid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="pos_th_SearchProduct" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="txtsearch" Type="nvarchar" Mode="In" />
+    <Parameter Name="type" Type="int" Mode="In" />
+  </Function>
+  <Function Name="UpdateToServer" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <EntityContainer Name="POSEZ2UModelStoreContainer">
+    <EntitySet Name="ACC_PAYMENT" EntityType="Self.ACC_PAYMENT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Card" EntityType="Self.Card" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CATALOGUE" EntityType="Self.CATALOGUE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CATEGORY" EntityType="Self.CATEGORY" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CLIENT" EntityType="Self.CLIENT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CONFIG" EntityType="Self.CONFIG" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CONFIG_SAVE_DATA" EntityType="Self.CONFIG_SAVE_DATA" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DATABASE_BACKUP" EntityType="Self.DATABASE_BACKUP" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DEPARTMENT" EntityType="Self.DEPARTMENT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FLOOR" EntityType="Self.FLOOR" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="INVOICE" EntityType="Self.INVOICE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="INVOICE_BY_CARD" EntityType="Self.INVOICE_BY_CARD" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="INVOICE_DETAIL" EntityType="Self.INVOICE_DETAIL" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="INVOICE_DETAIL_HISTORY" EntityType="Self.INVOICE_DETAIL_HISTORY" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="INVOICE_DETAIL_MODIFIRE" EntityType="Self.INVOICE_DETAIL_MODIFIRE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="INVOICE_DETAIL_MODIFIRE_HISTORY" EntityType="Self.INVOICE_DETAIL_MODIFIRE_HISTORY" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="INVOICE_HISTORY" EntityType="Self.INVOICE_HISTORY" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MAP_CATEGORY_TO_CATALOGUE" EntityType="Self.MAP_CATEGORY_TO_CATALOGUE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MAP_MODIFIRE_TO_PRODUCT" EntityType="Self.MAP_MODIFIRE_TO_PRODUCT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MAP_PRODUCT_TO_CATEGORY" EntityType="Self.MAP_PRODUCT_TO_CATEGORY" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MENU" EntityType="Self.MENU" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MODIFIRE" EntityType="Self.MODIFIRE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MODIFIRE_PRICE" EntityType="Self.MODIFIRE_PRICE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ORDER" EntityType="Self.ORDER" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ORDER_DATE" EntityType="Self.ORDER_DATE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ORDER_DETAIL" EntityType="Self.ORDER_DETAIL" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ORDER_DETAIL_DATE" EntityType="Self.ORDER_DETAIL_DATE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ORDER_DETAIL_MODIFIRE" EntityType="Self.ORDER_DETAIL_MODIFIRE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ORDER_DETAIL_MODIFIRE_DATE" EntityType="Self.ORDER_DETAIL_MODIFIRE_DATE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ORDER_OPEN_ITEM" EntityType="Self.ORDER_OPEN_ITEM" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ORDER_OPEN_ITEM_ALL" EntityType="Self.ORDER_OPEN_ITEM_ALL" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PAYMENT_INVOICE_HISTORY" EntityType="Self.PAYMENT_INVOICE_HISTORY" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PAYMENT_INVOICE_HISTORY_ALL" EntityType="Self.PAYMENT_INVOICE_HISTORY_ALL" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PAYMENT_TYPE" EntityType="Self.PAYMENT_TYPE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PERMISSION" EntityType="Self.PERMISSION" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PRINT_JOB" EntityType="Self.PRINT_JOB" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PRINTE_JOB_DETAIL" EntityType="Self.PRINTE_JOB_DETAIL" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PRINTER" EntityType="Self.PRINTER" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PRODUCT" EntityType="Self.PRODUCT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PRODUCT_PRICE" EntityType="Self.PRODUCT_PRICE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SEAT" EntityType="Self.SEAT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SHIFT_HISTORY" EntityType="Self.SHIFT_HISTORY" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="STAFF" EntityType="Self.STAFF" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SUB_MENU" EntityType="Self.SUB_MENU" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="VOID_ITEM_HISTORY" EntityType="Self.VOID_ITEM_HISTORY" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TableTemp" EntityType="Self.TableTemp" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [TableTemp].[ShiftHistoryID] AS [ShiftHistoryID], 
+    [TableTemp].[StaffID] AS [StaffID], 
+    [TableTemp].[ShiftName] AS [ShiftName], 
+    [TableTemp].[StartShift] AS [StartShift], 
+    [TableTemp].[EndShift] AS [EndShift], 
+    [TableTemp].[Status] AS [Status], 
+    [TableTemp].[CashStart] AS [CashStart], 
+    [TableTemp].[CashEnd] AS [CashEnd], 
+    [TableTemp].[SafeDrop] AS [SafeDrop], 
+    [TableTemp].[UserName] AS [UserName]
+    FROM [dbo].[TableTemp] AS [TableTemp]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="VIEW_INVOICE_ALL" EntityType="Self.VIEW_INVOICE_ALL" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [VIEW_INVOICE_ALL].[InvoiceID] AS [InvoiceID], 
+    [VIEW_INVOICE_ALL].[InvoiceNumber] AS [InvoiceNumber], 
+    [VIEW_INVOICE_ALL].[OrderID] AS [OrderID], 
+    [VIEW_INVOICE_ALL].[OrderNumber] AS [OrderNumber], 
+    [VIEW_INVOICE_ALL].[Status] AS [Status], 
+    [VIEW_INVOICE_ALL].[Total] AS [Total], 
+    [VIEW_INVOICE_ALL].[Payment] AS [Payment], 
+    [VIEW_INVOICE_ALL].[Change] AS [Change], 
+    [VIEW_INVOICE_ALL].[Discount] AS [Discount], 
+    [VIEW_INVOICE_ALL].[DiscountType] AS [DiscountType], 
+    [VIEW_INVOICE_ALL].[InvoiceByCardID] AS [InvoiceByCardID], 
+    [VIEW_INVOICE_ALL].[CashOut] AS [CashOut], 
+    [VIEW_INVOICE_ALL].[Seat] AS [Seat], 
+    [VIEW_INVOICE_ALL].[CreateBy] AS [CreateBy], 
+    [VIEW_INVOICE_ALL].[CreateDate] AS [CreateDate], 
+    [VIEW_INVOICE_ALL].[UpdateBy] AS [UpdateBy], 
+    [VIEW_INVOICE_ALL].[UpdateDate] AS [UpdateDate], 
+    [VIEW_INVOICE_ALL].[Note] AS [Note], 
+    [VIEW_INVOICE_ALL].[ShiftID] AS [ShiftID], 
+    [VIEW_INVOICE_ALL].[FloorType] AS [FloorType]
+    FROM [dbo].[VIEW_INVOICE_ALL] AS [VIEW_INVOICE_ALL]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="VIEW_INVOICE_DETAIL_ALL" EntityType="Self.VIEW_INVOICE_DETAIL_ALL" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [VIEW_INVOICE_DETAIL_ALL].[InvoiceDetailID] AS [InvoiceDetailID], 
+    [VIEW_INVOICE_DETAIL_ALL].[InvoiceID] AS [InvoiceID], 
+    [VIEW_INVOICE_DETAIL_ALL].[InvoiceNumber] AS [InvoiceNumber], 
+    [VIEW_INVOICE_DETAIL_ALL].[OrderDetailID] AS [OrderDetailID], 
+    [VIEW_INVOICE_DETAIL_ALL].[KeyItem] AS [KeyItem], 
+    [VIEW_INVOICE_DETAIL_ALL].[Status] AS [Status], 
+    [VIEW_INVOICE_DETAIL_ALL].[ProductID] AS [ProductID], 
+    [VIEW_INVOICE_DETAIL_ALL].[Price] AS [Price], 
+    [VIEW_INVOICE_DETAIL_ALL].[Qty] AS [Qty], 
+    [VIEW_INVOICE_DETAIL_ALL].[Total] AS [Total], 
+    [VIEW_INVOICE_DETAIL_ALL].[Seat] AS [Seat], 
+    [VIEW_INVOICE_DETAIL_ALL].[DynId] AS [DynId], 
+    [VIEW_INVOICE_DETAIL_ALL].[PrintType] AS [PrintType], 
+    [VIEW_INVOICE_DETAIL_ALL].[CreateBy] AS [CreateBy], 
+    [VIEW_INVOICE_DETAIL_ALL].[CreateDate] AS [CreateDate], 
+    [VIEW_INVOICE_DETAIL_ALL].[UpdateBy] AS [UpdateBy], 
+    [VIEW_INVOICE_DETAIL_ALL].[UpdateDate] AS [UpdateDate], 
+    [VIEW_INVOICE_DETAIL_ALL].[Note] AS [Note]
+    FROM [dbo].[VIEW_INVOICE_DETAIL_ALL] AS [VIEW_INVOICE_DETAIL_ALL]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="VIEW_INVOICE_DETAIL_MODIFIRE_ALL" EntityType="Self.VIEW_INVOICE_DETAIL_MODIFIRE_ALL" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [VIEW_INVOICE_DETAIL_MODIFIRE_ALL].[InvoiceModifireID] AS [InvoiceModifireID], 
+    [VIEW_INVOICE_DETAIL_MODIFIRE_ALL].[InvoiceID] AS [InvoiceID], 
+    [VIEW_INVOICE_DETAIL_MODIFIRE_ALL].[InvoiceNumber] AS [InvoiceNumber], 
+    [VIEW_INVOICE_DETAIL_MODIFIRE_ALL].[OrderModifireID] AS [OrderModifireID], 
+    [VIEW_INVOICE_DETAIL_MODIFIRE_ALL].[Status] AS [Status], 
+    [VIEW_INVOICE_DETAIL_MODIFIRE_ALL].[ProductID] AS [ProductID], 
+    [VIEW_INVOICE_DETAIL_MODIFIRE_ALL].[KeyModi] AS [KeyModi], 
+    [VIEW_INVOICE_DETAIL_MODIFIRE_ALL].[ModifireID] AS [ModifireID], 
+    [VIEW_INVOICE_DETAIL_MODIFIRE_ALL].[Qty] AS [Qty], 
+    [VIEW_INVOICE_DETAIL_MODIFIRE_ALL].[Total] AS [Total], 
+    [VIEW_INVOICE_DETAIL_MODIFIRE_ALL].[Seat] AS [Seat], 
+    [VIEW_INVOICE_DETAIL_MODIFIRE_ALL].[DynId] AS [DynId], 
+    [VIEW_INVOICE_DETAIL_MODIFIRE_ALL].[CreateBy] AS [CreateBy], 
+    [VIEW_INVOICE_DETAIL_MODIFIRE_ALL].[CreateDate] AS [CreateDate], 
+    [VIEW_INVOICE_DETAIL_MODIFIRE_ALL].[UpdateBy] AS [UpdateBy], 
+    [VIEW_INVOICE_DETAIL_MODIFIRE_ALL].[UpdateDate] AS [UpdateDate], 
+    [VIEW_INVOICE_DETAIL_MODIFIRE_ALL].[Note] AS [Note]
+    FROM [dbo].[VIEW_INVOICE_DETAIL_MODIFIRE_ALL] AS [VIEW_INVOICE_DETAIL_MODIFIRE_ALL]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="VIEW_ORDER_ALL" EntityType="Self.VIEW_ORDER_ALL" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [VIEW_ORDER_ALL].[OrderID] AS [OrderID], 
+    [VIEW_ORDER_ALL].[OrderNumber] AS [OrderNumber], 
+    [VIEW_ORDER_ALL].[ClientID] AS [ClientID], 
+    [VIEW_ORDER_ALL].[FloorID] AS [FloorID], 
+    [VIEW_ORDER_ALL].[Status] AS [Status], 
+    [VIEW_ORDER_ALL].[TotalAmount] AS [TotalAmount], 
+    [VIEW_ORDER_ALL].[Seat] AS [Seat], 
+    [VIEW_ORDER_ALL].[CreateBy] AS [CreateBy], 
+    [VIEW_ORDER_ALL].[CreateDate] AS [CreateDate], 
+    [VIEW_ORDER_ALL].[UpdateBy] AS [UpdateBy], 
+    [VIEW_ORDER_ALL].[UpdateDate] AS [UpdateDate], 
+    [VIEW_ORDER_ALL].[Note] AS [Note], 
+    [VIEW_ORDER_ALL].[ShiftID] AS [ShiftID]
+    FROM [dbo].[VIEW_ORDER_ALL] AS [VIEW_ORDER_ALL]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="VIEW_ORDER_DETAIL_ALL" EntityType="Self.VIEW_ORDER_DETAIL_ALL" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [VIEW_ORDER_DETAIL_ALL].[OrderDetailID] AS [OrderDetailID], 
+    [VIEW_ORDER_DETAIL_ALL].[OrderID] AS [OrderID], 
+    [VIEW_ORDER_DETAIL_ALL].[OrderNumber] AS [OrderNumber], 
+    [VIEW_ORDER_DETAIL_ALL].[ProductID] AS [ProductID], 
+    [VIEW_ORDER_DETAIL_ALL].[KeyItem] AS [KeyItem], 
+    [VIEW_ORDER_DETAIL_ALL].[Status] AS [Status], 
+    [VIEW_ORDER_DETAIL_ALL].[Price] AS [Price], 
+    [VIEW_ORDER_DETAIL_ALL].[Qty] AS [Qty], 
+    [VIEW_ORDER_DETAIL_ALL].[Total] AS [Total], 
+    [VIEW_ORDER_DETAIL_ALL].[Seat] AS [Seat], 
+    [VIEW_ORDER_DETAIL_ALL].[DynId] AS [DynId], 
+    [VIEW_ORDER_DETAIL_ALL].[PrintType] AS [PrintType], 
+    [VIEW_ORDER_DETAIL_ALL].[CreateBy] AS [CreateBy], 
+    [VIEW_ORDER_DETAIL_ALL].[CreateDate] AS [CreateDate], 
+    [VIEW_ORDER_DETAIL_ALL].[UpdateBy] AS [UpdateBy], 
+    [VIEW_ORDER_DETAIL_ALL].[UpdateDate] AS [UpdateDate], 
+    [VIEW_ORDER_DETAIL_ALL].[Note] AS [Note]
+    FROM [dbo].[VIEW_ORDER_DETAIL_ALL] AS [VIEW_ORDER_DETAIL_ALL]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="VIEW_ORDER_DETAIL_MODIFIRE_ALL" EntityType="Self.VIEW_ORDER_DETAIL_MODIFIRE_ALL" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [VIEW_ORDER_DETAIL_MODIFIRE_ALL].[OrderModifireID] AS [OrderModifireID], 
+    [VIEW_ORDER_DETAIL_MODIFIRE_ALL].[OrderDetailID] AS [OrderDetailID], 
+    [VIEW_ORDER_DETAIL_MODIFIRE_ALL].[OrderNumber] AS [OrderNumber], 
+    [VIEW_ORDER_DETAIL_MODIFIRE_ALL].[OrderID] AS [OrderID], 
+    [VIEW_ORDER_DETAIL_MODIFIRE_ALL].[ProductID] AS [ProductID], 
+    [VIEW_ORDER_DETAIL_MODIFIRE_ALL].[KeyModi] AS [KeyModi], 
+    [VIEW_ORDER_DETAIL_MODIFIRE_ALL].[ModifireID] AS [ModifireID], 
+    [VIEW_ORDER_DETAIL_MODIFIRE_ALL].[Status] AS [Status], 
+    [VIEW_ORDER_DETAIL_MODIFIRE_ALL].[Price] AS [Price], 
+    [VIEW_ORDER_DETAIL_MODIFIRE_ALL].[Qty] AS [Qty], 
+    [VIEW_ORDER_DETAIL_MODIFIRE_ALL].[Total] AS [Total], 
+    [VIEW_ORDER_DETAIL_MODIFIRE_ALL].[Seat] AS [Seat], 
+    [VIEW_ORDER_DETAIL_MODIFIRE_ALL].[DynId] AS [DynId], 
+    [VIEW_ORDER_DETAIL_MODIFIRE_ALL].[CreateBy] AS [CreateBy], 
+    [VIEW_ORDER_DETAIL_MODIFIRE_ALL].[CreateDate] AS [CreateDate], 
+    [VIEW_ORDER_DETAIL_MODIFIRE_ALL].[UpdateBy] AS [UpdateBy], 
+    [VIEW_ORDER_DETAIL_MODIFIRE_ALL].[UpdateDate] AS [UpdateDate], 
+    [VIEW_ORDER_DETAIL_MODIFIRE_ALL].[Note] AS [Note]
+    FROM [dbo].[VIEW_ORDER_DETAIL_MODIFIRE_ALL] AS [VIEW_ORDER_DETAIL_MODIFIRE_ALL]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="VIEW_PAYMENT_INVOICE_HISTORY_ALL" EntityType="Self.VIEW_PAYMENT_INVOICE_HISTORY_ALL" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [VIEW_PAYMENT_INVOICE_HISTORY_ALL].[PaymentHistoryID] AS [PaymentHistoryID], 
+    [VIEW_PAYMENT_INVOICE_HISTORY_ALL].[InvoiceID] AS [InvoiceID], 
+    [VIEW_PAYMENT_INVOICE_HISTORY_ALL].[InvoiceNumber] AS [InvoiceNumber], 
+    [VIEW_PAYMENT_INVOICE_HISTORY_ALL].[PaymentTypeID] AS [PaymentTypeID], 
+    [VIEW_PAYMENT_INVOICE_HISTORY_ALL].[Total] AS [Total], 
+    [VIEW_PAYMENT_INVOICE_HISTORY_ALL].[Status] AS [Status], 
+    [VIEW_PAYMENT_INVOICE_HISTORY_ALL].[CreateBy] AS [CreateBy], 
+    [VIEW_PAYMENT_INVOICE_HISTORY_ALL].[CreateDate] AS [CreateDate], 
+    [VIEW_PAYMENT_INVOICE_HISTORY_ALL].[UpdateBy] AS [UpdateBy], 
+    [VIEW_PAYMENT_INVOICE_HISTORY_ALL].[UpdateDate] AS [UpdateDate], 
+    [VIEW_PAYMENT_INVOICE_HISTORY_ALL].[Note] AS [Note]
+    FROM [dbo].[VIEW_PAYMENT_INVOICE_HISTORY_ALL] AS [VIEW_PAYMENT_INVOICE_HISTORY_ALL]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="view_report_invoice" EntityType="Self.view_report_invoice" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [view_report_invoice].[CategoryID] AS [CategoryID], 
+    [view_report_invoice].[CategoryName] AS [CategoryName], 
+    [view_report_invoice].[InvoiceID] AS [InvoiceID], 
+    [view_report_invoice].[InvoiceNumber] AS [InvoiceNumber], 
+    [view_report_invoice].[CreateDate] AS [CreateDate], 
+    [view_report_invoice].[OrderID] AS [OrderID], 
+    [view_report_invoice].[ProductID] AS [ProductID], 
+    [view_report_invoice].[ProductNameDesc] AS [ProductNameDesc], 
+    [view_report_invoice].[Qty] AS [Qty], 
+    [view_report_invoice].[Price] AS [Price], 
+    [view_report_invoice].[Total] AS [Total]
+    FROM [dbo].[view_report_invoice] AS [view_report_invoice]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

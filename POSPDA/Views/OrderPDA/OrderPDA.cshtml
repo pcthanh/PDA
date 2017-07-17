@@ -1,0 +1,1206 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <!-- InstanceBeginEditable name="doctitle" -->
+    <title>POSPDA</title>
+    <!-- InstanceEndEditable -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <!-- InstanceBeginEditable n <title>POSPDA</title>
+    <!-- InstanceEndEditable -->
+    <link href="@Url.Content("~/Content/css/bootstrap.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/css/style.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/css/pda.css")" rel="stylesheet" type="text/css" />
+    <script src="@Url.Content("~/Scripts/jquery-3.1.0.min.js")" type="text/javascript"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: rgba(228, 228, 228, 1);
+        }
+
+        .header1 {
+            background-color: #797979;
+            width: 100%;
+            height: 30px;
+        }
+
+        .asusername {
+            color: #fff;
+            line-height: 30px;
+        }
+
+        .shift {
+            text-align: center;
+        }
+
+        .logout {
+            text-align: center;
+            background-color: #868686;
+            width: 100px;
+            float: right;
+            cursor: pointer;
+        }
+
+        .back {
+            margin-top: 2px;
+            background-color: rgba(51, 51, 51, 1);
+            color: white;
+            width: 100px;
+            height: 50px;
+            padding: 0;
+            text-align: center;
+            line-height: 50px;
+        }
+
+            .back a {
+                text-decoration: none;
+                color: white;
+            }
+
+        .send {
+            margin-top: 2px;
+            background-color: rgba(0, 112, 82, 1);
+            color: white;
+            width: 100px;
+            height: 170px;
+            padding: 0;
+            text-align: center;
+            line-height: 170px;
+            cursor: pointer;
+        }
+
+        .void {
+            margin-top: 2px;
+            background-color: rgba(246, 19, 1, 1);
+            color: white;
+            width: 100px;
+            height: 100px;
+            padding: 0;
+            text-align: center;
+            line-height: 100px;
+            cursor: pointer;
+        }
+
+        .addseat {
+            margin-top: 2px;
+            background-color: rgba(38, 38, 38, 1);
+            color: white;
+            width: 100px;
+            height: 100px;
+            padding: 0;
+            text-align: center;
+            line-height: 100px;
+        }
+
+            .addseat a {
+                text-decoration: none;
+                color: white;
+                cursor: pointer;
+                display: block;
+                width: 100%;
+            }
+
+        .openitem {
+            margin-top: 2px;
+            background-color: rgba(0, 103, 204, 1);
+            color: white;
+            width: 100px;
+            height: 100px;
+            padding: 0;
+            text-align: center;
+            line-height: 100px;
+        }
+
+        .printbill {
+            margin-top: 2px;
+            background-color: rgba(0, 138, 204, 1);
+            color: white;
+            width: 100px;
+            height: 100px;
+            padding: 0;
+            text-align: center;
+            line-height: 100px;
+            cursor: pointer;
+        }
+
+        .note {
+            margin-top: 2px;
+            background-color: rgba(153, 115, 13, 1);
+            color: white;
+            width: 100px;
+            height: 100px;
+            padding: 0;
+            text-align: center;
+            line-height: 100px;
+        }
+
+        .actions {
+            margin: 0;
+        }
+
+        .menu {
+            margin-left: 32px;
+            margin-top: 2px;
+        }
+
+        .breakfast {
+            background-color: rgba(0, 153, 0, 1);
+            height: 50px;
+            color: white;
+            line-height: 50px;
+            text-align: center;
+            font-size: 24px;
+            margin: 0;
+            border-right: 1px solid;
+        }
+
+        .more {
+            background-color: rgba(228, 228, 228, 1);
+            width: 40%;
+            height: 50px;
+            color: #999999;
+            line-height: 50px;
+            text-align: center;
+            margin-top: 2px;
+            margin-left: 12px;
+        }
+
+        .right {
+            text-align: right;
+            width: 50%;
+        }
+
+        .divmenu {
+            background-color: rgba(0, 153, 0, 1);
+            width: 100px;
+            height: 80px;
+            margin-top: 2px;
+            margin-left: 0px;
+            margin-right: 1px;
+            text-align: center;
+            color: white;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        .menugroup1 {
+            margin-left: 32px;
+        }
+
+        .containerorder {
+            background-color: white;
+            min-height: 500px;
+        }
+
+        .itemorder {
+            width: 100%;
+            cursor: pointer;
+            float: left;
+            position: relative;
+        }
+
+            .itemorder div {
+                float: left;
+                margin: 0;
+                padding: 0;
+                height: 30px;
+                line-height: 30px;
+            }
+
+        .rice {
+            width: 30px;
+            height: 100%;
+            text-align: right;
+        }
+
+        .itemname {
+        }
+
+        .quantity {
+            width: 30px;
+            text-align: center;
+            height: 100%;
+        }
+
+            .quantity input {
+                height: 30px;
+                width: 30px;
+            }
+
+        .itemorder .openitemname {
+            width: 90%;
+            margin-left: 20px;
+        }
+
+        .seat {
+            width: 100%;
+            background-color: #797979;
+            color: white;
+        }
+
+        .modifier {
+            text-align: center;
+            width: 60%;
+        }
+
+        .black_overlay {
+            display: none;
+            position: absolute;
+            top: 0%;
+            left: 0%;
+            width: 100%;
+            height: 100%;
+            background-color: black;
+            z-index: 1001;
+            -moz-opacity: 0.8;
+            opacity: .80;
+            filter: alpha(opacity=80);
+        }
+
+
+
+        .black_overlay1 {
+            display: none;
+            position: absolute;
+            top: 0%;
+            left: 0%;
+            width: 100%;
+            height: 100%;
+            background-color: black;
+            z-index: 1001;
+            -moz-opacity: 0.8;
+            opacity: .80;
+            filter: alpha(opacity=80);
+        }
+
+
+
+
+        .openitem a {
+            text-decoration: none;
+            color: white;
+            display: block;
+            width: 100%;
+        }
+
+        .subtotal {
+            height: 50px;
+            background-color: rgba(51, 51, 51, 1);
+        }
+
+        .labelTotal, .total {
+            color: #00CC00;
+            line-height: 50px;
+        }
+        /*.total {
+            text-align:right;
+            margin-left:120px;
+            width:50%;
+        }*/
+        #tablecontainer td {
+        }
+
+        #tablecontainer {
+            border-spacing: 0;
+            border-collapse: collapse;
+        }
+
+        .numSeat {
+            background-color: #D7D7D7;
+            width: 100%;
+        }
+
+        .dropdown {
+            width: 200px;
+            height: 30px;
+        }
+
+        .order-container-menu-detail {
+            color: white;
+        }
+    </style>
+    <script type="text/javascript">
+        var indexOfControlItem;
+        var OrderItem = new Array();
+        var ModifierItem = new Array();
+        var KeyItem;
+        var ProductID;
+        var ModifirID;
+        var indexRow;
+        var flag = 0;
+        var lstSeat = new Array();
+        var SeatStatic;
+        var isLoadOrder;
+        var OrderDateModel = [];
+        var Category;
+        var OrderOpenItem = new Array();
+        var MainItemClick = 0;
+        var catalogue;
+        var MainSeat;
+        var seatIndex;
+        var seattemp;
+        var keyItemModify;
+        window.onload = function () {
+
+            $.ajax({
+                url: '@Url.Action("LoadCatalogue", "Menu")',
+                async: false,
+                type: 'get',
+                datatype: 'json',
+                success: function (data) {
+                    LoadCatalogue(data);
+
+                },
+                error: function (data) { alert(data.error + 'something bad happened load of menu'); }
+            });
+
+            $.ajax({
+                url: '@Url.Action("LoadMenuOf", "Menu")',
+                async: false,
+                type: 'get',
+                data: { ID: catalogue },
+                datatype: 'json',
+                success: function (data) {
+
+                    LoadMenu(data);
+                    subTotal();
+                },
+                error: function (data) { alert(data.error + 'something bad happened load of menu'); }
+            });
+
+
+
+
+
+            //ajax de load data cua 1 table
+            $.ajax({
+                url: '@Url.Action("GetTableById", "Order")',
+                async: false,
+                type: 'POST',
+                datatype: 'json',
+                success: function (data) {
+
+                    if (data != null) {
+                        isLoadOrder = 1
+
+                        if (data.ListSeatOfOrder.length > 0) {
+
+                            LoadDataOfTable(1, data);
+                            subTotal();
+
+                        }
+                        else {
+
+                            LoadDataOfTable(0, data);
+                            subTotal();
+                        }
+                    }
+
+                    else {
+
+
+                    }
+
+                },
+                error: function (data) { alert(data.error + 'something bad happened load of menu'); }
+
+            });
+        }
+        function format2(n, currency) {
+            n = n / 1000;
+            return currency + " " + n.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,");
+        }
+        function LoadDataOfTable(isSeat, data) {
+
+            var numTable = document.getElementById('numtable');
+            numtable.innerHTML = data.FloorID;
+            var status = document.getElementById('status');
+            status.innerHTML = "OLD";
+            if (Boolean(isSeat)) {
+                if (data != null) {
+                    for (var seat = 0; seat < data.ListSeatOfOrder.length; seat++) {
+                        insertSeat("Seat " + data.ListSeatOfOrder[seat].Seat, data.ListSeatOfOrder[seat].Seat, "numSeat");
+                        lstSeat.push({ 'Seat': data.ListSeatOfOrder[seat].Seat, 'ChangeStatus': 0, 'Rows': seattemp });
+                        for (var i = 0; i < data.ListOrderDetail.length; i++) {
+                            if (data.ListOrderDetail[i].Seat == data.ListSeatOfOrder[seat].Seat) {
+                                insertRow(data.ListOrderDetail[i].ProductName, 1, data.ListOrderDetail[i].Price, data.ListOrderDetail[i].ProductID, "");
+
+                                OrderItem.push({ 'ProductID': data.ListOrderDetail[i].ProductID, 'ProductName': data.ListOrderDetail[i].ProductName, 'Price': data.ListOrderDetail[i].Price, 'Qty': 1, 'ChangeStatus': 0, 'KeyIndex': indexRow.rowIndex, 'Seat': data.ListSeatOfOrder[seat].Seat, 'DynID': data.ListOrderDetail[i].DynID, 'CategoryID': data.ListOrderDetail[i].CategoryID, 'IndexItem': i })
+
+                                for (var j = 0; j < data.ListOrderDetail[i].ListOrderDetailModifire.length; j++) {
+                                    insertRowModifierTemp(data.ListOrderDetail[i].ListOrderDetailModifire[j].ModifireName, "", "", data.ListOrderDetail[i].ListOrderDetailModifire[j].ModifireID, "");
+                                    ModifierItem.push({ 'ModifiName': data.ListOrderDetail[i].ListOrderDetailModifire[j].ModifireName, 'ModifiID': data.ListOrderDetail[i].ListOrderDetailModifire[j].ModifireID, 'Qty': 1, 'ModifiPrice': data.ListOrderDetail[i].ListOrderDetailModifire[j].Price, 'ProdutcID': data.ListOrderDetail[i].ProductID, 'ChangeStatusM': 0, 'KeyIndexM': indexRow.rowIndex, 'DynID': data.ListOrderDetail[i].ListOrderDetailModifire[j].DynID, 'KeyModi': keyItemModify });
+                                }
+                            }
+                        }
+                    }
+                    setValueSeat();
+                }
+            }
+            else {
+                if (data.ListOrderDetail.length > 0) {
+
+                    for (var i = 0; i < data.ListOrderDetail.length; i++) {
+                        insertRow(data.ListOrderDetail[i].ProductName, 1, data.ListOrderDetail[i].Price, data.ListOrderDetail[i].ProductID, "");
+                        OrderItem.push({ 'ProductID': data.ListOrderDetail[i].ProductID, 'ProductName': data.ListOrderDetail[i].ProductName, 'Price': data.ListOrderDetail[i].Price, 'Qty': 1, 'ChangeStatus': 0, 'KeyIndex': indexRow.rowIndex, 'DynID': data.ListOrderDetail[i].DynID, 'CategoryID': data.ListOrderDetail[i].CategoryID, 'IndexItem': i })
+
+                        for (var j = 0; j < data.ListOrderDetail[i].ListOrderDetailModifire.length; j++) {
+                            insertRowModifierTemp(data.ListOrderDetail[i].ListOrderDetailModifire[j].ModifireName, "", "", data.ListOrderDetail[i].ListOrderDetailModifire[j].ModifireID, "");
+                            ModifierItem.push({ 'ModifiName': data.ListOrderDetail[i].ListOrderDetailModifire[j].ModifireName, 'ModifiID': data.ListOrderDetail[i].ListOrderDetailModifire[j].ModifireID, 'Qty': 1, 'ModifiPrice': data.ListOrderDetail[i].ListOrderDetailModifire[j].Price, 'ProdutcID': data.ListOrderDetail[i].ProductID, 'ChangeStatusM': 0, 'KeyIndexM': indexRow.rowIndex, 'DynID': data.ListOrderDetail[i].ListOrderDetailModifire[j].DynID, 'KeyModi': keyItemModify });
+                        }
+                    }
+                }
+            }
+        }
+        function setValueSeat() {
+            var numSeat = document.getElementById('numseat');
+            numSeat.innerHTML = lstSeat.length;
+        }
+        function createDivProduct(name, quantity, rice, id, keyIndex, CategoryID) {
+
+            d = document.createElement('div');
+            $(d).addClass("col-sm-2 col-xs-temp-3 order-container-menu-detail")
+                .html(name).attr('id', id)
+                .appendTo($("#loadmenu")).click(function () {
+
+                    insertRow(name, quantity, rice, id);
+
+                    if (isLoadOrder == 1) {
+                        if (SeatStatic > 0)
+                            OrderItem.push({ 'ProductID': id, 'ProductName': name, 'Price': rice, 'Qty': 1, 'ChangeStatus': 1, 'KeyIndex': indexRow.rowIndex, 'Seat': SeatStatic, 'DynID': indexRow, 'CategoryID': CategoryID })
+                        else
+
+                            OrderItem.push({ 'ProductID': id, 'ProductName': name, 'Price': rice, 'Qty': 1, 'ChangeStatus': 1, 'KeyIndex': indexRow.rowIndex, 'Seat': 0, 'DynID': indexRow, 'CategoryID': CategoryID })
+                        subTotal();
+                    }
+                    else {
+
+                        if (SeatStatic > 0)
+                            OrderItem.push({ 'ProductID': id, 'ProductName': name, 'Price': rice, 'Qty': 1, 'ChangeStatus': 0, 'KeyIndex': indexRow.rowIndex, 'Seat': SeatStatic, 'DynID': 0, 'CategoryID': CategoryID })
+                        else
+                            OrderItem.push({ 'ProductID': id, 'ProductName': name, 'Price': rice, 'Qty': 1, 'ChangeStatus': 0, 'KeyIndex': indexRow.rowIndex, 'Seat': 0, 'DynID': 0, 'CategoryID': CategoryID })
+                        subTotal();
+                    }
+                });
+        }
+
+        function createButtonBack(name, id) {
+            d = document.createElement('div');
+            $(d).addClass("col-sm-2 col-xs-temp-3 order-container-menu-detail")
+                .html(name).attr('id', id)
+                .appendTo($("#loadmenu")).click(function () {
+                    clearBox('loadmenu');
+                    $.ajax({
+                        url: '@Url.Action("LoadMenuOf", "Menu")',
+                        async: false,
+                        type: 'get',
+                        data: { ID: catalogue },
+                        datatype: 'json',
+                        success: function (data) {
+                            LoadMenu(data);
+                        }
+                    })
+                });
+        }
+
+        function LoadMenu(data) {
+            for (var i = 0; i < data.length; i++) {
+                d = document.createElement('div');
+                $(d).addClass("col-sm-2 col-xs-temp-3 order-container-menu-detail")
+                    .html(data[i].CategoryName).attr('id', data[i].CategoryID)
+                    .appendTo($("#loadmenu")).click(function () {
+                        Category = this.id;
+                        clearBox('loadmenu');
+                        $.ajax({
+                            url: '@Url.Action("LoadProduct", "Menu")',
+                            type: 'get',
+                            data: { ID: this.id },
+                            datatype: 'json',
+                            success: function (data) {
+                                for (var j = 0; j < data.length; j++) {
+
+                                    createDivProduct(data[j].ProductNameSort, 1, data[j].CurrentPrice, data[j].ProductID, indexRow, data[j].CategoryID);
+                                }
+                                createButtonBack("BACK", "buttonBack");
+
+                            },
+                        });
+                    });
+            }
+        }
+
+
+        function LoadCatalogue(data) {
+            catalogue = data[0].CatalogueID;
+            for (var i = 0; i < data.length; i++) {
+                d = document.createElement('div');
+                $(d).addClass("col-sm-2 col-xs-5 order-menu-title")
+                    .html(data[i].CatalogueName).attr('id', data[i].CatalogueID)
+                    .appendTo($("#loadcatalogue")).click(function () {
+                        clearBox('loadmenu');
+                        catalogue = this.id;
+                        $.ajax({
+                            url: '@Url.Action("LoadMenuOf", "Menu")',
+                            type: 'get',
+                            data: { ID: this.id },
+                            datatype: 'json',
+                            success: function (data) {
+                                LoadMenu(data);
+
+                            },
+                        });
+                    });
+            }
+        }
+
+
+        function getIndexOfItem() {
+
+
+        }
+        function createDivModifer(name, quantity, rice, id, keyIndex) {
+            var rows = document.getElementById('tablecontainer').getElementsByTagName('tr');
+
+            for (i = 0; i < rows.length; i++) {
+                rows[i].onclick = function () {
+                    indexOfControlItem = this.rowIndex;
+
+                }
+            }
+
+            d = document.createElement('div');
+            $(d).addClass("col-sm-2 col-xs-temp-3 order-container-menu-detail")
+                .html(name).attr('id', id)
+                .appendTo($("#loadmenu")).click(function () {
+                    insertRowModifier(name, quantity, rice, id);
+                    ModifierItem.push({ 'ModifiName': name, 'ModifiID': id, 'Qty': 1, 'ModifiPrice': rice, 'ProdutcID': ProductID, 'ChangeStatusM': 1, 'KeyIndexM': indexRow, 'DynID': 0, 'KeyModi': keyItemModify });
+                });
+        }
+        function createButtonBackModifier(name, id) {
+
+            d = document.createElement('div');
+            $(d).addClass("col-sm-2 col-xs-temp-3 order-container-menu-detail")
+                .html(name).attr('id', id)
+                .appendTo($("#loadmenu")).click(function () {
+                    clearBox('loadmenu');
+                    $.ajax({
+                        url: '@Url.Action("LoadProduct", "Menu")',
+                        type: 'get',
+                        data: { ID: Category },
+                        datatype: 'json',
+                        success: function (data) {
+                            for (var j = 0; j < data.length; j++) {
+                                createDivProduct(data[j].ProductNameSort, 1, data[j].CurrentPrice, data[j].ProductID, "", indexRow, data[j].CategoryID);
+                            }
+                            createButtonBack("BACK", "buttonBack");
+
+                        },
+                    })
+                });
+        }
+        function clearBox(elementID) {
+            document.getElementById(elementID).innerHTML = "";
+        }
+        function insertRow(name, qty, rice, id, classname) {
+
+            var table = document.getElementById("tablecontainer");
+            if (MainSeat > 0) {
+
+                var row = table.insertRow(seatIndex + 1);
+            }
+            else
+                var row = table.insertRow(table.rows.length);
+            indexRow = row;
+            keyItemModify = row.rowIndex;
+            var cell1 = row.insertCell(0);
+            var t1 = document.createElement("div");
+            t1.id = "txName";
+            t1.innerHTML = name;
+            t1.name = id;
+            t1.className = "itemname"
+            t1.onclick = function () {
+                indexRow = row.rowIndex;
+                keyItemModify = row.rowIndex;
+                //for (var i = 0; i < OrderItem.length; i++) {
+                //    if (OrderItem[i].ProductID == id) {
+                //        OrderItem[i].KeyIndex = indexRow;
+                //    }
+                //}
+                changeStyle();
+                MainSeat = -1;
+                flag = 1;
+                MainItemClick = 1;
+                clearBox('loadmenu');
+                ProductID = this.name;
+                $.ajax({
+                    url: '@Url.Action("LoadModifier", "Menu")',
+                    async: false,
+                    type: 'get',
+                    datatype: 'json',
+                    data: { ID: this.name },
+                    success: function (data) {
+                        if (data.length > 0) {
+                            for (var k = 0; k < data.length; k++) {
+
+                                createDivModifer(data[k].ModifireName, "", "", data[k].ModifireID, indexRow);
+
+                            }
+                        }
+                        else {
+                            indexOfControlItem = indexRow;
+                        }
+
+                        createButtonBackModifier("Back", "buttonBackModifier");
+
+                    },
+                    error: function (data) { alert(data.error + 'something bad happened load of menu'); }
+                })
+            };
+            cell1.appendChild(t1);
+            var cell2 = row.insertCell(1);
+            var t2 = document.createElement("input");
+            t2.id = "txtQuantity";
+            t2.innerHTML = qty;
+            // t2.name = id;
+            t2.type = "number";
+            t2.value = 1;
+            t2.min = 1;
+            t2.max = 20;
+            t2.className = "quantity"
+            t2.onclick = function () {
+
+            };
+            cell2.appendChild(t2);
+            var cell3 = row.insertCell(2);
+            var t3 = document.createElement("div");
+            t3.id = "txtRice";
+            t3.innerHTML = format2(rice, "");
+            t3.name = id;
+            t3.className = "rice"
+            t3.onclick = function () {
+
+            };
+            cell3.appendChild(t3);
+            subTotal();
+        }
+        function insertRowModifier(name, qty, rice, id, classname) {
+
+            var table = document.getElementById("tablecontainer");
+            var row = table.insertRow(indexOfControlItem + 1);
+            indexRow = row;
+            var cell1 = row.insertCell(0);
+            var t1 = document.createElement("div");
+            t1.id = "txName";
+            t1.innerHTML = name;
+            t1.name = id;
+            t1.className = "modifier"
+            t1.onclick = function () {
+
+                indexRow = row.rowIndex;
+                flag = 2;
+                ModifirID = this.name;
+
+                changeStyle();
+            };
+            cell1.appendChild(t1);
+
+        }
+
+        function insertSeat(value, id, classname) {
+
+            var table = document.getElementById("tablecontainer");
+            var row = table.insertRow(table.rows.length);
+            var ind = row.rowIndex;
+            seattemp = ind;
+            table.rows[ind].style.backgroundColor = '#D7D7D7';
+            var cell1 = row.insertCell(0);
+            var t1 = document.createElement("div");
+            t1.id = id;
+            t1.innerHTML = value;
+            t1.name = id;
+            t1.className = "";
+            setValueSeat();
+            t1.onclick = function () {
+                seatIndex = row.rowIndex;
+                //indexRow = row.rowIndex;
+                MainSeat = t1.id;
+                SeatStatic = MainSeat;
+                changeStyle1();
+                flag = 0;
+            };
+            cell1.appendChild(t1);
+            cell1.appendChild(t1);
+            var cell2 = row.insertCell(1);
+            var t2 = document.createElement("div");
+            t2.id = "";
+            t2.innerHTML = "";
+            // t2.name = id;
+            t2.type = "";
+            t2.value = "";
+
+            t2.className = ""
+            t2.onclick = function () {
+
+            };
+            cell2.appendChild(t2);
+            var cell3 = row.insertCell(2);
+            var t3 = document.createElement("div");
+            t3.id = "";
+            t3.innerHTML = ""
+            t3.name = id;
+            t3.className = ""
+            t3.onclick = function () {
+
+            };
+            cell3.appendChild(t3);
+
+        }
+
+        function insertRowModifierTemp(name, qty, rice, id, classname) {
+
+            var table = document.getElementById("tablecontainer");
+            var row = table.insertRow(table.rows.length);
+            indexRow = row;
+            var cell1 = row.insertCell(0);
+            var t1 = document.createElement("div");
+            t1.id = "txName";
+            t1.innerHTML = name;
+            t1.name = id;
+            t1.className = "modifier"
+            t1.onclick = function () {
+
+                indexRow = row.rowIndex;
+                flag = 2;
+                ModifirID = this.name;
+
+                changeStyle();
+            };
+            cell1.appendChild(t1);
+
+        }
+        function CloseAndSetVaue() {
+
+            var nameOpenItem = document.getElementById('txtNameOpenitem').value;
+            var riceOpenItem = document.getElementById('txtRiceOpenitem').value;
+            var printerID = document.getElementById('Printer').value;
+            if (nameOpenItem != "") {
+                OrderOpenItem.push({ 'ItemNameShort': nameOpenItem, 'ItemNameDesc': nameOpenItem, 'UnitPrice': riceOpenItem, 'PrinterID': printerID, 'PrintType': printerID, 'ChangeStatus': 0, 'KeyIndex': indexRow, 'Seat': SeatStatic });
+                $.ajax({
+                    url: '@Url.Action("InsertOpenItem", "Order")',
+                    async: false,
+                    type: 'get',
+                    datatype: 'json',
+                    data: { 'lstOrderOpenItem': JSON.stringify(OrderOpenItem) },
+                    success: function (data) {
+                        if (isLoadOrder == 1) {
+
+                            if (!Boolean(MainItemClick)) {
+                                OrderItem.push({ 'ProductID': 0, 'ProductName': nameOpenItem, 'Price': riceOpenItem, 'Qty': 1, 'ChangeStatus': 1, 'KeyIndex': indexRow, 'Seat': SeatStatic, 'DynID': data, 'CategoryID': 0 })
+                                insertRow(nameOpenItem, 1, riceOpenItem, 0, "");
+                            }
+                            else {
+
+                                ModifierItem.push({ 'ModifiName': nameOpenItem, 'ModifiID': 0, 'Qty': 1, 'ModifiPrice': riceOpenItem, 'ProdutcID': ProductID, 'ChangeStatusM': 1, 'KeyIndexM': indexRow, 'DynID': data, 'KeyModi': keyItemModify });
+                                insertRowModifier(nameOpenItem, 1, riceOpenItem, 0, "")
+                                MainItemClick = 0;
+                            }
+                        }
+                        else {
+
+                            if (!Boolean(MainItemClick)) {
+                                OrderItem.push({ 'ProductID': 0, 'ProductName': nameOpenItem, 'Price': riceOpenItem, 'Qty': 1, 'ChangeStatus': 0, 'KeyIndex': indexRow, 'Seat': SeatStatic, 'DynID': data, 'CategoryID': 0 })
+                                insertRow(nameOpenItem, 1, riceOpenItem, 0, "");
+                            }
+                            else {
+                                ModifierItem.push({ 'ModifiName': nameOpenItem, 'ModifiID': 0, 'Qty': 1, 'ModifiPrice': riceOpenItem, 'ProdutcID': ProductID, 'ChangeStatusM': 0, 'KeyIndexM': indexRow, 'DynID': data, 'KeyModi': keyItemModify });
+
+                                insertRowModifier(nameOpenItem, 1, riceOpenItem, 0, "")
+                                MainItemClick = 0;
+                            }
+                        }
+
+                    }
+                })
+
+            }
+            document.getElementById('light').style.display = 'none';
+            document.getElementById('fade').style.display = 'none';
+
+        }
+        function CloseAndSetVaueSeat() {
+
+            var seat = document.getElementById('txtSeat').value;
+            if (seat != "") {
+                document.getElementById('light1').style.display = 'none';
+                document.getElementById('fade1').style.display = 'none';
+                lstSeat.push({ 'Seat': seat, 'ChangeStatus': 0, 'Rows': seattemp });
+                insertSeat("Seat " + seat, seat, "numSeat");
+                SeatStatic = seat;
+            }
+            else {
+                alert("Please Input No# Seat");
+            }
+
+        }
+        function closeDialog() {
+            document.getElementById('light1').style.display = 'none';
+            document.getElementById('fade1').style.display = 'none';
+        }
+        function closeDialog1() {
+            MainItemClick = 0;
+            resetStyleItem();
+            document.getElementById('light').style.display = 'none';
+            document.getElementById('fade').style.display = 'none';
+
+        }
+        function showDailog() {
+            if (Boolean(MainItemClick)) {
+                document.getElementById('Printer').disabled = true;
+            }
+            else {
+
+                document.getElementById('Printer').disabled = false;
+            }
+            document.getElementById('light').style.display = 'block';
+            document.getElementById('fade').style.display = 'block';
+
+        }
+        function showDailogSeat() {
+            document.getElementById('light1').style.display = 'block';
+            document.getElementById('fade1').style.display = 'block';
+        }
+
+        function subTotal() {
+            var total = 0;
+            for (var i = 0; i < OrderItem.length ; i++) {
+
+                total = total + parseInt(OrderItem[i].Price);
+
+            }
+            var sub = document.getElementById('subtotal-ipad');
+            sub.innerHTML = format2(total, "$");
+            var sub1 = document.getElementById('subtotal-iphone');
+            sub1.innerHTML = format2(total, "$");
+        }
+
+        function SendOrder() {
+            var postData = { values: OrderItem };
+            if (OrderItem.length > 0) {
+
+                $.ajax({
+                    url: '@Url.Action("SendOrder", "Order")',
+                    async: false,
+                    type: 'POST',
+                    datatype: 'json',
+                    data: { 'lstOrderItem': JSON.stringify(OrderItem), 'lstModifierItem': JSON.stringify(ModifierItem), 'lstSeat': JSON.stringify(lstSeat) },
+                    success: function (data) {
+
+                        if (data == "BILL") {
+                            alert("Order had Print Bill");
+                        }
+                        else {
+                            if (data == "NoSend") {
+                                alert("Can not send Order");
+                                location.reload();
+                            }
+                            else
+                                window.location.href = '@Url.Action("Floor", "Floor")';
+                        }
+
+                    },
+                    error: function (data) { alert(data.error + 'something bad happened load of menu'); }
+                })
+            }
+            else {
+                alert('No have Order to Send');
+            }
+        }
+
+        function PrintBill() {
+
+            $.ajax({
+                url: '@Url.Action("PrintBill", "Order")',
+                async: false,
+                type: 'POST',
+                datatype: 'json',
+                success: function (data) {
+                    window.location.href = '@Url.Action("Floor", "Floor")';
+                },
+                error: function (data) { alert(data.error + 'something bad happened load of menu'); }
+            })
+        }
+
+
+
+        function VoidItem() {
+            if (flag != 0) {
+                if (flag == 1) {
+
+                    Update(ProductID, 2, indexRow);
+                    for (var k = 0; k < ModifierItem.length; k++) {
+                        if (ProductID == ModifierItem[k].ProdutcID && ModifierItem[k].ChangeStatusM != 2 && indexRow == ModifierItem[k].KeyModi) {
+                            document.getElementById("tablecontainer").deleteRow(indexRow + 1);
+                            ModifierItem[k].ChangeStatusM = 2;
+                        }
+                    }
+                }
+                else {
+                    UpdateModifi(ModifirID, 2, indexRow)
+                }
+                document.getElementById("tablecontainer").deleteRow(indexRow);
+                flag = 0;
+            }
+            else {
+                if (MainSeat >= 0) {
+                    var countseat = 0;
+                    for (var s = 0; s < lstSeat.length; s++) {
+                        if (lstSeat[s].Seat == MainSeat) {
+                            lstSeat[s].ChangeStatus = 2;
+                            lstSeat.slice(s, 1);
+                        }
+
+                    }
+                    for (var i = 0; i < OrderItem.length; i++) {
+                        if (OrderItem[i].Seat == MainSeat) {
+                            OrderItem[i].ChangeStatus = 2;
+                            countseat = countseat + 1;
+                        }
+                    }
+                    for (var count = seatIndex + countseat; count >= seatIndex; count--) {
+                        document.getElementById("tablecontainer").deleteRow(count);
+                    }
+                    seatIndex = -1;
+                }
+                else
+                    alert('Please select date to Void');
+            }
+        }
+        function Update(key, value, index) {
+            var result = 0;
+            for (var i = 0; i < OrderItem.length; i++) {
+                if (OrderItem[i].ChangeStatus == 2) {
+                    result = 1;
+                }
+                if (result == 1) {
+                    if (OrderItem[i].ProductID == key && OrderItem[i].KeyIndex - 1 == indexRow) {
+
+                        OrderItem[i].ChangeStatus = value;
+
+                    }
+                } else {
+                    if (OrderItem[i].ProductID == key && OrderItem[i].KeyIndex == indexRow) {
+
+                        OrderItem[i].ChangeStatus = value;
+
+                    }
+                }
+
+            }
+        }
+        function UpdateModifi(key, value, index) {
+            for (var i = 0; i < ModifierItem.length; i++) {
+                if (ModifierItem[i].ModifiID == key && ModifierItem[i].KeyIndexM == indexRow) {
+                    ModifierItem[i].ChangeStatusM = value;
+                }
+            }
+        }
+        function changeStyle() {
+            var table = document.getElementById("tablecontainer");
+            for (var i = 0, row; row = table.rows[i]; i++) {
+
+                if (indexRow == table.rows[i].rowIndex) {
+                    table.rows[i].style.backgroundColor = 'rgba(0, 153, 0, 1)';
+                    table.rows[i].style.color = 'white';
+                }
+                else {
+                    if (lstSeat.length > 0) {
+                        table.rows[i].style.backgroundColor = '';
+                        table.rows[i].style.color = '';
+                        for (var rowsseat = 0; rowsseat < lstSeat.length; rowsseat++) {
+
+                            table.rows[lstSeat[rowsseat].Rows].style.backgroundColor = 'rgb(215, 215, 215)';
+
+                        }
+                    }
+                    else {
+                        table.rows[i].style.backgroundColor = '';
+                        table.rows[i].style.color = '';
+                    }
+                }
+            }
+
+        }
+
+
+        function changeStyle1() {
+            var table = document.getElementById("tablecontainer");
+            for (var i = 0, row; row = table.rows[i]; i++) {
+
+                if (seatIndex == table.rows[i].rowIndex) {
+                    table.rows[i].style.backgroundColor = 'rgba(0, 103, 204, 1)';
+                    table.rows[i].style.color = 'white';
+                }
+                else {
+                    table.rows[i].style.backgroundColor = '';
+                    table.rows[i].style.color = '';
+                    for (var rowsseat = 0; rowsseat < lstSeat.length; rowsseat++) {
+                        if (lstSeat[rowsseat].Rows != seatIndex) {
+                            table.rows[lstSeat[rowsseat].Rows].style.backgroundColor = 'rgb(215, 215, 215)';
+                        }
+                    }
+                }
+
+            }
+        }
+        function resetStyleItem() {
+            var table = document.getElementById("tablecontainer");
+            for (var i = 0, row; row = table.rows[i]; i++) {
+
+
+                table.rows[i].style.backgroundColor = '';
+                table.rows[i].style.color = '';
+            }
+            MainItemClick = 0;
+        }
+        function Logout() {
+            $.ajax({
+                url: '@Url.Action("LogOut", "MainPDA")',
+                async: false,
+                type: 'get',
+                datatype: 'json',
+
+                success: function (data) {
+                    if (data == 1)
+                        window.location.href = '@Url.Action("Index", "Login")';
+                },
+                error: function (data) { alert(data.error + 'something bad happened load of menu'); }
+            });
+        }
+
+    </script>
+</head>
+<body>
+    @using POSPDA;
+    @using ServicePOS.Model;
+    @{
+        var session = Session["User"] as StaffModel;
+        string nameUser = session.UserName;
+        ViewBag.username = nameUser;
+    }
+    <div class="container-fluid">
+        <div class="row">
+            <div class="header-menu-pda col-md-4">
+                Login As Thanh
+            </div>
+            <div class="header-menu-pda header-menu-pda-shift col-md-4">
+                Shift
+            </div>
+            <div class="header-menu-pda header-menu-pda-logout col-md-4">
+                LogOut
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="order-pda-main">
+                <div class="function-pda-button col-md-1">
+                    <div class="order-pda-button-back">
+                        Back
+                    </div>
+                    <div class="order-pda-button-send">
+                        Send
+                    </div>
+                    <div class="order-pda-button-void">
+                        Void
+                    </div>
+                    <div class="order-pda-button-openitem">
+                        Open Item
+                    </div>
+                    <div class="order-pda-button-addseat">
+                        Add Seat
+                    </div>
+                    <div class="order-pda-button-printbill">
+                        Print Bill
+                    </div>
+                    <div class="order-pda-button-note">
+                        Note
+                    </div>
+                </div>
+                <div class="menu-pda col-md-8">
+                    <div class="menu-pda-catalog">
+                        <div class="col-md-2 col-xs-3 meu-pda-catalog-button menu-pda-catalog-float">
+                            Breask
+                        </div>
+
+
+                    </div>
+                    <div class="">
+
+                    </div>
+                </div>
+                <div class=" menu-pda-oder col-md-3">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="light" class="white_content">
+
+        <table border="0">
+            <tr>
+                <td>
+                    Name
+                </td>
+                <td><input type="text" id="txtNameOpenitem" style="width:200px;height:30px" /></td>
+            </tr>
+            <tr>
+                <td>
+                    Price
+                </td>
+                <td><input type="number" id="txtRiceOpenitem" style="width:200px;height:30px" /></td>
+            </tr>
+            <tr>
+
+                <td>Select Printer</td>
+                <td>
+                    @Html.DropDownList("Printer", ViewData["Printer"] as List<SelectListItem>, new { @class = "dropdown" })
+                </td>
+            </tr>
+            <tr>
+                <td><a href="javascript:void(0)" onclick="CloseAndSetVaue()">OK</a></td>
+                <td><a href="javascript:void(0)" style="background-color: rgba(246, 19, 1, 1);" onclick="closeDialog1()">CANCLE</a></td>
+            </tr>
+        </table>
+
+
+
+
+    </div>
+
+    <div id="fade" class="black_overlay">
+    </div>
+
+
+
+    <div id="light1" class="white_content1 container col-xs-12">
+        <p></p>Please input No# Seat</p>
+
+        <div>
+            <input type="number" id="txtSeat" style="width:200px;height:30px" />
+        </div>
+        <div>
+            <a href="javascript:void(0)" onclick="CloseAndSetVaueSeat()">OK</a>
+            <a href="javascript:void(0)" style="background-color: rgba(246, 19, 1, 1);" onclick="closeDialog()">CANCLE</a>
+        </div>
+    </div>
+
+    <div id="fade1" class="black_overlay1">
+    </div>
+</body>
+</html>

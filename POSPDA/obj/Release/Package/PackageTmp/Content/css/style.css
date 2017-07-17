@@ -1,0 +1,1177 @@
+﻿
+   .txtselectnameandlogin {
+        color: white;
+        margin-top: 15%;
+        margin-left: 33%;
+        font-size: 36px;
+    }
+.containerusername{
+    background-color:rgba(121, 121, 121, 1);
+    min-height:300px;
+
+}
+.userinfo{
+    background-color:white;
+    margin:10px 5px 0 5px;
+    height:40px;
+    text-align:center;
+    line-height:40px;
+    width:150px;
+    cursor:pointer;
+}
+.userinfo a{
+    text-decoration:none;
+   color:black;
+}
+/*Login*/
+ .background {
+        min-height: 700px;
+        background-color: rgba(54, 54, 54, 1);
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+    }
+    .title {
+        margin-top: 15%;
+        margin-left: 15%;
+    }
+    .label-back {
+        height: 60px;
+        background-color: white;
+        line-height: 60px;
+        font-size:24px;
+       
+    }
+    .label-enterpassword {
+        color: white;
+        font-size:40px;
+        margin-left: 50px;
+    }
+    .text-user {
+        margin-top: 20px;
+        height: 80px;
+        background-color: rgba(121, 121, 121, 1);
+        position: relative;
+    }
+    .text-user img{
+        width:40px;
+        height:40px;
+        position:absolute;
+        left:10px;
+        top:20px;
+    }
+        .text-user input {
+            width: 50%;
+            height: 40px;
+            position: absolute;
+            left: 60px;
+            top: 20px;
+            background-color: rgba(121, 121, 121, 1);
+            border:none;
+            color:white;
+        }
+
+    .text-password {
+        margin-top: 10px;
+        height: 80px;
+        position: relative;
+        background-color: rgba(121, 121, 121, 1);
+    }
+
+   
+        .text-password .img-password {
+            width: 40px;
+            height: 40px;
+            position: absolute;
+            left: 10px;
+            top: 20px;
+        }
+         .text-password input {
+            width: 50%;
+            height: 40px;
+            position: absolute;
+            left: 60px;
+            top: 20px;
+            background-color: rgba(121, 121, 121, 1);
+            border:none;
+            color:white;
+        }
+        .text-password .imgenter{
+            position:absolute;
+            width:40px;
+            height:40px;
+            right:10px;
+            top:20px;
+            cursor:pointer;
+        }
+        input:focus{
+            outline:none;
+        }
+        .login-img-back{
+            background-image:url("../images/u28.png");
+            background-repeat:no-repeat;
+            width:40px;
+            height:40px;
+            display:none;
+            background-color:white;
+            background-position:center;
+            background-size:20px 20px;
+            cursor:pointer;
+        }
+        /*end login*/
+
+
+
+    /*Css of Main*/
+        .main-title{
+            width:100%;
+            height:40px;
+            background-color:rgb(215, 215, 215);
+        }
+        .main-login-as{
+            color:white;
+            line-height:40px;
+            
+           background-color:rgb(121, 121, 121);
+           
+        }
+        .main-shift{
+             color:white;
+            line-height:40px;
+            text-align:center;
+            background-color:rgb(121, 121, 121);
+        }
+        .main-logout{
+            color:white;
+            line-height:40px;
+            text-align:right;
+           background-color:rgb(215, 215, 215);
+            
+           
+        }
+         .main-shift-temp{
+             display:none;
+
+         }
+         
+         .main-btn-action{
+             height:150px;
+             
+         }
+         .main-btn-eatin{
+             height:100px;
+             background-color:rgb(0, 153, 0);
+             color:white;
+             line-height:100px;
+             font-size:36px;
+             margin-top:25px;
+             margin-left:70px;
+             text-align:center;
+         }
+         .main-btn-eatin a{
+             text-decoration:none;
+             color:white;
+         }
+         .main-btn-takeaway{
+              height:100px;
+             background-color:rgb(255, 202, 69);
+             color:white;
+             line-height:100px;
+             font-size:36px;
+             margin-top:25px;
+             margin-left:20px;
+             text-align:center;
+             display:none;
+         }
+         .main-eatin-tka{
+             height:500px;
+            
+         }
+         .main-col-eatin-and-tka{
+             background-color:rgba(121, 121, 121, 1);
+             height:500px;
+             margin:0;
+             padding:0;
+         }
+         .main-col-info{
+             background-color:rgba(228, 228, 228, 1);
+             height:500px;
+             margin:0;
+             padding:0;
+         }
+         .main-col-detail{
+             
+             height:500px;
+             margin:0;
+             padding:0;
+             position:relative
+         }
+         .main-data-eatin{
+             height:60px;
+             background-color:rgba(228, 228, 228, 1);
+             width:100%;
+             position:relative;
+             cursor:pointer;
+         }
+         .main-data-eatin-title{
+            
+             height:100%;
+             line-height:60px;
+             font-size:18px;
+             position:absolute;
+             left:0;
+             top:0;
+             margin-left:30px;
+          
+         }
+         .main-data-eatin-qty{
+             width:50px;
+             background-color:rgba(0, 153, 0, 1);
+             height:50px;
+             line-height:50px;
+             position:absolute;
+             right:75px;
+             text-align:center;
+             top:6px;
+             color:white;
+             border-radius:100px;
+             
+         }
+         .main-data-eatin-next{
+             width:50px;
+             height:50px;
+             line-height:50px;
+             position:absolute;
+             right:0px;
+             text-align:center;
+             top:6px;
+             background-image:url("../images/u56.png");
+             background-repeat:no-repeat;
+             background-size:20px 20px;
+             background-position:right;
+         }
+
+
+
+         .main-data-tka{
+             height:60px;
+             background-color:rgba(228, 228, 228, 1);
+             width:100%;
+             position:relative;
+             cursor:pointer;
+             display:none;
+         }
+         .main-data-eatin-title-tka{
+            
+             height:100%;
+             line-height:60px;
+             font-size:18px;
+             position:absolute;
+             left:0;
+             top:0;
+             margin-left:30px;
+          
+         }
+         .main-data-eatin-qty-tka{
+             width:50px;
+             background-color:rgba(0, 153, 0, 1);
+             height:50px;
+             line-height:50px;
+             position:absolute;
+             right:75px;
+             text-align:center;
+             top:6px;
+             color:white;
+             border-radius:100px;
+             
+         }
+         .main-data-eatin-next-tka{
+             width:50px;
+             height:50px;
+             line-height:50px;
+             position:absolute;
+             right:0px;
+             text-align:center;
+             top:6px;
+             background-image:url("../images/u56.png");
+             background-repeat:no-repeat;
+             background-size:20px 20px;
+             background-position:right;
+         }
+
+         .main-data-info-order{
+              height:60px;
+             background-color:rgba(228, 228, 228, 1);
+             width:100%;
+             position:relative;
+             border-bottom:1px solid;
+             cursor:pointer;
+             
+         }
+         .main-data-info-order-tableid{
+            width:50%;
+            height:100%;
+            position:absolute;
+            left:10px;
+            top:0;
+            line-height:60px;
+         }
+         .main-data-info-order-total{
+            width:45%;
+            height:70%;
+            background-color:rgba(215, 215, 215, 1);
+            position:absolute;
+            right:10px;
+            top:6px;
+            line-height:45px;
+            border-radius:80px;
+            text-align:center;
+            color:#009900;
+         }
+         .main-col-detail-nametable{
+             width:100%;
+             height:60px;
+             line-height:60px;
+             text-align:center;
+             border-bottom:1px solid;
+             border-top:1px solid;
+             font-size:18px;
+             margin-left:1px;
+             position:absolute;
+         }
+         .main-col-detail-amount{
+             margin-top:10px;
+             width:80%;
+             height:100px;
+             color:white;
+             background-color:rgba(0, 153, 0, 1);
+             font-size:50px;
+             border-radius:25px;
+             position:absolute;
+             left:40px;
+             text-align:center;
+             line-height:100px;
+             position:absolute;
+             top:60px;
+         }
+         .main-col-detail-vieworder{
+             margin-top:10px;
+             width:80%;
+             height:100px;
+             color:white;
+             background-color:rgba(0, 51, 0, 1);
+             font-size:24px;
+             border-radius:25px;
+             position:absolute;
+             left:40px;
+             top:180px;
+             text-align:center;
+             line-height:100px;
+         }
+         .main-col-detail-print{
+              margin-top:10px;
+             width:80%;
+             height:100px;
+             color:white;
+             background-color:rgba(0, 51, 0, 1);
+             font-size:24px;
+             border-radius:25px;
+             position:absolute;
+             left:40px;
+             top:300px;
+             text-align:center;
+             line-height:100px;
+         }
+        
+     .main-data-info-order-temp{
+             display:none;
+         }
+     .main-data-eatin-temp{
+        display:none;
+     }
+       .main-data-eatin-temp-iphone{
+         display:block;
+     }
+       
+    /*end Css of Main*/
+
+
+    /*---------------CSS of Floor----------------*/
+     .floor-main-body{
+       background-color:rgb(228, 228, 228);
+       min-height:700px;
+       margin:0;
+       padding:0;
+       width:100%;
+     }
+     .floor-control{
+         
+         height:40px;
+         margin-top:10px;
+     }
+     .floor-control-back{
+         width:110px;
+         height:100%;
+         color:black;
+         background-color:white;
+         text-align:center;
+         line-height:40px;
+         background-image:url("../images/u28.png");
+         background-repeat:no-repeat;
+         background-size:20px 20px;
+         background-position:left;
+         font-size:16px;
+     }
+     .floor-control-text{
+         height:100%;
+         text-align:center;
+         font-size:16px;
+         line-height:40px;
+     }
+      .floor-gui {
+          width: 90px;
+          height: 100px;
+          margin-top: 10px;
+          margin-right: 5px;
+          background-color:white;
+          text-align:center;
+          font-size:18px;
+          cursor:pointer;
+          float:left;
+        }
+      .floor-container{
+         margin:0 10px 0 10px;
+      }
+     
+      .floor-control-text-iphone{
+          display:none;
+      }
+    /*---------------end CSS of Floor------------*/
+
+
+    /*---------------CSS of Order------------------*/
+
+    .order-btn-action{
+       
+        height:600px;
+        position:relative;
+        overflow:auto;
+    }
+    .order-btn-back{
+        background-color:black;
+        height:50px;
+        width:100%;
+        color:white;
+        position:absolute;
+        left:0;
+        top:1px;
+        line-height:50px;
+        text-align:center;
+        font-size:18px;
+        
+    }
+    .order-btn-back a{
+         text-decoration: none;
+            color: white;
+            display: block;
+            width: 100%;
+    }
+    .order-btn-send
+    {
+        background-color:rgba(0, 112, 82, 1);
+        width:100%;
+        height:80px;
+        text-align:center;
+        color:white;
+        position:absolute;
+        left:0;
+        top:52px;
+        font-size:18px;
+    }
+    .order-btn-void{
+        background-color: rgba(246, 19, 1, 1);
+        width:100%;
+        height:80px;
+        text-align:center;
+        color:white;
+        position:absolute;
+        left:0;
+        top:133px;
+        font-size:18px;
+    }
+    .order-btn-openitem{
+        background-color:rgba(0, 103, 204, 1);
+        width:100%;
+        height:80px;
+        text-align:center;
+        color:white;
+        position:absolute;
+        left:0;
+        top:215px;
+        font-size:18px;
+    }
+        .order-btn-openitem a {
+           text-decoration: none;
+            color: white;
+            display: block;
+            width: 100%;
+
+        }
+     .order-btn-addseat{
+        background-color:black;
+        width:100%;
+        height:80px;
+        text-align:center;
+        color:white;
+        position:absolute;
+        left:0;
+        top:296px;
+        font-size:18px;
+    }
+        .order-btn-addseat a {
+             text-decoration: none;
+            color: white;
+            display: block;
+            width: 100%;
+        }
+      .order-btn-printbil{
+        background-color:rgba(0, 103, 204, 1);
+        width:100%;
+        height:80px;
+        text-align:center;
+        color:white;
+        position:absolute;
+        left:0;
+        top:377px;
+        font-size:18px;
+    }
+       .order-btn-note{
+        background-color:rgba(153, 115, 13, 1);
+        width:100%;
+        height:80px;
+        text-align:center;
+        color:white;
+        position:absolute;
+        left:0;
+        top:557px;
+        font-size:18px;
+        display:none;
+    }
+       .order-grid-menu{
+           height:600px;
+           margin-left:1px;
+           margin-top:1px;
+         
+           position:relative;
+       }
+       .order-menu-title{
+           background-color:rgba(0, 153, 0, 1);
+           height:50px;
+           left:0;
+           top:0;
+          
+           line-height:50px;
+           text-align:center;
+           color:white;
+           font-size:18px;
+           margin-left:-15px;
+           margin-right:16px;
+       }
+       .order-more-title{
+           background-color:rgba(228, 228, 228, 1);
+           height:50px;
+           left:398px;
+           top:0;
+           position:absolute;
+           line-height:50px;
+           text-align:center;
+           color:white;
+           font-size:18px;
+       }
+       .order-container-menu{
+          
+           height:100%;
+           width:100%;
+           position:absolute;
+           left:0;
+           top:51px;
+           
+       }
+       .order-container-menu-detail{
+           background-color:rgba(0, 153, 0, 1);
+           height:90px;
+           margin-right:16px;
+           margin-left:-15px;
+           margin-top:1px;
+           padding:0;
+       }
+       .order-row-container-menu{
+         
+           width:100%;
+           height:100%;
+           margin-left:-20px;
+           position:absolute;
+       }
+
+       .order-data{
+          height:500px;
+          
+          position:absolute;
+          right:0;
+          top:41px;
+              width: 24.5%;
+
+          
+       }
+       .order-subtotal-ipad{
+           position:absolute;
+           top:541px;
+           right:0px;
+           height:50px;
+           background-color:black;
+           width:24.3%;
+       }
+       .order-subtotal{
+           display:none;
+       }
+        .total {
+            text-align: right;
+            margin-left: 75px;
+            width: 50%;
+        }
+        .white_content1 {
+            display: none;
+            position: absolute;
+            top: 25%;
+            left: 25%;
+            width: 50%;
+            height: 50%;
+            padding: 16px;
+            background-color: white;
+            z-index: 1002;
+            overflow: auto;
+            text-align:center;
+        }
+         .white_content1 a {
+                text-decoration: none;
+                width: 100px;
+                height: 30px;
+                background-color: rgba(0, 138, 204, 1);
+                display:block;
+                color: white;
+                line-height:30px;
+                text-align:center;
+                margin-left:290px;
+                margin-top:5px;
+                border-radius:10px;
+            }
+        .white_content {
+            display: none;
+            position: absolute;
+            top: 25%;
+            left: 25%;
+            width: 50%;
+            height: 50%;
+            padding: 16px;
+            background-color: white;
+            z-index: 1002;
+            overflow: auto;
+            text-align: center;
+        }
+        .white_content table{
+           margin :auto;
+        }
+        .white_content a {
+            text-decoration: none;
+            width: 100px;
+            height: 30px;
+            background-color: rgba(0, 138, 204, 1);
+            display: block;
+            color: white;
+            line-height: 30px;
+            text-align: center;
+            
+            border-radius: 10px;
+        }
+        .btn-login{
+            margin-top:20px;
+        }
+    /*---------------CSS end of Order-------------*/
+@media(max-width:760px)
+{
+    .btn-login{
+            margin-top:20px;
+        }
+	.txtselectnameandlogin{
+       font-size:18.5px;
+       margin-left:30px;
+	}
+    .userinfo {
+        width:100px;
+    }
+    .label-enterpassword{
+        margin-left:20px;
+    }
+    .containerusername{
+       margin-top:20px;
+    }
+   .label-enterpassword{
+       font-size:30px;
+       margin-left:50px;
+   }
+   .container{
+       margin:0 20px;
+   }
+   .login-img-back{
+       display:block;
+   }
+   .label-back{
+       display:none;
+   }
+
+   .main-shift{
+       display:none;
+   }
+   .main-shift-temp{
+       display:block;
+       color:white;
+       text-align:center;
+       margin-top:15px;
+   }
+   .main-body{
+       min-height:700px;
+       background-color:black;
+       margin:0;
+       padding:0;
+       width:100%;
+   }
+    .main-btn-eatin, .main-btn-takeaway{
+        height:50px;
+        font-size:18px;
+        line-height:50px;
+        margin-left:0px;
+    }
+    .main-btn-action{
+        clear:both;
+        
+    }
+    .main-btn-takeaway {
+        margin-top:10px;
+    }
+    .main-col-info{
+       
+        display:none;
+    }
+    .main-col-info-iphone{
+       position:absolute;
+       top:0;
+       width:100%;
+       display:block;
+       margin-top:-20px;
+       height:auto;
+       
+    }
+    .main-col-detail{
+        display:none;
+    }
+    .main-col-eatin-and-tka{
+        background-color:black;
+        margin-top:-20px;
+        
+    }
+    .main-eatin-tka{
+             position:relative;
+            
+         }
+    .main-data-eatin{
+        background-color:rgba(121, 121, 121, 1);
+        color:white;
+    }
+    .main-data-tka{
+        background-color:rgba(121, 121, 121, 1);
+        color:white;
+    }
+    .main-data-eatin-next{
+         background-image:url("../images/u333.png");
+    }
+    .main-data-eatin-next-tka{
+         background-image:url("../images/u333.png");
+    }
+    .main-data-eatin{
+        margin-left:0px;
+        border-bottom:1px solid;
+    }
+   
+    .main-data-eatin-title{
+        margin-left:0px;
+    }
+    .main-data-eatin-qty-tka{
+       font-size:12px;
+        width:35px;
+        height:35px;
+        line-height:35px;
+        top:12px;
+        right:30px;
+    }
+
+     .main-data-eatin-title-tka{
+        margin-left:0px;
+    }
+    .main-data-eatin-qty{
+        font-size:12px;
+        width:35px;
+        height:35px;
+        line-height:35px;
+        top:12px;
+        right:30px;
+    }
+    .main-eatin-show{
+        display:block;
+       
+    }
+     .main-tka-show{
+        display:block;
+
+    }
+     .main-data-eatin-next-show{
+         
+     }
+     .main-data-eatin-show{
+         height:40px;
+
+     }
+     .main-data-eatin-title-show{
+         line-height:40px;
+         font-size:18px;
+         text-align:center;
+         
+     }
+     .main-data-eatin-qty-show{
+             width:40px;
+             background-color:rgba(0, 153, 0, 1);
+             height:30px;
+             line-height:30px;
+             position:absolute;
+             right:10px;
+             top:5px;
+             color:white;
+             border-radius:25px;
+     }
+     .main-data-eatin-temp{
+             height:40px;
+             background-color:rgba(121, 121, 121, 1);
+             width:100%;
+             position:relative;
+             display:block;
+     }
+     
+     .main-data-eatin-next-temp{
+              width:50px;
+             height:40px;
+             line-height:40px;
+             position:absolute;
+             left:0px;
+             text-align:center;
+             top:0px;
+             background-image:url("../images/u367.png");
+             background-repeat:no-repeat;
+             background-size:20px 20px;
+             background-position:left;
+             cursor:pointer;
+             
+     }
+     .main-data-eatin-title-temp{
+             width:250px;
+             height:40px;
+             line-height:40px;
+             position:absolute;
+             left:30px;
+             text-align:center;
+             top:0px;
+             color:white;
+     }
+     .main-data-eatin-qty-temp{
+         width:35px;
+             background-color:rgba(0, 153, 0, 1);
+             height:35px;
+             line-height:35px;
+             position:absolute;
+             right:0px;
+             text-align:center;
+             top:3px;
+             color:white;
+             border-radius:100px;
+     }
+     .main-data-tka-hidden{
+         display:none;
+     }
+     .main-data-eatin-next-hidden{
+         display:none;
+     }
+     .main-data-info-order-temp{
+              height:60px;
+             background-color:rgba(228, 228, 228, 1);
+             width:100%;
+             position:relative;
+             border-bottom:1px solid ;
+             display:block;
+             cursor:pointer;
+     }
+     .main-data-eatin-temp-iphone{
+         display:none;
+     }
+     .main-data-eatin-temp-back{
+         display:none;
+     }
+     .main-col-eatin-and-tka-back{
+        display:block;
+        position:absolute;
+        top:0;
+        width:100%
+     }
+     .main-col-info-come-back-main{
+         display:none;
+     }
+     .main-show{
+         display:block;
+         position:absolute;
+         left:0;
+         top:0;
+         width:100%;
+     }
+     .main-hidden{
+         display:none;
+     }
+      .main-col-detail-show{
+             display:block;
+             height:500px;
+             margin:0;
+             padding:0;
+             position:relative;
+             background-color:white;
+             width:100%;
+         }
+     
+      .main-col-detail{
+             
+             height:500px;
+             margin:0;
+             padding:0;
+             margin-top:-20px;
+             
+         }
+      .main-col-detail-amount{
+             
+             width:80%;
+             height:100px;
+             color:white;
+             background-color:rgba(0, 153, 0, 1);
+             font-size:50px;
+             border-radius:25px;
+             position:absolute;
+             left:40px;
+             top:60px;
+             text-align:center;
+             line-height:100px;
+         }
+      .main-col-detail-nametable{
+             width:100%;
+             height:40px;
+             line-height:40px;
+             text-align:center;
+             border-bottom:1px solid;
+             border-top:1px solid;
+             font-size:18px;
+             margin-left:1px;
+             position:absolute;
+             left:0;
+             top:0px;
+             background-color:rgba(228, 228, 228, 1);
+             background-image:url("../images/u56-1.png");
+             background-repeat:no-repeat;
+             background-size:20px 20px;
+             background-position:left;
+             cursor:pointer;
+         }
+
+      .floor-main-body{
+       background-color:black;
+      
+     }
+    .floor-control-back-iphone-hidden {
+        display:none;
+    }
+    .floor-control-back-iphone{
+         width:40px;
+         height:40px;
+         color:black;
+         background-color:white;
+         text-align:center;
+         line-height:40px;
+         background-image:url("../images/u28.png");
+         background-repeat:no-repeat;
+         background-size:20px 20px;
+         background-position:center;
+         font-size:16px;
+         cursor:pointer;
+     }
+    .floor-control-text{
+        display:none;
+    }
+     .floor-control-text-iphone{
+         display:block;
+         height:100%;
+         text-align:center;
+         font-size:16px;
+         line-height:40px;
+         color:white;
+     }
+      .floor-gui {
+          width: 70px;
+          height: 100px;
+          margin-top: 10px;
+          margin-right: 5px;
+          background-color:white;
+          text-align:center;
+          font-size:18px;
+          cursor:pointer;
+          float:left;
+        }
+   .order-more-title{
+           background-color:rgba(228, 228, 228, 1);
+           height:50px;
+           left:200px;
+           top:0;
+           position:absolute;
+           line-height:50px;
+           text-align:center;
+           color:white;
+           font-size:18px;
+       }
+      
+
+    .floor-gui {
+          width: 57px;
+          height: 80px;
+          margin-top: 10px;
+          margin-right: 5px;
+          background-color:white;
+          text-align:center;
+          font-size:18px;
+          cursor:pointer;
+          float:left;
+        }
+    .order-btn-action{
+        float:left;
+        height:600px;
+    }
+    
+    .order-grid-menu{
+            height:350px;
+           margin-left:1px;
+           margin-top:1px;
+          position:absolute;
+          top:550px;
+          left:0;
+          overflow:auto;
+    }
+    .order-subtotal{
+        background-color:black;
+        height:50px;
+        width:100%;
+        position:absolute;
+        top:500px;
+        left:0;
+        display:block;
+    }
+    .order-container-menu{
+           
+           height:100%;
+           width:100%;
+           position:absolute;
+           left:0;
+           top:51px;
+           
+           
+       }
+       .order-container-menu-detail{
+           background-color:rgba(0, 153, 0, 1);
+           height:90px;
+          
+           margin-top:1px;
+           padding:0;
+       }
+       .order-row-container-menu{
+           
+           width:100%;
+           height:100%;
+           margin-left:-20px;
+       }
+       .order-subtotal-ipad{
+           display:none;
+       }
+       .col-xs-temp-3{
+           width:33%;
+           float:left;
+       }
+       .order-data{
+          height:455px;
+          
+          position:absolute;
+          right:0;
+          top:41px;
+          width:75%;
+          overflow:auto;
+          
+       }
+       .total {
+            text-align:right;
+            margin-left:120px;
+            width:50%;
+        }
+       .test{
+           height:50px;
+       }
+       .white_content1 {
+            display: none;
+            position: absolute;
+            top: 25%;
+            left: 0;
+            width: 89%;
+            height: 50%;
+            padding: 16px;
+            background-color: white;
+            z-index: 1002;
+            overflow: auto;
+            text-align:center;
+        }
+       .white_content1 a {
+                text-decoration: none;
+                width: 100px;
+                height: 30px;
+                background-color: rgba(0, 138, 204, 1);
+                display:block;
+                color: white;
+                line-height:30px;
+                text-align:center;
+                margin-left:95px;
+                margin-top:5px;
+                border-radius:10px;
+            }
+       .white_content {
+            display: none;
+            position: absolute;
+            top: 25%;
+            left: 15px;
+            width: 89%;
+            height: 50%;
+            padding: 16px;
+            background-color: white;
+            z-index: 1002;
+            overflow: auto;
+            text-align: center;
+        }
+       
+}

@@ -1,0 +1,53 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!-- InstanceBegin template="Templates/template.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <!-- InstanceBeginEditable name="doctitle" -->
+    <title>POSPDA</title>
+    <!-- InstanceEndEditable -->
+    <link href="@Url.Content("~/Content/css/bootstrap.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/css/style.css")" rel="stylesheet" type="text/css" />
+
+    <!-- InstanceBeginEditable name="head" -->
+    <!-- InstanceEndEditable -->
+    <style>
+
+
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: rgba(54, 54, 54, 1);
+            width: 100%;
+        }
+      
+    </style>
+    @using ServicePOS.Model;
+    @using ServicePOS;
+</head>
+<body>
+
+    <div class="background">
+        <div class="container">
+            <div class="col-xs-12 txtselectnameandlogin">
+                select a name and login
+            </div>
+
+            <div class="containerusername">
+                @foreach (var item in @ViewBag.listUser)
+                {
+                    <div class="col-sm-1 col-xs-1 userinfo">
+                        @Html.ActionLink((string)item.UserName, "LoginAction", "Login", new { username = (string)item.UserName }, null)
+                    </div>
+                }
+            </div>
+
+        </div>
+    </div>
+    
+</body>
+</html>

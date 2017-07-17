@@ -1,0 +1,195 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <!-- InstanceBeginEditable name="doctitle" -->
+    <title>POSPDA</title>
+    <!-- InstanceEndEditable -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <!-- InstanceBeginEditable name="doctitle" -->
+    <!-- InstanceEndEditable -->
+    <link href="@Url.Content("~/Content/css/bootstrap.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/css/style.css")" rel="stylesheet" type="text/css" />
+
+    <script src="@Url.Content("~/Scripts/jquery-3.1.0.min.js")" type="text/javascript"></script>
+    <style>
+        body {
+            background-color: #363636;
+           
+        }
+        .format {
+            color: #ffffff;
+            margin-top:120px;
+            font-size:24px;
+            
+        }
+            .format a {
+                text-decoration: none;
+                color: #000000;
+            }
+        .btnback {
+            background-color: #ffffff;
+            height:40px;
+            text-align:center;
+            line-height:40px;
+        }
+        .password {
+            text-align: right;
+            height: 40px;
+            font-size:36px;
+            line-height: 40px;
+        }
+        .txtusername {
+            border: 1px solid #848484;
+            margin-top: 20px;
+            outline: 0;
+            height: 60px;
+            width: 95%;
+            padding-left: 15px;
+            padding-right: 10px;
+            background: #797979 url(../Content/images/u26.png) no-repeat 5px 5px;
+            padding-left: 35px;
+            background-position: left center;
+            background-size: 40px 40px;
+            position:relative;
+        }
+        .txtusername1 {
+            height:40px;
+            width: 500px;
+            position: absolute;
+            left: 60px;
+            top: 12px;
+            background-color: #797979;
+            border:none;
+            outline:none;
+            font-size:24px;
+            color:#fff;
+            line-height:80;
+            z-index:1000;
+        }
+        .tpassword {
+            border: 1px solid #848484;
+            margin-top: 20px;
+            outline: 0;
+            height: 60px;
+            width: 95%;
+            padding-left: 15px;
+            padding-right: 10px;
+            background: #797979 url(../Content/images/u24.png) no-repeat 5px 5px;
+            padding-left: 35px;
+            background-position: left center;
+            background-size: 40px 40px;
+            position: relative;
+        }
+        .tpassword img{
+            position:absolute;
+            right:0;
+            top:8px;
+            height:50px;
+            width:50px;
+            cursor:pointer;
+        }
+        .enter {
+            background: #797979 url(~/Content/images/u30.png) no-repeat 5px 5px;
+            position: absolute;
+            right: 0;
+            top: 8px;
+            height: 50px;
+            width: 50px;
+            display:block;
+        }
+        .btn-login {
+            margin-top: 10px;
+        }
+    </style>
+    <script>
+        function CheckLogin()
+        {
+            var pass = document.getElementById('textPassword').value;
+            $.ajax({
+                url: '@Url.Action("CheckLogin", "MainPDA")',
+                async: false,
+                type: 'get',
+                datatype: 'json',
+                data:{'Password':pass},
+                success: function (data) {
+                      
+                    if (data == 1) {
+                        window.location.href = '@Url.Action("Index", "MainPDA")';
+                    }
+                },
+                error: function (data) { alert(data.error + 'something bad happened load of menu'); }
+            });
+        }
+    </script>
+</head>
+<body>
+    @*<div class="row">
+       <div class="container format">
+           <div class="col-2 btnback">
+               @Html.ActionLink("Back", "Index", "Login", null, new { @class = "page-scroll" })
+           </div>
+           <div class="col-4 password">
+               Enter Password
+           </div>
+           
+       </div>
+    </div>
+    <div class="row">
+        <div class="container">
+            <div class="col-12 txtusername">
+                <input type="text" class="txtusername1"  id="textUserName" value="@ViewBag.UserName" readonly="readonly"/>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="container">
+            <div class="col-12 tpassword">
+                <input type="password" class="txtusername1" id="textPassword" name="textPassword" />
+                @*<a href='@Url.Action("Index", "MainPDA")'>
+                    <img onclick="CheckLogin()" src='@Url.Content("~/Content/images/u30.png")'/>
+                @*</a>
+            </div>
+        </div>
+    </div>*@
+
+
+    <style>
+
+    </style>
+    <div class="row background">
+        <div class="container" style="margin-top:80px;">
+            <div class="row">
+                <div class="col-sm-2 col-xs-2 label-back">
+                    BACK
+                </div>
+                <div class="col-xs-2 login-img-back">
+
+                </div>
+                <div class="col-sm-6 label-enterpassword">
+                    Enter Password
+                </div>
+            </div>
+            <div class="row infor-user">
+                <div class="col-sm-12 text-user">
+                    <img src="../Content/images/u26.png" />
+                    <input name="txtUser" id="txtUser" readonly="readonly" value="@ViewBag.UserName" />
+                </div>
+                <div class="col-sm-12 text-password">
+                    <img class="img-password" src="../Content/images/u24.png" />
+                    <input name="txtPassword" id="textPassword" placeholder="enter password here" type="password" />
+                   
+                        @*<img onclick="CheckLogin()" class="imgenter" src="../Content/images/u30.png" />*@
+                    
+                </div>
+               
+                    <button type="button" class="col-sm-12 col-xs-12 btn btn-primary btn-login" onclick="CheckLogin()">Login</button>
+                
+        </div>
+    </div>
+
+</body>
+</html>

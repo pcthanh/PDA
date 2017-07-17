@@ -1,0 +1,353 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4065A0ED-288B-4694-81D5-C6F02421277C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ModelPOS</RootNamespace>
+    <AssemblyName>ModelPOS</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ModelEntity\ACC_PAYMENT.cs">
+      <DependentUpon>POSEZ2UEMODEL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelEntity\Card.cs">
+      <DependentUpon>POSEZ2UEMODEL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelEntity\CATALOGUE.cs">
+      <DependentUpon>POSEZ2UEMODEL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelEntity\CATEGORY.cs">
+      <DependentUpon>POSEZ2UEMODEL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelEntity\CLIENT.cs">
+      <DependentUpon>POSEZ2UEMODEL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelEntity\CONFIG.cs">
+      <DependentUpon>POSEZ2UEMODEL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelEntity\CONFIG_SAVE_DATA.cs">
+      <DependentUpon>POSEZ2UEMODEL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelEntity\DATABASE_BACKUP.cs">
+      <DependentUpon>POSEZ2UEMODEL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelEntity\DEPARTMENT.cs">
+      <DependentUpon>POSEZ2UEMODEL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelEntity\FLOOR.cs">
+      <DependentUpon>POSEZ2UEMODEL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelEntity\fxnExample_Result.cs">
+      <DependentUpon>POSEZ2UEMODEL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelEntity\getModifireByProduct_Result.cs">
+      <DependentUpon>POSEZ2UEMODEL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelEntity\getProductByCategory_Result.cs">
+      <DependentUpon>POSEZ2UEMODEL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelEntity\INVOICE.cs">
+      <DependentUpon>POSEZ2UEMODEL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelEntity\INVOICE_BY_CARD.cs">
+      <DependentUpon>POSEZ2UEMODEL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelEntity\INVOICE_DETAIL.cs">
+      <DependentUpon>POSEZ2UEMODEL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelEntity\INVOICE_DETAIL_HISTORY.cs">
+      <DependentUpon>POSEZ2UEMODEL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelEntity\INVOICE_DETAIL_MODIFIRE.cs">
+      <DependentUpon>POSEZ2UEMODEL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelEntity\INVOICE_DETAIL_MODIFIRE_HISTORY.cs">
+      <DependentUpon>POSEZ2UEMODEL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelEntity\INVOICE_HISTORY.cs">
+      <DependentUpon>POSEZ2UEMODEL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelEntity\LISTTKA_Result.cs">
+      <DependentUpon>POSEZ2UEMODEL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelEntity\MAP_CATEGORY_TO_CATALOGUE.cs">
+      <DependentUpon>POSEZ2UEMODEL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelEntity\MAP_MODIFIRE_TO_PRODUCT.cs">
+      <DependentUpon>POSEZ2UEMODEL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelEntity\MAP_PRODUCT_TO_CATEGORY.cs">
+      <DependentUpon>POSEZ2UEMODEL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelEntity\MENU.cs">
+      <DependentUpon>POSEZ2UEMODEL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelEntity\MODIFIRE.cs">
+      <DependentUpon>POSEZ2UEMODEL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelEntity\MODIFIRE_PRICE.cs">
+      <DependentUpon>POSEZ2UEMODEL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelEntity\ORDER.cs">
+      <DependentUpon>POSEZ2UEMODEL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelEntity\ORDER_DATE.cs">
+      <DependentUpon>POSEZ2UEMODEL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelEntity\ORDER_DETAIL.cs">
+      <DependentUpon>POSEZ2UEMODEL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelEntity\ORDER_DETAIL_DATE.cs">
+      <DependentUpon>POSEZ2UEMODEL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelEntity\ORDER_DETAIL_MODIFIRE.cs">
+      <DependentUpon>POSEZ2UEMODEL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelEntity\ORDER_DETAIL_MODIFIRE_DATE.cs">
+      <DependentUpon>POSEZ2UEMODEL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelEntity\ORDER_OPEN_ITEM.cs">
+      <DependentUpon>POSEZ2UEMODEL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelEntity\ORDER_OPEN_ITEM_ALL.cs">
+      <DependentUpon>POSEZ2UEMODEL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelEntity\PAYMENT_INVOICE_HISTORY.cs">
+      <DependentUpon>POSEZ2UEMODEL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelEntity\PAYMENT_INVOICE_HISTORY_ALL.cs">
+      <DependentUpon>POSEZ2UEMODEL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelEntity\PAYMENT_TYPE.cs">
+      <DependentUpon>POSEZ2UEMODEL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelEntity\PERMISSION.cs">
+      <DependentUpon>POSEZ2UEMODEL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelEntity\POSEZ2UEMODEL.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>POSEZ2UEMODEL.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelEntity\POSEZ2UEMODEL.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>POSEZ2UEMODEL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelEntity\POSEZ2UEMODEL.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>POSEZ2UEMODEL.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="ModelEntity\pos_th_GetAllListCategoryByCatalogue_Result.cs">
+      <DependentUpon>POSEZ2UEMODEL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelEntity\pos_th_GetAllListPermissionByDepartmentID_Result.cs">
+      <DependentUpon>POSEZ2UEMODEL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelEntity\pos_th_GetAllListProductByCategory_Result.cs">
+      <DependentUpon>POSEZ2UEMODEL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelEntity\pos_th_GetDailySaleReport_Result.cs">
+      <DependentUpon>POSEZ2UEMODEL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelEntity\pos_th_GetDataBackupDatabase_Result.cs">
+      <DependentUpon>POSEZ2UEMODEL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelEntity\pos_th_GetDataProductAndModifire_Result.cs">
+      <DependentUpon>POSEZ2UEMODEL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelEntity\pos_th_GetDataSaleByAccount_Result.cs">
+      <DependentUpon>POSEZ2UEMODEL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelEntity\pos_th_GetDataSaleByCard_Result.cs">
+      <DependentUpon>POSEZ2UEMODEL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelEntity\pos_th_GetDataSummaryReportNew_Result.cs">
+      <DependentUpon>POSEZ2UEMODEL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelEntity\pos_th_GetDataSummaryReport_Result.cs">
+      <DependentUpon>POSEZ2UEMODEL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelEntity\pos_th_GetDetailDailyReport_Result.cs">
+      <DependentUpon>POSEZ2UEMODEL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelEntity\pos_th_GetDetailProductPrice_Result.cs">
+      <DependentUpon>POSEZ2UEMODEL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelEntity\pos_th_GetDetailWeeklyReport_Result.cs">
+      <DependentUpon>POSEZ2UEMODEL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelEntity\pos_th_GetListModifireToProduct_Result.cs">
+      <DependentUpon>POSEZ2UEMODEL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelEntity\pos_th_GetListModifire_Result.cs">
+      <DependentUpon>POSEZ2UEMODEL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelEntity\pos_th_GetListProductPrice_Result.cs">
+      <DependentUpon>POSEZ2UEMODEL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelEntity\pos_th_GetQTYGroupSaleReport_Result.cs">
+      <DependentUpon>POSEZ2UEMODEL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelEntity\pos_th_GetQTYItemSaleReport_Result.cs">
+      <DependentUpon>POSEZ2UEMODEL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelEntity\pos_th_GetReportSaleByStaff_Result.cs">
+      <DependentUpon>POSEZ2UEMODEL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelEntity\pos_th_GetShiftReport_Result.cs">
+      <DependentUpon>POSEZ2UEMODEL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelEntity\pos_th_GetWeeklySaleReport_Result.cs">
+      <DependentUpon>POSEZ2UEMODEL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelEntity\pos_th_SearchProduct_Result.cs">
+      <DependentUpon>POSEZ2UEMODEL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelEntity\PRINTER.cs">
+      <DependentUpon>POSEZ2UEMODEL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelEntity\PRINTE_JOB_DETAIL.cs">
+      <DependentUpon>POSEZ2UEMODEL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelEntity\PRINT_JOB.cs">
+      <DependentUpon>POSEZ2UEMODEL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelEntity\PRODUCT.cs">
+      <DependentUpon>POSEZ2UEMODEL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelEntity\PRODUCT_PRICE.cs">
+      <DependentUpon>POSEZ2UEMODEL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelEntity\SEAT.cs">
+      <DependentUpon>POSEZ2UEMODEL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelEntity\SHIFT_HISTORY.cs">
+      <DependentUpon>POSEZ2UEMODEL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelEntity\sp_helpdiagramdefinition_Result.cs">
+      <DependentUpon>POSEZ2UEMODEL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelEntity\sp_helpdiagrams_Result.cs">
+      <DependentUpon>POSEZ2UEMODEL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelEntity\STAFF.cs">
+      <DependentUpon>POSEZ2UEMODEL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelEntity\SUB_MENU.cs">
+      <DependentUpon>POSEZ2UEMODEL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelEntity\TableTemp.cs">
+      <DependentUpon>POSEZ2UEMODEL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelEntity\VIEW_INVOICE_ALL.cs">
+      <DependentUpon>POSEZ2UEMODEL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelEntity\VIEW_INVOICE_DETAIL_ALL.cs">
+      <DependentUpon>POSEZ2UEMODEL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelEntity\VIEW_INVOICE_DETAIL_MODIFIRE_ALL.cs">
+      <DependentUpon>POSEZ2UEMODEL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelEntity\VIEW_ORDER_ALL.cs">
+      <DependentUpon>POSEZ2UEMODEL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelEntity\VIEW_ORDER_DETAIL_ALL.cs">
+      <DependentUpon>POSEZ2UEMODEL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelEntity\VIEW_ORDER_DETAIL_MODIFIRE_ALL.cs">
+      <DependentUpon>POSEZ2UEMODEL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelEntity\VIEW_PAYMENT_INVOICE_HISTORY_ALL.cs">
+      <DependentUpon>POSEZ2UEMODEL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelEntity\view_report_invoice.cs">
+      <DependentUpon>POSEZ2UEMODEL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelEntity\VOID_ITEM_HISTORY.cs">
+      <DependentUpon>POSEZ2UEMODEL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config">
+      <SubType>Designer</SubType>
+    </None>
+    <EntityDeploy Include="ModelEntity\POSEZ2UEMODEL.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>POSEZ2UEMODEL.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="ModelEntity\POSEZ2UEMODEL.edmx.diagram">
+      <DependentUpon>POSEZ2UEMODEL.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="ModelEntity\POSEZ2UEMODEL.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>POSEZ2UEMODEL.edmx</DependentUpon>
+      <LastGenOutput>POSEZ2UEMODEL.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="ModelEntity\POSEZ2UEMODEL.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>POSEZ2UEMODEL.edmx</DependentUpon>
+      <LastGenOutput>POSEZ2UEMODEL.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

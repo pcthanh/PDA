@@ -1,0 +1,1252 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="POSEZ2UModelStoreContainer" CdmEntityContainer="POSEZ2UEntities">
+    <FunctionImportMapping FunctionImportName="pos_th_GetAllListCategoryByCatalogue" FunctionName="POSEZ2UModel.Store.pos_th_GetAllListCategoryByCatalogue">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="POSEZ2UModel.pos_th_GetAllListCategoryByCatalogue_Result">
+          <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+          <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+          <ScalarProperty Name="CategoryNameSort" ColumnName="CategoryNameSort" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="pos_th_GetAllListProductByCategory" FunctionName="POSEZ2UModel.Store.pos_th_GetAllListProductByCategory">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="POSEZ2UModel.pos_th_GetAllListProductByCategory_Result">
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="pos_th_GetListModifire" FunctionName="POSEZ2UModel.Store.pos_th_GetListModifire">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="POSEZ2UModel.pos_th_GetListModifire_Result">
+          <ScalarProperty Name="ModifireID" ColumnName="ModifireID" />
+          <ScalarProperty Name="ModifireName" ColumnName="ModifireName" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Color" ColumnName="Color" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="pos_th_GetListModifireToProduct" FunctionName="POSEZ2UModel.Store.pos_th_GetListModifireToProduct">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="POSEZ2UModel.pos_th_GetListModifireToProduct_Result">
+          <ScalarProperty Name="ModifireID" ColumnName="ModifireID" />
+          <ScalarProperty Name="ModifireName" ColumnName="ModifireName" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Color" ColumnName="Color" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="pos_th_SaveDataMapCategoryToCatalogue" FunctionName="POSEZ2UModel.Store.pos_th_SaveDataMapCategoryToCatalogue" />
+    <FunctionImportMapping FunctionImportName="pos_th_SaveDataMapProductToCategory" FunctionName="POSEZ2UModel.Store.pos_th_SaveDataMapProductToCategory" />
+    <FunctionImportMapping FunctionImportName="pos_th_SaveDataMapModifireToProduct" FunctionName="POSEZ2UModel.Store.pos_th_SaveDataMapModifireToProduct" />
+    <FunctionImportMapping FunctionImportName="getModifireByProduct" FunctionName="POSEZ2UModel.Store.getModifireByProduct">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="POSEZ2UModel.getModifireByProduct_Result">
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="ModifireID" ColumnName="ModifireID" />
+          <ScalarProperty Name="ModifireName" ColumnName="ModifireName" />
+          <ScalarProperty Name="CurrentPrice" ColumnName="CurrentPrice" />
+          <ScalarProperty Name="Color" ColumnName="Color" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="pos_th_GetAllListPermissionByDepartmentID" FunctionName="POSEZ2UModel.Store.pos_th_GetAllListPermissionByDepartmentID">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="POSEZ2UModel.pos_th_GetAllListPermissionByDepartmentID_Result">
+          <ScalarProperty Name="SubMenuID" ColumnName="SubMenuID" />
+          <ScalarProperty Name="SubMenuName" ColumnName="SubMenuName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="pos_th_GetDataListShiftHistoryByUserID" FunctionName="POSEZ2UModel.Store.pos_th_GetDataListShiftHistoryByUserID" />
+    <FunctionImportMapping FunctionImportName="pos_th_SaveDataPermissionByDepartmet" FunctionName="POSEZ2UModel.Store.pos_th_SaveDataPermissionByDepartmet" />
+    <FunctionImportMapping FunctionImportName="pos_th_GetDataBackupDatabase" FunctionName="POSEZ2UModel.Store.pos_th_GetDataBackupDatabase">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="POSEZ2UModel.pos_th_GetDataBackupDatabase_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="FileName" ColumnName="FileName" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="pos_th_GetDataProductAndModifire" FunctionName="POSEZ2UModel.Store.pos_th_GetDataProductAndModifire">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="POSEZ2UModel.pos_th_GetDataProductAndModifire_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="NameDesc" ColumnName="NameDesc" />
+          <ScalarProperty Name="NameSort" ColumnName="NameSort" />
+          <ScalarProperty Name="Color" ColumnName="Color" />
+          <ScalarProperty Name="CurrentPrice" ColumnName="CurrentPrice" />
+          <ScalarProperty Name="Portions" ColumnName="Portions" />
+          <ScalarProperty Name="PriceID" ColumnName="PriceID" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="pos_th_GetDataSaleByAccount" FunctionName="POSEZ2UModel.Store.pos_th_GetDataSaleByAccount">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="POSEZ2UModel.pos_th_GetDataSaleByAccount_Result">
+          <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="Total" ColumnName="Total" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="pos_th_GetDataSaleByCard" FunctionName="POSEZ2UModel.Store.pos_th_GetDataSaleByCard">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="POSEZ2UModel.pos_th_GetDataSaleByCard_Result">
+          <ScalarProperty Name="CardID" ColumnName="CardID" />
+          <ScalarProperty Name="CardName" ColumnName="CardName" />
+          <ScalarProperty Name="Total" ColumnName="Total" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="pos_th_GetDataSummaryReport" FunctionName="POSEZ2UModel.Store.pos_th_GetDataSummaryReport">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="POSEZ2UModel.pos_th_GetDataSummaryReport_Result">
+          <ScalarProperty Name="NetSale" ColumnName="NetSale" />
+          <ScalarProperty Name="Discount" ColumnName="Discount" />
+          <ScalarProperty Name="Change" ColumnName="Change" />
+          <ScalarProperty Name="Refund" ColumnName="Refund" />
+          <ScalarProperty Name="CashTotal" ColumnName="CashTotal" />
+          <ScalarProperty Name="CardTotal" ColumnName="CardTotal" />
+          <ScalarProperty Name="ChequeTotal" ColumnName="ChequeTotal" />
+          <ScalarProperty Name="AccountTotal" ColumnName="AccountTotal" />
+          <ScalarProperty Name="GrifCardTotal" ColumnName="GrifCardTotal" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="pos_th_GetDetailProductPrice" FunctionName="POSEZ2UModel.Store.pos_th_GetDetailProductPrice">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="POSEZ2UModel.pos_th_GetDetailProductPrice_Result">
+          <ScalarProperty Name="ProductPriceID" ColumnName="ProductPriceID" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="ProductNameDesc" ColumnName="ProductNameDesc" />
+          <ScalarProperty Name="CurrentPrice" ColumnName="CurrentPrice" />
+          <ScalarProperty Name="Portions" ColumnName="Portions" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="pos_th_GetListProductPrice" FunctionName="POSEZ2UModel.Store.pos_th_GetListProductPrice">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="POSEZ2UModel.pos_th_GetListProductPrice_Result">
+          <ScalarProperty Name="ProductPriceID" ColumnName="ProductPriceID" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="ProductNameDesc" ColumnName="ProductNameDesc" />
+          <ScalarProperty Name="CurrentPrice" ColumnName="CurrentPrice" />
+          <ScalarProperty Name="Portions" ColumnName="Portions" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="pos_th_GetQTYGroupSaleReport" FunctionName="POSEZ2UModel.Store.pos_th_GetQTYGroupSaleReport">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="POSEZ2UModel.pos_th_GetQTYGroupSaleReport_Result">
+          <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+          <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+          <ScalarProperty Name="TotalQty" ColumnName="TotalQty" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="pos_th_GetQTYItemSaleReport" FunctionName="POSEZ2UModel.Store.pos_th_GetQTYItemSaleReport">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="POSEZ2UModel.pos_th_GetQTYItemSaleReport_Result">
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="ProductNameDesc" ColumnName="ProductNameDesc" />
+          <ScalarProperty Name="TotalQty" ColumnName="TotalQty" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="pos_th_GetReportSaleByStaff" FunctionName="POSEZ2UModel.Store.pos_th_GetReportSaleByStaff">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="POSEZ2UModel.pos_th_GetReportSaleByStaff_Result">
+          <ScalarProperty Name="StaffID" ColumnName="StaffID" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Total" ColumnName="Total" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="pos_th_GetShiftReport" FunctionName="POSEZ2UModel.Store.pos_th_GetShiftReport">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="POSEZ2UModel.pos_th_GetShiftReport_Result">
+          <ScalarProperty Name="ShiftHistoryID" ColumnName="ShiftHistoryID" />
+          <ScalarProperty Name="ShiftName" ColumnName="ShiftName" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="StartShift" ColumnName="StartShift" />
+          <ScalarProperty Name="EndShift" ColumnName="EndShift" />
+          <ScalarProperty Name="CashStart" ColumnName="CashStart" />
+          <ScalarProperty Name="CashEnd" ColumnName="CashEnd" />
+          <ScalarProperty Name="SafeDrop" ColumnName="SafeDrop" />
+          <ScalarProperty Name="TotalCash" ColumnName="TotalCash" />
+          <ScalarProperty Name="TotalSale" ColumnName="TotalSale" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="pos_th_SearchProduct" FunctionName="POSEZ2UModel.Store.pos_th_SearchProduct">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="POSEZ2UModel.pos_th_SearchProduct_Result">
+          <ScalarProperty Name="CatalogueID" ColumnName="CatalogueID" />
+          <ScalarProperty Name="CatalogueName" ColumnName="CatalogueName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="LISTTKA" FunctionName="POSEZ2UModel.Store.LISTTKA">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="POSEZ2UModel.LISTTKA_Result">
+          <ScalarProperty Name="CusName" ColumnName="CusName" />
+          <ScalarProperty Name="CusPhone" ColumnName="CusPhone" />
+          <ScalarProperty Name="Total" ColumnName="Total" />
+          <ScalarProperty Name="Waiting" ColumnName="Waiting" />
+          <ScalarProperty Name="TKAID" ColumnName="TKAID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="UpdateToServer" FunctionName="POSEZ2UModel.Store.UpdateToServer" />
+    <EntitySetMapping Name="ACC_PAYMENT">
+      <EntityTypeMapping TypeName="POSEZ2UModel.ACC_PAYMENT">
+        <MappingFragment StoreEntitySet="ACC_PAYMENT">
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="IsDebit" ColumnName="IsDebit" />
+          <ScalarProperty Name="IsCredit" ColumnName="IsCredit" />
+          <ScalarProperty Name="Card" ColumnName="Card" />
+          <ScalarProperty Name="Cash" ColumnName="Cash" />
+          <ScalarProperty Name="InvoiceNumber" ColumnName="InvoiceNumber" />
+          <ScalarProperty Name="InvoiceID" ColumnName="InvoiceID" />
+          <ScalarProperty Name="SubTotal" ColumnName="SubTotal" />
+          <ScalarProperty Name="CusNo" ColumnName="CusNo" />
+          <ScalarProperty Name="PayMentID" ColumnName="PayMentID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Cards">
+      <EntityTypeMapping TypeName="POSEZ2UModel.Card">
+        <MappingFragment StoreEntitySet="Card">
+          <ScalarProperty Name="SurChart" ColumnName="SurChart" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="CardName" ColumnName="CardName" />
+          <ScalarProperty Name="CardID" ColumnName="CardID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CATALOGUEs">
+      <EntityTypeMapping TypeName="POSEZ2UModel.CATALOGUE">
+        <MappingFragment StoreEntitySet="CATALOGUE">
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="Color" ColumnName="Color" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="CatalogueName" ColumnName="CatalogueName" />
+          <ScalarProperty Name="CatalogueID" ColumnName="CatalogueID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CATEGORies">
+      <EntityTypeMapping TypeName="POSEZ2UModel.CATEGORY">
+        <MappingFragment StoreEntitySet="CATEGORY">
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="ProductColor" ColumnName="ProductColor" />
+          <ScalarProperty Name="Color" ColumnName="Color" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="CategoryNameSort" ColumnName="CategoryNameSort" />
+          <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+          <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CLIENTs">
+      <EntityTypeMapping TypeName="POSEZ2UModel.CLIENT">
+        <MappingFragment StoreEntitySet="CLIENT">
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="Balance" ColumnName="Balance" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="Adress3" ColumnName="Adress3" />
+          <ScalarProperty Name="Adress2" ColumnName="Adress2" />
+          <ScalarProperty Name="Adress1" ColumnName="Adress1" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Lname" ColumnName="Lname" />
+          <ScalarProperty Name="Fname" ColumnName="Fname" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CONFIGs">
+      <EntityTypeMapping TypeName="POSEZ2UModel.CONFIG">
+        <MappingFragment StoreEntitySet="CONFIG">
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="Logan" ColumnName="Logan" />
+          <ScalarProperty Name="Web" ColumnName="Web" />
+          <ScalarProperty Name="Tel" ColumnName="Tel" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="ABN" ColumnName="ABN" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CONFIG_SAVE_DATA">
+      <EntityTypeMapping TypeName="POSEZ2UModel.CONFIG_SAVE_DATA">
+        <MappingFragment StoreEntitySet="CONFIG_SAVE_DATA">
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="LinkPath" ColumnName="LinkPath" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DATABASE_BACKUP">
+      <EntityTypeMapping TypeName="POSEZ2UModel.DATABASE_BACKUP">
+        <MappingFragment StoreEntitySet="DATABASE_BACKUP">
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="Notes" ColumnName="Notes" />
+          <ScalarProperty Name="FileName" ColumnName="FileName" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DEPARTMENTs">
+      <EntityTypeMapping TypeName="POSEZ2UModel.DEPARTMENT">
+        <MappingFragment StoreEntitySet="DEPARTMENT">
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="DepartmentName" ColumnName="DepartmentName" />
+          <ScalarProperty Name="DepartmentID" ColumnName="DepartmentID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FLOORs">
+      <EntityTypeMapping TypeName="POSEZ2UModel.FLOOR">
+        <MappingFragment StoreEntitySet="FLOOR">
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Priority" ColumnName="Priority" />
+          <ScalarProperty Name="FloorName" ColumnName="FloorName" />
+          <ScalarProperty Name="FloorID" ColumnName="FloorID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="INVOICEs">
+      <EntityTypeMapping TypeName="POSEZ2UModel.INVOICE">
+        <MappingFragment StoreEntitySet="INVOICE">
+          <ScalarProperty Name="PDA" ColumnName="PDA" />
+          <ScalarProperty Name="FloorType" ColumnName="FloorType" />
+          <ScalarProperty Name="ShiftID" ColumnName="ShiftID" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="Account" ColumnName="Account" />
+          <ScalarProperty Name="Seat" ColumnName="Seat" />
+          <ScalarProperty Name="CashOut" ColumnName="CashOut" />
+          <ScalarProperty Name="InvoiceByCardID" ColumnName="InvoiceByCardID" />
+          <ScalarProperty Name="DiscountType" ColumnName="DiscountType" />
+          <ScalarProperty Name="Discount" ColumnName="Discount" />
+          <ScalarProperty Name="Change" ColumnName="Change" />
+          <ScalarProperty Name="Payment" ColumnName="Payment" />
+          <ScalarProperty Name="Total" ColumnName="Total" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="OrderNumber" ColumnName="OrderNumber" />
+          <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+          <ScalarProperty Name="InvoiceNumber" ColumnName="InvoiceNumber" />
+          <ScalarProperty Name="InvoiceID" ColumnName="InvoiceID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="INVOICE_BY_CARD">
+      <EntityTypeMapping TypeName="POSEZ2UModel.INVOICE_BY_CARD">
+        <MappingFragment StoreEntitySet="INVOICE_BY_CARD">
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="Total" ColumnName="Total" />
+          <ScalarProperty Name="CardID" ColumnName="CardID" />
+          <ScalarProperty Name="InvoiceID" ColumnName="InvoiceID" />
+          <ScalarProperty Name="InvoiceByCardID" ColumnName="InvoiceByCardID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="INVOICE_DETAIL">
+      <EntityTypeMapping TypeName="POSEZ2UModel.INVOICE_DETAIL">
+        <MappingFragment StoreEntitySet="INVOICE_DETAIL">
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="PrintType" ColumnName="PrintType" />
+          <ScalarProperty Name="DynId" ColumnName="DynId" />
+          <ScalarProperty Name="Seat" ColumnName="Seat" />
+          <ScalarProperty Name="Total" ColumnName="Total" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="KeyItem" ColumnName="KeyItem" />
+          <ScalarProperty Name="OrderDetailID" ColumnName="OrderDetailID" />
+          <ScalarProperty Name="InvoiceNumber" ColumnName="InvoiceNumber" />
+          <ScalarProperty Name="InvoiceID" ColumnName="InvoiceID" />
+          <ScalarProperty Name="InvoiceDetailID" ColumnName="InvoiceDetailID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="INVOICE_DETAIL_HISTORY">
+      <EntityTypeMapping TypeName="POSEZ2UModel.INVOICE_DETAIL_HISTORY">
+        <MappingFragment StoreEntitySet="INVOICE_DETAIL_HISTORY">
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="PrintType" ColumnName="PrintType" />
+          <ScalarProperty Name="DynId" ColumnName="DynId" />
+          <ScalarProperty Name="Seat" ColumnName="Seat" />
+          <ScalarProperty Name="Total" ColumnName="Total" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="KeyItem" ColumnName="KeyItem" />
+          <ScalarProperty Name="OrderDetailID" ColumnName="OrderDetailID" />
+          <ScalarProperty Name="InvoiceNumber" ColumnName="InvoiceNumber" />
+          <ScalarProperty Name="InvoiceID" ColumnName="InvoiceID" />
+          <ScalarProperty Name="InvoiceDetailID" ColumnName="InvoiceDetailID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="INVOICE_DETAIL_MODIFIRE">
+      <EntityTypeMapping TypeName="POSEZ2UModel.INVOICE_DETAIL_MODIFIRE">
+        <MappingFragment StoreEntitySet="INVOICE_DETAIL_MODIFIRE">
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="DynId" ColumnName="DynId" />
+          <ScalarProperty Name="Seat" ColumnName="Seat" />
+          <ScalarProperty Name="Total" ColumnName="Total" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="ModifireID" ColumnName="ModifireID" />
+          <ScalarProperty Name="KeyModi" ColumnName="KeyModi" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="OrderModifireID" ColumnName="OrderModifireID" />
+          <ScalarProperty Name="InvoiceNumber" ColumnName="InvoiceNumber" />
+          <ScalarProperty Name="InvoiceID" ColumnName="InvoiceID" />
+          <ScalarProperty Name="InvoiceModifireID" ColumnName="InvoiceModifireID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="INVOICE_DETAIL_MODIFIRE_HISTORY">
+      <EntityTypeMapping TypeName="POSEZ2UModel.INVOICE_DETAIL_MODIFIRE_HISTORY">
+        <MappingFragment StoreEntitySet="INVOICE_DETAIL_MODIFIRE_HISTORY">
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="DynId" ColumnName="DynId" />
+          <ScalarProperty Name="Seat" ColumnName="Seat" />
+          <ScalarProperty Name="Total" ColumnName="Total" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="ModifireID" ColumnName="ModifireID" />
+          <ScalarProperty Name="KeyModi" ColumnName="KeyModi" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="OrderModifireID" ColumnName="OrderModifireID" />
+          <ScalarProperty Name="InvoiceNumber" ColumnName="InvoiceNumber" />
+          <ScalarProperty Name="InvoiceID" ColumnName="InvoiceID" />
+          <ScalarProperty Name="InvoiceModifireID" ColumnName="InvoiceModifireID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="INVOICE_HISTORY">
+      <EntityTypeMapping TypeName="POSEZ2UModel.INVOICE_HISTORY">
+        <MappingFragment StoreEntitySet="INVOICE_HISTORY">
+          <ScalarProperty Name="PDA" ColumnName="PDA" />
+          <ScalarProperty Name="FloorType" ColumnName="FloorType" />
+          <ScalarProperty Name="ShiftID" ColumnName="ShiftID" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="Seat" ColumnName="Seat" />
+          <ScalarProperty Name="CashOut" ColumnName="CashOut" />
+          <ScalarProperty Name="InvoiceByCardID" ColumnName="InvoiceByCardID" />
+          <ScalarProperty Name="DiscountType" ColumnName="DiscountType" />
+          <ScalarProperty Name="Discount" ColumnName="Discount" />
+          <ScalarProperty Name="Change" ColumnName="Change" />
+          <ScalarProperty Name="Payment" ColumnName="Payment" />
+          <ScalarProperty Name="Total" ColumnName="Total" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="OrderNumber" ColumnName="OrderNumber" />
+          <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+          <ScalarProperty Name="InvoiceNumber" ColumnName="InvoiceNumber" />
+          <ScalarProperty Name="InvoiceID" ColumnName="InvoiceID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MAP_CATEGORY_TO_CATALOGUE">
+      <EntityTypeMapping TypeName="POSEZ2UModel.MAP_CATEGORY_TO_CATALOGUE">
+        <MappingFragment StoreEntitySet="MAP_CATEGORY_TO_CATALOGUE">
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="CatalogueID" ColumnName="CatalogueID" />
+          <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MAP_MODIFIRE_TO_PRODUCT">
+      <EntityTypeMapping TypeName="POSEZ2UModel.MAP_MODIFIRE_TO_PRODUCT">
+        <MappingFragment StoreEntitySet="MAP_MODIFIRE_TO_PRODUCT">
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="ModifireID" ColumnName="ModifireID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MAP_PRODUCT_TO_CATEGORY">
+      <EntityTypeMapping TypeName="POSEZ2UModel.MAP_PRODUCT_TO_CATEGORY">
+        <MappingFragment StoreEntitySet="MAP_PRODUCT_TO_CATEGORY">
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MENUs">
+      <EntityTypeMapping TypeName="POSEZ2UModel.MENU">
+        <MappingFragment StoreEntitySet="MENU">
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Priority" ColumnName="Priority" />
+          <ScalarProperty Name="MenuName" ColumnName="MenuName" />
+          <ScalarProperty Name="MenuID" ColumnName="MenuID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MODIFIREs">
+      <EntityTypeMapping TypeName="POSEZ2UModel.MODIFIRE">
+        <MappingFragment StoreEntitySet="MODIFIRE">
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="Color" ColumnName="Color" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="ModifireName" ColumnName="ModifireName" />
+          <ScalarProperty Name="ModifireID" ColumnName="ModifireID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MODIFIRE_PRICE">
+      <EntityTypeMapping TypeName="POSEZ2UModel.MODIFIRE_PRICE">
+        <MappingFragment StoreEntitySet="MODIFIRE_PRICE">
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="WasPrice" ColumnName="WasPrice" />
+          <ScalarProperty Name="CurrentPrice" ColumnName="CurrentPrice" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="ModifireID" ColumnName="ModifireID" />
+          <ScalarProperty Name="ModifirePriceID" ColumnName="ModifirePriceID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ORDERs">
+      <EntityTypeMapping TypeName="POSEZ2UModel.ORDER">
+        <MappingFragment StoreEntitySet="ORDER">
+          <ScalarProperty Name="PDA" ColumnName="PDA" />
+          <ScalarProperty Name="PrinterNote" ColumnName="PrinterNote" />
+          <ScalarProperty Name="ShiftID" ColumnName="ShiftID" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="Seat" ColumnName="Seat" />
+          <ScalarProperty Name="TotalAmount" ColumnName="TotalAmount" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="FloorID" ColumnName="FloorID" />
+          <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+          <ScalarProperty Name="OrderNumber" ColumnName="OrderNumber" />
+          <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ORDER_DATE">
+      <EntityTypeMapping TypeName="POSEZ2UModel.ORDER_DATE">
+        <MappingFragment StoreEntitySet="ORDER_DATE">
+          <ScalarProperty Name="PDA" ColumnName="PDA" />
+          <ScalarProperty Name="PrinterNote" ColumnName="PrinterNote" />
+          <ScalarProperty Name="ShiftID" ColumnName="ShiftID" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="Seat" ColumnName="Seat" />
+          <ScalarProperty Name="TotalAmount" ColumnName="TotalAmount" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="FloorID" ColumnName="FloorID" />
+          <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+          <ScalarProperty Name="OrderNumber" ColumnName="OrderNumber" />
+          <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ORDER_DETAIL">
+      <EntityTypeMapping TypeName="POSEZ2UModel.ORDER_DETAIL">
+        <MappingFragment StoreEntitySet="ORDER_DETAIL">
+          <ScalarProperty Name="Category" ColumnName="Category" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="PrintType" ColumnName="PrintType" />
+          <ScalarProperty Name="DynId" ColumnName="DynId" />
+          <ScalarProperty Name="Seat" ColumnName="Seat" />
+          <ScalarProperty Name="Total" ColumnName="Total" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="KeyItem" ColumnName="KeyItem" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="OrderNumber" ColumnName="OrderNumber" />
+          <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+          <ScalarProperty Name="OrderDetailID" ColumnName="OrderDetailID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ORDER_DETAIL_DATE">
+      <EntityTypeMapping TypeName="POSEZ2UModel.ORDER_DETAIL_DATE">
+        <MappingFragment StoreEntitySet="ORDER_DETAIL_DATE">
+          <ScalarProperty Name="Category" ColumnName="Category" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="PrintType" ColumnName="PrintType" />
+          <ScalarProperty Name="DynId" ColumnName="DynId" />
+          <ScalarProperty Name="Seat" ColumnName="Seat" />
+          <ScalarProperty Name="Total" ColumnName="Total" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="KeyItem" ColumnName="KeyItem" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="OrderNumber" ColumnName="OrderNumber" />
+          <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+          <ScalarProperty Name="OrderDetailID" ColumnName="OrderDetailID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ORDER_DETAIL_MODIFIRE">
+      <EntityTypeMapping TypeName="POSEZ2UModel.ORDER_DETAIL_MODIFIRE">
+        <MappingFragment StoreEntitySet="ORDER_DETAIL_MODIFIRE">
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="DynId" ColumnName="DynId" />
+          <ScalarProperty Name="Seat" ColumnName="Seat" />
+          <ScalarProperty Name="Total" ColumnName="Total" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="ModifireID" ColumnName="ModifireID" />
+          <ScalarProperty Name="KeyModi" ColumnName="KeyModi" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+          <ScalarProperty Name="OrderNumber" ColumnName="OrderNumber" />
+          <ScalarProperty Name="OrderDetailID" ColumnName="OrderDetailID" />
+          <ScalarProperty Name="OrderModifireID" ColumnName="OrderModifireID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ORDER_DETAIL_MODIFIRE_DATE">
+      <EntityTypeMapping TypeName="POSEZ2UModel.ORDER_DETAIL_MODIFIRE_DATE">
+        <MappingFragment StoreEntitySet="ORDER_DETAIL_MODIFIRE_DATE">
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="DynId" ColumnName="DynId" />
+          <ScalarProperty Name="Seat" ColumnName="Seat" />
+          <ScalarProperty Name="Total" ColumnName="Total" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="ModifireID" ColumnName="ModifireID" />
+          <ScalarProperty Name="KeyModi" ColumnName="KeyModi" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+          <ScalarProperty Name="OrderNumber" ColumnName="OrderNumber" />
+          <ScalarProperty Name="OrderDetailID" ColumnName="OrderDetailID" />
+          <ScalarProperty Name="OrderModifireID" ColumnName="OrderModifireID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ORDER_OPEN_ITEM">
+      <EntityTypeMapping TypeName="POSEZ2UModel.ORDER_OPEN_ITEM">
+        <MappingFragment StoreEntitySet="ORDER_OPEN_ITEM">
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="PrintType" ColumnName="PrintType" />
+          <ScalarProperty Name="PrinterID" ColumnName="PrinterID" />
+          <ScalarProperty Name="UnitPrice" ColumnName="UnitPrice" />
+          <ScalarProperty Name="ItemNameDesc" ColumnName="ItemNameDesc" />
+          <ScalarProperty Name="ItemNameShort" ColumnName="ItemNameShort" />
+          <ScalarProperty Name="dynID" ColumnName="dynID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ORDER_OPEN_ITEM_ALL">
+      <EntityTypeMapping TypeName="POSEZ2UModel.ORDER_OPEN_ITEM_ALL">
+        <MappingFragment StoreEntitySet="ORDER_OPEN_ITEM_ALL">
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="PrintType" ColumnName="PrintType" />
+          <ScalarProperty Name="PrinterID" ColumnName="PrinterID" />
+          <ScalarProperty Name="UnitPrice" ColumnName="UnitPrice" />
+          <ScalarProperty Name="ItemNameDesc" ColumnName="ItemNameDesc" />
+          <ScalarProperty Name="ItemNameShort" ColumnName="ItemNameShort" />
+          <ScalarProperty Name="dynID" ColumnName="dynID" />
+          <ScalarProperty Name="iD" ColumnName="iD" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PAYMENT_INVOICE_HISTORY">
+      <EntityTypeMapping TypeName="POSEZ2UModel.PAYMENT_INVOICE_HISTORY">
+        <MappingFragment StoreEntitySet="PAYMENT_INVOICE_HISTORY">
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Total" ColumnName="Total" />
+          <ScalarProperty Name="PaymentTypeID" ColumnName="PaymentTypeID" />
+          <ScalarProperty Name="InvoiceNumber" ColumnName="InvoiceNumber" />
+          <ScalarProperty Name="InvoiceID" ColumnName="InvoiceID" />
+          <ScalarProperty Name="PaymentHistoryID" ColumnName="PaymentHistoryID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PAYMENT_INVOICE_HISTORY_ALL">
+      <EntityTypeMapping TypeName="POSEZ2UModel.PAYMENT_INVOICE_HISTORY_ALL">
+        <MappingFragment StoreEntitySet="PAYMENT_INVOICE_HISTORY_ALL">
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Total" ColumnName="Total" />
+          <ScalarProperty Name="PaymentTypeID" ColumnName="PaymentTypeID" />
+          <ScalarProperty Name="InvoiceNumber" ColumnName="InvoiceNumber" />
+          <ScalarProperty Name="InvoiceID" ColumnName="InvoiceID" />
+          <ScalarProperty Name="PaymentHistoryID" ColumnName="PaymentHistoryID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PAYMENT_TYPE">
+      <EntityTypeMapping TypeName="POSEZ2UModel.PAYMENT_TYPE">
+        <MappingFragment StoreEntitySet="PAYMENT_TYPE">
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="PaymentTypeName" ColumnName="PaymentTypeName" />
+          <ScalarProperty Name="PaymentTypeID" ColumnName="PaymentTypeID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PERMISSIONs">
+      <EntityTypeMapping TypeName="POSEZ2UModel.PERMISSION">
+        <MappingFragment StoreEntitySet="PERMISSION">
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="SubMenuID" ColumnName="SubMenuID" />
+          <ScalarProperty Name="DepartmentID" ColumnName="DepartmentID" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="PermissionName" ColumnName="PermissionName" />
+          <ScalarProperty Name="PermissionID" ColumnName="PermissionID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PRINT_JOB">
+      <EntityTypeMapping TypeName="POSEZ2UModel.PRINT_JOB">
+        <MappingFragment StoreEntitySet="PRINT_JOB">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="PrintContent" ColumnName="PrintContent" />
+          <ScalarProperty Name="PrintJobName" ColumnName="PrintJobName" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PRINTE_JOB_DETAIL">
+      <EntityTypeMapping TypeName="POSEZ2UModel.PRINTE_JOB_DETAIL">
+        <MappingFragment StoreEntitySet="PRINTE_JOB_DETAIL">
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="Notes" ColumnName="Notes" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="TemplatesID" ColumnName="TemplatesID" />
+          <ScalarProperty Name="PrinterID" ColumnName="PrinterID" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PRINTERs">
+      <EntityTypeMapping TypeName="POSEZ2UModel.PRINTER">
+        <MappingFragment StoreEntitySet="PRINTER">
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="NumberOfTicket" ColumnName="NumberOfTicket" />
+          <ScalarProperty Name="PrinterType" ColumnName="PrinterType" />
+          <ScalarProperty Name="Header" ColumnName="Header" />
+          <ScalarProperty Name="PrintName" ColumnName="PrintName" />
+          <ScalarProperty Name="PrinterName" ColumnName="PrinterName" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PRODUCTs">
+      <EntityTypeMapping TypeName="POSEZ2UModel.PRODUCT">
+        <MappingFragment StoreEntitySet="PRODUCT">
+          <ScalarProperty Name="Portions" ColumnName="Portions" />
+          <ScalarProperty Name="ProductNameSort" ColumnName="ProductNameSort" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="Color" ColumnName="Color" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="ProductNameDesc" ColumnName="ProductNameDesc" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PRODUCT_PRICE">
+      <EntityTypeMapping TypeName="POSEZ2UModel.PRODUCT_PRICE">
+        <MappingFragment StoreEntitySet="PRODUCT_PRICE">
+          <ScalarProperty Name="Portions" ColumnName="Portions" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="WasPrice" ColumnName="WasPrice" />
+          <ScalarProperty Name="CurrentPrice" ColumnName="CurrentPrice" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="ProductPriceID" ColumnName="ProductPriceID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SEATs">
+      <EntityTypeMapping TypeName="POSEZ2UModel.SEAT">
+        <MappingFragment StoreEntitySet="SEAT">
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="OrderNumber" ColumnName="OrderNumber" />
+          <ScalarProperty Name="Seat1" ColumnName="Seat" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SHIFT_HISTORY">
+      <EntityTypeMapping TypeName="POSEZ2UModel.SHIFT_HISTORY">
+        <MappingFragment StoreEntitySet="SHIFT_HISTORY">
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="SafeDrop" ColumnName="SafeDrop" />
+          <ScalarProperty Name="CashEnd" ColumnName="CashEnd" />
+          <ScalarProperty Name="CashStart" ColumnName="CashStart" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="EndShift" ColumnName="EndShift" />
+          <ScalarProperty Name="StartShift" ColumnName="StartShift" />
+          <ScalarProperty Name="ShiftName" ColumnName="ShiftName" />
+          <ScalarProperty Name="StaffID" ColumnName="StaffID" />
+          <ScalarProperty Name="ShiftHistoryID" ColumnName="ShiftHistoryID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="STAFFs">
+      <EntityTypeMapping TypeName="POSEZ2UModel.STAFF">
+        <MappingFragment StoreEntitySet="STAFF">
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="Adress3" ColumnName="Adress3" />
+          <ScalarProperty Name="Adress2" ColumnName="Adress2" />
+          <ScalarProperty Name="Adress1" ColumnName="Adress1" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Lname" ColumnName="Lname" />
+          <ScalarProperty Name="Fname" ColumnName="Fname" />
+          <ScalarProperty Name="DepartmentID" ColumnName="DepartmentID" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="StaffID" ColumnName="StaffID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SUB_MENU">
+      <EntityTypeMapping TypeName="POSEZ2UModel.SUB_MENU">
+        <MappingFragment StoreEntitySet="SUB_MENU">
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Priority" ColumnName="Priority" />
+          <ScalarProperty Name="MenuID" ColumnName="MenuID" />
+          <ScalarProperty Name="SubMenuName" ColumnName="SubMenuName" />
+          <ScalarProperty Name="SubMenuID" ColumnName="SubMenuID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VOID_ITEM_HISTORY">
+      <EntityTypeMapping TypeName="POSEZ2UModel.VOID_ITEM_HISTORY">
+        <MappingFragment StoreEntitySet="VOID_ITEM_HISTORY">
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="FloorID" ColumnName="FloorID" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+          <ScalarProperty Name="StaffID" ColumnName="StaffID" />
+          <ScalarProperty Name="Total" ColumnName="Total" />
+          <ScalarProperty Name="ShiftID" ColumnName="ShiftID" />
+          <ScalarProperty Name="ModifireID" ColumnName="ModifireID" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="OrderNumber" ColumnName="OrderNumber" />
+          <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TableTemps">
+      <EntityTypeMapping TypeName="POSEZ2UModel.TableTemp">
+        <MappingFragment StoreEntitySet="TableTemp">
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="SafeDrop" ColumnName="SafeDrop" />
+          <ScalarProperty Name="CashEnd" ColumnName="CashEnd" />
+          <ScalarProperty Name="CashStart" ColumnName="CashStart" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="EndShift" ColumnName="EndShift" />
+          <ScalarProperty Name="StartShift" ColumnName="StartShift" />
+          <ScalarProperty Name="ShiftName" ColumnName="ShiftName" />
+          <ScalarProperty Name="StaffID" ColumnName="StaffID" />
+          <ScalarProperty Name="ShiftHistoryID" ColumnName="ShiftHistoryID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VIEW_INVOICE_ALL">
+      <EntityTypeMapping TypeName="POSEZ2UModel.VIEW_INVOICE_ALL">
+        <MappingFragment StoreEntitySet="VIEW_INVOICE_ALL">
+          <ScalarProperty Name="FloorType" ColumnName="FloorType" />
+          <ScalarProperty Name="ShiftID" ColumnName="ShiftID" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="Seat" ColumnName="Seat" />
+          <ScalarProperty Name="CashOut" ColumnName="CashOut" />
+          <ScalarProperty Name="InvoiceByCardID" ColumnName="InvoiceByCardID" />
+          <ScalarProperty Name="DiscountType" ColumnName="DiscountType" />
+          <ScalarProperty Name="Discount" ColumnName="Discount" />
+          <ScalarProperty Name="Change" ColumnName="Change" />
+          <ScalarProperty Name="Payment" ColumnName="Payment" />
+          <ScalarProperty Name="Total" ColumnName="Total" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="OrderNumber" ColumnName="OrderNumber" />
+          <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+          <ScalarProperty Name="InvoiceNumber" ColumnName="InvoiceNumber" />
+          <ScalarProperty Name="InvoiceID" ColumnName="InvoiceID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VIEW_INVOICE_DETAIL_ALL">
+      <EntityTypeMapping TypeName="POSEZ2UModel.VIEW_INVOICE_DETAIL_ALL">
+        <MappingFragment StoreEntitySet="VIEW_INVOICE_DETAIL_ALL">
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="PrintType" ColumnName="PrintType" />
+          <ScalarProperty Name="DynId" ColumnName="DynId" />
+          <ScalarProperty Name="Seat" ColumnName="Seat" />
+          <ScalarProperty Name="Total" ColumnName="Total" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="KeyItem" ColumnName="KeyItem" />
+          <ScalarProperty Name="OrderDetailID" ColumnName="OrderDetailID" />
+          <ScalarProperty Name="InvoiceNumber" ColumnName="InvoiceNumber" />
+          <ScalarProperty Name="InvoiceID" ColumnName="InvoiceID" />
+          <ScalarProperty Name="InvoiceDetailID" ColumnName="InvoiceDetailID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VIEW_INVOICE_DETAIL_MODIFIRE_ALL">
+      <EntityTypeMapping TypeName="POSEZ2UModel.VIEW_INVOICE_DETAIL_MODIFIRE_ALL">
+        <MappingFragment StoreEntitySet="VIEW_INVOICE_DETAIL_MODIFIRE_ALL">
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="DynId" ColumnName="DynId" />
+          <ScalarProperty Name="Seat" ColumnName="Seat" />
+          <ScalarProperty Name="Total" ColumnName="Total" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+          <ScalarProperty Name="ModifireID" ColumnName="ModifireID" />
+          <ScalarProperty Name="KeyModi" ColumnName="KeyModi" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="OrderModifireID" ColumnName="OrderModifireID" />
+          <ScalarProperty Name="InvoiceNumber" ColumnName="InvoiceNumber" />
+          <ScalarProperty Name="InvoiceID" ColumnName="InvoiceID" />
+          <ScalarProperty Name="InvoiceModifireID" ColumnName="InvoiceModifireID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VIEW_ORDER_ALL">
+      <EntityTypeMapping TypeName="POSEZ2UModel.VIEW_ORDER_ALL">
+        <MappingFragment StoreEntitySet="VIEW_ORDER_ALL">
+          <ScalarProperty Name="ShiftID" ColumnName="ShiftID" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="Seat" ColumnName="Seat" />
+          <ScalarProperty Name="TotalAmount" ColumnName="TotalAmount" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="FloorID" ColumnName="FloorID" />
+          <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+          <ScalarProperty Name="OrderNumber" ColumnName="OrderNumber" />
+          <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VIEW_ORDER_DETAIL_ALL">
+      <EntityTypeMapping TypeName="POSEZ2UModel.VIEW_ORDER_DETAIL_ALL">
+        <MappingFragment StoreEntitySet="VIEW_ORDER_DETAIL_ALL">
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="PrintType" ColumnName="PrintType" />
+          <ScalarProperty Name="DynId" ColumnName="DynId" />
+          <ScalarProperty Name="Seat" ColumnName="Seat" />
+          <ScalarProperty Name="Total" ColumnName="Total" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="KeyItem" ColumnName="KeyItem" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="OrderNumber" ColumnName="OrderNumber" />
+          <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+          <ScalarProperty Name="OrderDetailID" ColumnName="OrderDetailID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VIEW_ORDER_DETAIL_MODIFIRE_ALL">
+      <EntityTypeMapping TypeName="POSEZ2UModel.VIEW_ORDER_DETAIL_MODIFIRE_ALL">
+        <MappingFragment StoreEntitySet="VIEW_ORDER_DETAIL_MODIFIRE_ALL">
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="DynId" ColumnName="DynId" />
+          <ScalarProperty Name="Seat" ColumnName="Seat" />
+          <ScalarProperty Name="Total" ColumnName="Total" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="ModifireID" ColumnName="ModifireID" />
+          <ScalarProperty Name="KeyModi" ColumnName="KeyModi" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+          <ScalarProperty Name="OrderNumber" ColumnName="OrderNumber" />
+          <ScalarProperty Name="OrderDetailID" ColumnName="OrderDetailID" />
+          <ScalarProperty Name="OrderModifireID" ColumnName="OrderModifireID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VIEW_PAYMENT_INVOICE_HISTORY_ALL">
+      <EntityTypeMapping TypeName="POSEZ2UModel.VIEW_PAYMENT_INVOICE_HISTORY_ALL">
+        <MappingFragment StoreEntitySet="VIEW_PAYMENT_INVOICE_HISTORY_ALL">
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Total" ColumnName="Total" />
+          <ScalarProperty Name="PaymentTypeID" ColumnName="PaymentTypeID" />
+          <ScalarProperty Name="InvoiceNumber" ColumnName="InvoiceNumber" />
+          <ScalarProperty Name="InvoiceID" ColumnName="InvoiceID" />
+          <ScalarProperty Name="PaymentHistoryID" ColumnName="PaymentHistoryID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="view_report_invoice">
+      <EntityTypeMapping TypeName="POSEZ2UModel.view_report_invoice">
+        <MappingFragment StoreEntitySet="view_report_invoice">
+          <ScalarProperty Name="Total" ColumnName="Total" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+          <ScalarProperty Name="ProductNameDesc" ColumnName="ProductNameDesc" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="InvoiceNumber" ColumnName="InvoiceNumber" />
+          <ScalarProperty Name="InvoiceID" ColumnName="InvoiceID" />
+          <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+          <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="pos_th_GetDataSummaryReportNew" FunctionName="POSEZ2UModel.Store.pos_th_GetDataSummaryReportNew">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="POSEZ2UModel.pos_th_GetDataSummaryReportNew_Result">
+          <ScalarProperty Name="NetSale" ColumnName="NetSale" />
+          <ScalarProperty Name="Discount" ColumnName="Discount" />
+          <ScalarProperty Name="Change" ColumnName="Change" />
+          <ScalarProperty Name="Refund" ColumnName="Refund" />
+          <ScalarProperty Name="CashTotal" ColumnName="CashTotal" />
+          <ScalarProperty Name="CardTotal" ColumnName="CardTotal" />
+          <ScalarProperty Name="ChequeTotal" ColumnName="ChequeTotal" />
+          <ScalarProperty Name="AccountTotal" ColumnName="AccountTotal" />
+          <ScalarProperty Name="GrifCardTotal" ColumnName="GrifCardTotal" />
+          <ScalarProperty Name="TotalEATIN" ColumnName="TotalEATIN" />
+          <ScalarProperty Name="TotalTKA" ColumnName="TotalTKA" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

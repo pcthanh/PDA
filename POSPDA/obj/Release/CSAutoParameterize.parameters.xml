@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="POSEZ2UEntities-Web.config Connection String" description="POSEZ2UEntities Connection String used in web.config by the application to access the database." defaultValue="metadata=res://*/ModelEntity.POSEZ2UEMODEL.csdl|res://*/ModelEntity.POSEZ2UEMODEL.ssdl|res://*/ModelEntity.POSEZ2UEMODEL.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=THANHPHAN-PC\SQLEXPRESS;initial catalog=VyVyCabra;user id=sa;password=123456;MultipleActiveResultSets=True;App=EntityFramework&quot;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="D:\\MyProject\\LocPOS\\THANH\.PHAN\\PDA\\POSPDA\\POSPDA\\obj\\Release\\Package\\PackageTmp\\Views\\Web\.config$" match="/configuration/connectionStrings/add[@name='POSEZ2UEntities']/@connectionString" />
+    <parameterEntry kind="XmlFile" scope="D:\\MyProject\\LocPOS\\THANH\.PHAN\\PDA\\POSPDA\\POSPDA\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='POSEZ2UEntities']/@connectionString" />
+  </parameter>
+</parameters>

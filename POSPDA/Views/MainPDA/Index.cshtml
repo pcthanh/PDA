@@ -1,0 +1,366 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    @using POSPDA;
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <!-- InstanceBeginEditable name="doctitle" -->
+    <title>POSPDA</title>
+    <!-- InstanceEndEditable -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <!-- InstanceBeginEditable name="doctitle" -->
+    <title>POSPDA</title>
+    <!-- InstanceEndEditable -->
+    <link href="@Url.Content("~/Content/css/bootstrap.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/css/style.css")" rel="stylesheet" type="text/css" />
+    <script src="@Url.Content("~/Scripts/jquery-3.1.0.min.js")" type="text/javascript"></script>
+    <style>
+        body{
+            margin:0;
+        }
+        
+
+    </style>
+    <script>
+        var TableID;
+        window.onload = function () {
+            $.ajax({
+                url: '@Url.Action("CountEatIn", "Order")',
+                async: false,
+                type: 'get',
+                datatype: 'json',
+                success: function (data) {
+                    var quantity = document.getElementById('main-data-eatin-qty');
+                    quantity.innerHTML = data;
+                },
+                error: function (data) { alert(data.error + 'something bad happened load of menu'); }
+            });
+        }
+        function clearBox(elementID) {
+            document.getElementById(elementID).innerHTML = "";
+        }
+        function format2(n, currency) {
+            n = n / 1000;
+            return currency + " " + n.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,");
+        }
+        function onClickDetail(tableID,rice) {
+            TableID = tableID;
+            $("#nameTable").html("Table "+ TableID);
+            $("#riceTable").html(format2(rice,"$"));
+        }
+        function opneneatinClick() {
+            $("#main-col-info").html("");
+            $("#main-col-info").removeClass("main-hidden");
+            $("#main-col-eatin-and-tka").addClass("main-hidden");
+            createPanelEatIn();
+            
+            $.ajax({
+                url: '@Url.Action("GetStatusTable", "MainPDA")',
+                async: false,
+                type: 'get',
+                datatype: 'json',
+                success: function (data) {
+                    
+                    for (var i = 0; i < data.length; i++) {
+                        var j = 1;
+                                $("#main-col-info").append(
+                            '<div class="main-data-info-order" onclick="tableClick(' + data[i].TableID + ',' + data[i].SubTotal + ')">' +
+                            '<div class="main-data-info-order-tableid" id=' + data[i].TableID + '>' +
+                                'Table ' + data[i].TableID +
+                           ' </div>' +
+                            '<div class="main-data-info-order-total" id="total">' +
+                                format2(data[i].SubTotal, "$") +
+                            '</div>' +
+                        '</div>'
+                            ).addClass("main-col-info-iphone")
+                                j++;
+                    }
+                    
+                },
+                error: function (data) { alert(data.error + 'something bad happened load of menu'); }
+            });
+        }
+        function opnenetkaClick() {
+            clearBox('detail');
+            
+        }
+        function ViewOrder() {
+           
+            $.ajax({
+                
+                url: '@Url.Action("ViewOrder", "MainPDA")',
+                async: false,
+                type: 'get',
+                datatype: 'json',
+                data: { TableID: tableID },
+                success: function (data) {
+                    window.location.href = '@Url.Action("LoadMenu", "Menu")';
+                },
+                error: function (data) { alert(data.error + 'something bad happened load of menu'); }
+            });
+        }
+        function Logout() {
+            $.ajax({
+                url: '@Url.Action("LogOut", "MainPDA")',
+                async: false,
+                type: 'get',
+                datatype: 'json',
+                data: { TableID: TableID },
+                success: function (data) {
+                    if(data==1)
+                        window.location.href = '@Url.Action("Index", "Login")';
+                },
+                error: function (data) { alert(data.error + 'something bad happened load of menu'); }
+            });
+        }
+
+
+        var z_index = 1;
+        var tableID;
+        
+        function tkaClick() {
+
+            for (i = 0; i < 4; i++) {
+                $("#main-col-eatin-and-tka").append(
+                    '<div class="main-data-info-order">' +
+                    '<div class="main-data-info-order-tableid" id="tableid">' +
+                        'Table 2' +
+                   ' </div>' +
+                    '<div class="main-data-info-order-total" id="total">' +
+                        '$12.09' +
+                    '</div>' +
+                '</div>'
+                    ).addClass("main-tka-show")
+            }
+
+            document.getElementById('main-data-eatin').hidden = true;
+        }
+        function backTo() {
+            //$("#main-data-eatin-temp").addClass("main-data-eatin-temp-iphone");
+            $("#main-col-eatin-and-tka").removeClass("main-hidden").addClass("main-show")
+            $("#main-col-info").addClass("main-hidden");
+
+        }
+
+        //function append() {
+        //    var str = '<div class="main-data-eatin" id="main-data-eatin" onclick="eatInClick()">' +
+        //          '  <div class="col-sm-8 main-data-eatin-title" id="main-data-eatin-title">' +
+        //           '     Opening eat-in' +
+        //            '</div>' +
+        //            '<div class="col-sm-2 main-data-eatin-qty" id="main-data-eatin-qty">' +
+        //             '   7' +
+        //            '</div>' +
+        //            '<div class="col-sm-2 main-data-eatin-next" id="main-data-eatin-next">' +
+
+        //            '</div>' +
+        //        '</div>' +
+        //        '<div class="main-data-tka" id="main-data-tka" onclick="tkaClick()">' +
+        //           ' <div class="col-sm-8 main-data-eatin-title-tka">' +
+        //            '    Opening Takeaway' +
+        //            '</div>' +
+        //            '<div class="col-sm-2 main-data-eatin-qty-tka">' +
+        //             '   7' +
+        //            '</div>' +
+        //            '<div class="col-sm-2 main-data-eatin-next-tka">' +
+
+        //            '</div>' +
+        //        '</div>';
+
+        //    return str;
+        //}
+        function createPanelEatIn() {
+            $("#main-col-info").append(
+                '<div class="main-data-eatin-temp" id="main-data-eatin-temp">' +
+                    '<div class="col-sm-2 main-data-eatin-next-temp" id="main-data-eatin-next-temp" onclick="backTo()">' +
+
+                    '</div>' +
+                    '<div class="col-sm-8 main-data-eatin-title-temp" id="main-data-eatin-title-temp">' +
+                        'Opening eat-in' +
+                    '</div>' +
+                    '<div class="col-sm-2 main-data-eatin-qty-temp" id="main-data-eatin-qty-temp">' +
+                        '7' +
+                    '</div>' +
+
+                 '</div>'
+                );
+        }
+        function eatinClick() {
+            $("#main-col-info").html("");
+            $("#main-col-info").removeClass("main-hidden");
+            $("#main-col-eatin-and-tka").addClass("main-hidden");
+            createPanelEatIn();
+            for (i = 0; i < 5; i++) {
+                $("#main-col-info").append(
+                   '<div class="main-data-info-order" onclick="tableClick(' + i + ')">' +
+                   '<div class="main-data-info-order-tableid" id=' + i + '>' +
+                       'Table ' + i +
+                  ' </div>' +
+                   '<div class="main-data-info-order-total" id="total">' +
+                       '$12.09' +
+                   '</div>' +
+               '</div>'
+                   ).addClass("main-col-info-iphone")
+            }
+
+        }
+
+        function tableClick(id,rice) {
+            $("#main-col-detail").html("");
+            $("#main-col-info").addClass("main-hidden");
+            $("#main-col-detail").append(appenDetail()).addClass("main-col-detail-show");
+            tableID = id;
+            $("#main-col-detail-nametable").html("Table " + tableID);
+            $("#main-col-detail-rice").html(format2(rice, "$"));
+
+        }
+        function appenDetail() {
+            var str = '<div class="main-col-detail-nametable"onclick="detailBack()" id="main-col-detail-nametable">' +
+                '</div>' +
+                '<div id="main-col-detail-rice" class="main-col-detail-amount">' +
+                   ' $12.09' +
+                '</div>' +
+                '<div class="main-col-detail-vieworder"onclick="ViewOrder()">' +
+                   ' VIEW ORDER' +
+                '</div>' +
+                '<div class="main-col-detail-print"onclick="PrintBill()">' +
+                  '  PRINT RECEIPT' +
+                '</div>';
+            return str;
+        }
+        function detailBack() {
+            $("#main-col-info").removeClass("main-hidden").addClass("main-show");
+            $("#main-col-detail").removeClass("main-col-detail-show").addClass("main-hidden");
+        }
+
+        function neweatInClick() {
+
+            $.ajax({
+                url: '@Url.Action("Index", "Floor")',
+                async: false,
+                type: 'get',
+                datatype: 'json',
+                success: function (data) {
+                    window.location.href = '@Url.Action("Index", "Floor")';
+                },
+                error: function (data) { alert(data.error + 'something bad happened load of menu'); }
+            });
+
+        }
+        function PrintBill() {
+
+            $.ajax({
+                url: '@Url.Action("PrintBill1", "Order")',
+                async: false,
+                type: 'POST',
+                data: { TableID: tableID },
+                datatype: 'json',
+                success: function (data) {
+                    window.location.href = '@Url.Action("Floor", "Floor")';
+                },
+                error: function (data) { alert(data.error + 'something bad happened load of menu'); }
+            })
+        }
+
+
+    </script>
+</head>
+<body>
+    @using ServicePOS.Model;
+@{
+    var session = Session["User"] as StaffModel;
+    if (session != null)
+    {
+        string nameUser = session.UserName;
+        ViewBag.username = nameUser;
+    }
+    else
+    {
+        @Html.ActionLink("Index", "Login");
+    }
+
+}
+    <div class="main-body">
+        <div class=" main-title">
+            <div class="col-sm-2 col-xs-8 main-login-as" id="main-login-as">
+                Login as @ViewBag.username
+            </div>
+            <div class="col-sm-7 col-xs-10 main-shift">
+                Working Period - Shift 1
+            </div>
+
+            <div class="col-sm-2 col-xs-4 main-logout" onclick="Logout()">
+                Log out
+            </div>
+            <div class="col-sm-7 col-xs-11 main-shift-temp">
+                Working Period - Shift 1
+            </div>
+        </div>
+        <div class="main-btn-action">
+            <div class="col-sm-5 col-xs-12 main-btn-eatin" onclick="" style="text-decoration:none">
+                @Html.ActionLink("+ new EAT IN", "Floor", "Floor", null, new { @class = "page-scroll" })
+            </div>
+            <div class="col-sm-5 col-xs-12 main-btn-takeaway">
+                + new TAKEAWAY
+            </div>
+        </div>
+        <div class=" main-eatin-tka">
+            <div class="col-sm-4 main-col-eatin-and-tka" id="main-col-eatin-and-tka">
+                <div class="main-data-eatin" id="main-data-eatin" onclick="opneneatinClick()">
+                    <div class="col-sm-8 main-data-eatin-title" id="main-data-eatin-title">
+                        Opening eat-in
+                    </div>
+                    <div class="col-sm-2 main-data-eatin-qty" id="main-data-eatin-qty">
+                        
+                    </div>
+                    <div class="col-sm-2 main-data-eatin-next" id="main-data-eatin-next">
+
+                    </div>
+                </div>
+                <div class="main-data-tka" id="main-data-tka" onclick="">
+                    <div class="col-sm-8 main-data-eatin-title-tka">
+                        Opening Takeaway
+                    </div>
+                    <div class="col-sm-2 main-data-eatin-qty-tka">
+                        0
+                    </div>
+                    <div class="col-sm-2 main-data-eatin-next-tka">
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4 main-col-info" id="main-col-info">
+                
+                @foreach (var order in ViewBag.listOrder)
+                {
+                     <div class="main-data-info-order">
+                         <div class="main-data-info-order-tableid" id="@order.TableID" onclick="tableClick(@order.TableID,@order.SubTotal)">
+                             Table @order.TableID
+                         </div>
+                        <div class="main-data-info-order-total" id="total">
+                          $ @MoneyFortmat.Format2(@order.SubTotal)
+                        </div>
+                    </div>
+                }
+            </div>
+            <div class="col-sm-4 main-col-detail" id="main-col-detail">
+                <div class="main-col-detail-nametable">
+                    Table
+                </div>
+                <div class="main-col-detail-amount">
+                    $0.00
+                </div>
+                <div class="main-col-detail-vieworder" onclick="ViewOrder()">
+                    VIEW ORDER
+                </div>
+                <div class="main-col-detail-print">
+                    PRINT RECEIPT
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</body>
+</html>

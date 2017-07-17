@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{51045385-D22A-46E9-9230-C0EAB53C3338}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ServicePOS</RootNamespace>
+    <AssemblyName>ServicePOS</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccountPaymentService.cs" />
+    <Compile Include="CatalogueService.cs" />
+    <Compile Include="ConfigService.cs" />
+    <Compile Include="CustomerService.cs" />
+    <Compile Include="DatabaseSettingService.cs" />
+    <Compile Include="IAccountPaymentService.cs" />
+    <Compile Include="ICatalogueService.cs" />
+    <Compile Include="IConfigService.cs" />
+    <Compile Include="ICustomerService.cs" />
+    <Compile Include="IDatabaseSettingService.cs" />
+    <Compile Include="IInvoiceService.cs" />
+    <Compile Include="IMapModifireToProduct.cs" />
+    <Compile Include="IModifireService.cs" />
+    <Compile Include="InvoiceService.cs" />
+    <Compile Include="IOrderService.cs" />
+    <Compile Include="IPermissionService.cs" />
+    <Compile Include="IPriceListService.cs" />
+    <Compile Include="IPrinterService.cs" />
+    <Compile Include="IPrinterSettingServer.cs" />
+    <Compile Include="IProductPriceService.cs" />
+    <Compile Include="IProductService.cs" />
+    <Compile Include="IReportService.cs" />
+    <Compile Include="IShiftService.cs" />
+    <Compile Include="IUserService.cs" />
+    <Compile Include="MapModifireToProductService.cs" />
+    <Compile Include="Model\AccountModel.cs" />
+    <Compile Include="Model\AccountPaymentModel.cs" />
+    <Compile Include="Model\BackupDataModel.cs" />
+    <Compile Include="Model\CardModel.cs" />
+    <Compile Include="Model\CashModel.cs" />
+    <Compile Include="Model\CatalogueModel.cs" />
+    <Compile Include="Model\CategoryModel.cs" />
+    <Compile Include="Model\ConfigModel.cs" />
+    <Compile Include="Model\CustomerModel.cs" />
+    <Compile Include="Model\DailyReportDetailModel.cs" />
+    <Compile Include="Model\DailyReportModel.cs" />
+    <Compile Include="Model\DepartmentModel.cs" />
+    <Compile Include="Model\DiscountModel.cs" />
+    <Compile Include="Model\InByCardModel.cs" />
+    <Compile Include="Model\InvoiceByCardModel.cs" />
+    <Compile Include="Model\InvoiceDetailModel.cs" />
+    <Compile Include="Model\InvoiceDetailModifire.cs" />
+    <Compile Include="Model\InvoiceModel.cs" />
+    <Compile Include="Model\MapModifreToProductModel.cs" />
+    <Compile Include="Model\ModifierModel.cs" />
+    <Compile Include="Model\ModifireModel.cs" />
+    <Compile Include="Model\ModifirePriceModel.cs" />
+    <Compile Include="Model\OrderItem.cs" />
+    <Compile Include="Model\OrderJoinTableModel.cs" />
+    <Compile Include="Model\OrderModel.cs" />
+    <Compile Include="Model\OrderDetailModel.cs" />
+    <Compile Include="Model\OrderDetailModifireModel.cs" />
+    <Compile Include="Model\OrderDateModel.cs" />
+    <Compile Include="Model\OrderOpenItemModel.cs" />
+    <Compile Include="Model\OrderTKAModel.cs" />
+    <Compile Include="Model\PayMentModel.cs" />
+    <Compile Include="Model\PriceListModel.cs" />
+    <Compile Include="Model\PrinteJobDetailModel.cs" />
+    <Compile Include="Model\PrinterModel.cs" />
+    <Compile Include="Model\PrintJobModel.cs" />
+    <Compile Include="Model\ProductionModel.cs" />
+    <Compile Include="Model\ProductPriceModel.cs" />
+    <Compile Include="Model\SeatModel.cs" />
+    <Compile Include="Model\ShiftHistoryModel.cs" />
+    <Compile Include="Model\StaffModel.cs" />
+    <Compile Include="Model\StatusTable.cs" />
+    <Compile Include="Model\SubMenuModel.cs" />
+    <Compile Include="Model\VoidItemHistoryModel.cs" />
+    <Compile Include="ModifireService.cs" />
+    <Compile Include="OrderService.cs" />
+    <Compile Include="PermissionService.cs" />
+    <Compile Include="PriceListService.cs" />
+    <Compile Include="PrinterService.cs" />
+    <Compile Include="PrinterSettingServer.cs" />
+    <Compile Include="ProductPriceService.cs" />
+    <Compile Include="ProductService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReportService.cs" />
+    <Compile Include="ShiftService.cs" />
+    <Compile Include="UserService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ModelPOS\ModelPOS.csproj">
+      <Project>{4065a0ed-288b-4694-81d5-c6f02421277c}</Project>
+      <Name>ModelPOS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SystemLog\SystemLog.csproj">
+      <Project>{c3deb7b0-9be5-430e-b774-715f65e6a8ff}</Project>
+      <Name>SystemLog</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

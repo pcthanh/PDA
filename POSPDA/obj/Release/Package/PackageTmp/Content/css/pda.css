@@ -1,0 +1,159 @@
+﻿@charset "utf-8";
+/* CSS Document */
+.header-menu-pda{
+	background-color:rgba(121, 121, 121, 1);
+	height:50px;
+	line-height:50px;
+	color:#ffffff;
+}
+.header-menu-pda-shift{
+	text-align:center;
+}
+.header-menu-pda-logout{
+	text-align:right;
+}
+
+.function-pda-button{
+
+	background-color:#066;
+	height:600px;
+}
+.menu-pda{
+	background-color:#00F;
+	height:37%;
+}
+.menu-pda-oder{
+	background-color:#900;
+	height:37%;
+    overflow:auto;
+}
+.order-pda-main{
+	height:600px;
+}
+.order-pda-button-back {
+    color:white;
+    background-color:black;
+    width:118%;
+    height:50px;
+    line-height:50px;
+    text-align:center;
+}
+.order-pda-button-send {
+    color:white;
+    background-color:rgba(0, 112, 82, 1);
+    width:118%;
+    height:50px;
+    line-height:50px;
+    text-align:center;
+}
+.order-pda-button-void {
+    color:white;
+    background-color:rgba(246, 19, 1, 1);
+    width:118%;
+    height:50px;
+    line-height:50px;
+    text-align:center;
+}
+.order-pda-button-openitem {
+    color:white;
+    background-color:rgba(0, 103, 204, 1);
+    width:118%;
+    height:50px;
+    line-height:50px;
+    text-align:center;
+}
+.order-pda-button-addseat {
+    color:white;
+    background-color:black;
+    width:118%;
+    height:50px;
+    line-height:50px;
+    text-align:center;
+}
+.order-pda-button-printbill {
+    color:white;
+    background-color:rgba(0, 138, 204, 1);
+    width:118%;
+    height:50px;
+    line-height:50px;
+    text-align:center;
+}
+.order-pda-button-note {
+    color:white;
+    background-color:rgba(153, 115, 13, 1);
+    width:118%;
+    height:50px;
+    line-height:50px;
+    text-align:center;
+}
+.menu-pda-catalog{
+    background-color:rgba(0, 153, 0, 1);
+    color:white;
+    height:50px;
+    line-height:50px;
+    margin-left:-15px;
+    margin-right:-15px;
+}
+.meu-pda-catalog-button{
+    text-align:center;
+    height:50px;
+    border:1px solid;
+}
+
+
+/* Extra small devices (phones, less than 768px) */
+@media (max-width: 768px) { 
+	.header-menu-pda{
+		float:left !important;
+		width:50% !important;
+	}
+	.header-menu-pda-shift{
+		display:none;
+	}
+	
+	.order-pda-main{
+		position:relative;
+        height: 100%;
+	}
+    .function-pda-button{
+        width:30%;
+        height:100%;
+    }
+	.menu-pda-oder{
+		position:absolute;
+		top:0;
+		left:30%;
+        width:70%;
+        background-color:#900;
+        height:350px;
+	}
+    .menu-pda-catalog-float{
+       float:left !important;
+    }
+    .menu-pda{
+        height:350px;
+        overflow:auto;
+    }
+  
+    
+
+	
+	
+}
+/* No media query since this is the default in Bootstrap */
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 769px) {
+	
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+	
+ }
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+
+	
+}

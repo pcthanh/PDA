@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="311b8d6ee54047159ffddfb011be5b7c" Name="Diagram1">
+        <EntityTypeShape EntityType="POSEZ2UModel.ACC_PAYMENT" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="POSEZ2UModel.Card" Width="1.5" PointX="2.75" PointY="0.75" />
+        <EntityTypeShape EntityType="POSEZ2UModel.CATALOGUE" Width="1.5" PointX="2.75" PointY="3.75" />
+        <EntityTypeShape EntityType="POSEZ2UModel.CATEGORY" Width="1.5" PointX="4.75" PointY="0.75" />
+        <EntityTypeShape EntityType="POSEZ2UModel.CLIENT" Width="1.5" PointX="4.75" PointY="4.75" />
+        <EntityTypeShape EntityType="POSEZ2UModel.CONFIG" Width="1.5" PointX="6.75" PointY="0.75" />
+        <EntityTypeShape EntityType="POSEZ2UModel.CONFIG_SAVE_DATA" Width="1.5" PointX="6.75" PointY="4.75" />
+        <EntityTypeShape EntityType="POSEZ2UModel.DATABASE_BACKUP" Width="1.5" PointX="0.75" PointY="7.75" />
+        <EntityTypeShape EntityType="POSEZ2UModel.DEPARTMENT" Width="1.5" PointX="8.75" PointY="0.75" />
+        <EntityTypeShape EntityType="POSEZ2UModel.FLOOR" Width="1.5" PointX="8.75" PointY="4.75" />
+        <EntityTypeShape EntityType="POSEZ2UModel.INVOICE" Width="1.5" PointX="6.75" PointY="8.75" />
+        <EntityTypeShape EntityType="POSEZ2UModel.INVOICE_BY_CARD" Width="1.5" PointX="8.75" PointY="8.75" />
+        <EntityTypeShape EntityType="POSEZ2UModel.INVOICE_DETAIL" Width="1.5" PointX="2.75" PointY="9.75" />
+        <EntityTypeShape EntityType="POSEZ2UModel.INVOICE_DETAIL_HISTORY" Width="1.5" PointX="10.75" PointY="0.75" />
+        <EntityTypeShape EntityType="POSEZ2UModel.INVOICE_DETAIL_MODIFIRE" Width="1.5" PointX="10.75" PointY="6.75" />
+        <EntityTypeShape EntityType="POSEZ2UModel.INVOICE_DETAIL_MODIFIRE_HISTORY" Width="1.5" PointX="12.75" PointY="0.75" />
+        <EntityTypeShape EntityType="POSEZ2UModel.INVOICE_HISTORY" Width="1.5" PointX="12.75" PointY="6.75" />
+        <EntityTypeShape EntityType="POSEZ2UModel.MAP_CATEGORY_TO_CATALOGUE" Width="1.5" PointX="8.75" PointY="12.75" />
+        <EntityTypeShape EntityType="POSEZ2UModel.MAP_MODIFIRE_TO_PRODUCT" Width="1.5" PointX="10.75" PointY="12.75" />
+        <EntityTypeShape EntityType="POSEZ2UModel.MAP_PRODUCT_TO_CATEGORY" Width="1.5" PointX="12.75" PointY="12.75" />
+        <EntityTypeShape EntityType="POSEZ2UModel.MENU" Width="1.5" PointX="14.75" PointY="0.75" />
+        <EntityTypeShape EntityType="POSEZ2UModel.MODIFIRE" Width="1.5" PointX="14.75" PointY="4.75" />
+        <EntityTypeShape EntityType="POSEZ2UModel.MODIFIRE_PRICE" Width="1.5" PointX="4.75" PointY="14.75" />
+        <EntityTypeShape EntityType="POSEZ2UModel.ORDER" Width="1.5" PointX="14.75" PointY="8.75" />
+        <EntityTypeShape EntityType="POSEZ2UModel.ORDER_DATE" Width="1.5" PointX="14.75" PointY="13.75" />
+        <EntityTypeShape EntityType="POSEZ2UModel.ORDER_DETAIL" Width="1.5" PointX="0.75" PointY="15.75" />
+        <EntityTypeShape EntityType="POSEZ2UModel.ORDER_DETAIL_DATE" Width="1.5" PointX="16.75" PointY="0.75" />
+        <EntityTypeShape EntityType="POSEZ2UModel.ORDER_DETAIL_MODIFIRE" Width="1.5" PointX="16.75" PointY="6.75" />
+        <EntityTypeShape EntityType="POSEZ2UModel.ORDER_DETAIL_MODIFIRE_DATE" Width="1.5" PointX="6.75" PointY="16.75" />
+        <EntityTypeShape EntityType="POSEZ2UModel.ORDER_OPEN_ITEM" Width="1.5" PointX="8.75" PointY="16.75" />
+        <EntityTypeShape EntityType="POSEZ2UModel.ORDER_OPEN_ITEM_ALL" Width="1.5" PointX="10.75" PointY="16.75" />
+        <EntityTypeShape EntityType="POSEZ2UModel.PAYMENT_INVOICE_HISTORY" Width="1.5" PointX="16.75" PointY="12.75" />
+        <EntityTypeShape EntityType="POSEZ2UModel.PAYMENT_INVOICE_HISTORY_ALL" Width="1.5" PointX="16.75" PointY="16.75" />
+        <EntityTypeShape EntityType="POSEZ2UModel.PAYMENT_TYPE" Width="1.5" PointX="18.75" PointY="0.75" />
+        <EntityTypeShape EntityType="POSEZ2UModel.PERMISSION" Width="1.5" PointX="2.75" PointY="18.75" />
+        <EntityTypeShape EntityType="POSEZ2UModel.PRINT_JOB" Width="1.5" PointX="18.75" PointY="4.75" />
+        <EntityTypeShape EntityType="POSEZ2UModel.PRINTE_JOB_DETAIL" Width="1.5" PointX="18.75" PointY="8.75" />
+        <EntityTypeShape EntityType="POSEZ2UModel.PRINTER" Width="1.5" PointX="18.75" PointY="12.75" />
+        <EntityTypeShape EntityType="POSEZ2UModel.PRODUCT" Width="1.5" PointX="12.75" PointY="18.75" />
+        <EntityTypeShape EntityType="POSEZ2UModel.PRODUCT_PRICE" Width="1.5" PointX="18.75" PointY="16.75" />
+        <EntityTypeShape EntityType="POSEZ2UModel.SEAT" Width="1.5" PointX="20.75" PointY="0.75" />
+        <EntityTypeShape EntityType="POSEZ2UModel.SHIFT_HISTORY" Width="1.5" PointX="20.75" PointY="4.75" />
+        <EntityTypeShape EntityType="POSEZ2UModel.STAFF" Width="1.5" PointX="8.75" PointY="20.75" />
+        <EntityTypeShape EntityType="POSEZ2UModel.SUB_MENU" Width="1.5" PointX="20.75" PointY="9.75" />
+        <EntityTypeShape EntityType="POSEZ2UModel.VOID_ITEM_HISTORY" Width="1.5" PointX="20.75" PointY="13.75" />
+        <EntityTypeShape EntityType="POSEZ2UModel.TableTemp" Width="1.5" PointX="20.75" PointY="18.75" />
+        <EntityTypeShape EntityType="POSEZ2UModel.VIEW_INVOICE_ALL" Width="1.5" PointX="14.75" PointY="21.75" />
+        <EntityTypeShape EntityType="POSEZ2UModel.VIEW_INVOICE_DETAIL_ALL" Width="1.5" PointX="16.75" PointY="21.75" />
+        <EntityTypeShape EntityType="POSEZ2UModel.VIEW_INVOICE_DETAIL_MODIFIRE_ALL" Width="1.5" PointX="22.75" PointY="0.75" />
+        <EntityTypeShape EntityType="POSEZ2UModel.VIEW_ORDER_ALL" Width="1.5" PointX="0.75" PointY="22.75" />
+        <EntityTypeShape EntityType="POSEZ2UModel.VIEW_ORDER_DETAIL_ALL" Width="1.5" PointX="2.75" PointY="22.75" />
+        <EntityTypeShape EntityType="POSEZ2UModel.VIEW_ORDER_DETAIL_MODIFIRE_ALL" Width="1.5" PointX="4.75" PointY="22.75" />
+        <EntityTypeShape EntityType="POSEZ2UModel.VIEW_PAYMENT_INVOICE_HISTORY_ALL" Width="1.5" PointX="22.75" PointY="6.75" />
+        <EntityTypeShape EntityType="POSEZ2UModel.view_report_invoice" Width="1.5" PointX="22.75" PointY="10.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
