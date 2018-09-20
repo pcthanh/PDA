@@ -19,7 +19,7 @@ namespace POSPDA.Controllers
             set { _userservice = value; }
         }
         //
-        // GET: /Login/
+        // GET: /Login/Thanh
 
         public ActionResult Index()
         {
