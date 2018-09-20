@@ -12,7 +12,7 @@ namespace POSPDA.Controllers
     public class MainPDAController : Controller
     {
         //
-        // GET: /MainPDA/
+        // GET: /MainPDA/ Thanh test
         private IOrderService _orderService;
         private IOrderService OrderService
         {
