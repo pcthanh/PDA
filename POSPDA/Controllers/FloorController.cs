@@ -12,7 +12,7 @@ namespace POSPDA.Controllers
     public class FloorController : Controller
     {
         //
-        // GET: /Floor/
+        // GET: /Floor/ thanh
         private IOrderService _orderService;
         private IOrderService OrderService
         {
